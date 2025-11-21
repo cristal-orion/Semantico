@@ -65,9 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         horizontal: 24, vertical: 12),
                     decoration: PopTheme.boxDecoration(color: PopTheme.white)
                         .copyWith(boxShadow: PopTheme.shadow),
-                    child: Text(
-                      'SEMANTICO',
-                      style: PopTheme.titleStyle.copyWith(fontSize: 40),
+                    child: Image.asset(
+                      'assets/images/SematicoLogotipo.png',
+                      height: 60, // Adjust height as needed
+                      fit: BoxFit.contain,
                     ),
                   )
                       .animate(onPlay: (controller) => controller.repeat())
