@@ -24,6 +24,18 @@ class _GameScreenState extends State<GameScreen> {
   bool _victoryShown = false;
 
   @override
+  void dispose() {
+    // Pulisce lo stato quando si esce dalla schermata
+    // Usiamo addPostFrameCallback per evitare errori se il widget è in fase di smontaggio
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        context.read<GameProvider>().clearCurrentState();
+      }
+    });
+    super.dispose();
+  }
+
+  @override
   void initState() {
     super.initState();
     // Inizializza il gioco

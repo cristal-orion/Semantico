@@ -39,10 +39,21 @@ class GameProvider with ChangeNotifier {
     return validGuesses;
   }
 
+  /// Pulisce lo stato corrente (memoria)
+  void clearCurrentState() {
+    _guesses = [];
+    _dailyWordInfo = null;
+    _currentDate = null;
+    _hasWon = false;
+    _errorMessage = null;
+    _isLoading = false;
+    notifyListeners();
+  }
+
   /// Inizializza il gioco
   Future<void> initialize({String? date}) async {
+    clearCurrentState();
     _isLoading = true;
-    _errorMessage = null;
     notifyListeners();
 
     try {

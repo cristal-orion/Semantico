@@ -111,7 +111,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const ArchiveScreen()),
-                      );
+                      ).then((_) {
+                        // Ricarica la partita del giorno quando si torna dall'archivio
+                        context.read<GameProvider>().initialize();
+                      });
                     },
                   ),
 
