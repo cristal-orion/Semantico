@@ -5,6 +5,7 @@ import '../theme/pop_theme.dart';
 import '../widgets/vector_background.dart';
 import '../providers/game_provider.dart';
 import 'game_screen.dart';
+import 'shot_game_screen.dart';
 import 'archive_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -94,6 +95,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                 builder: (context) => const GameScreen()),
                           );
                         },
+                      );
+                    },
+                  ),
+
+                  const SizedBox(height: 24),
+
+                  // Shot Mode Button
+                  _buildMenuButton(
+                    context,
+                    label: 'SHOT MODE',
+                    icon: Icons.flash_on_rounded,
+                    color: PopTheme.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ShotGameScreen()),
                       );
                     },
                   ),

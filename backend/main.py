@@ -69,6 +69,19 @@ class HintResponse(BaseModel):
     hint_word: str
     message: str
 
+class ShotNewGameResponse(BaseModel):
+    game_id: str
+    clue_words: List[str]
+
+class ShotGuessRequest(BaseModel):
+    game_id: str
+    guess: str
+
+class ShotGuessResponse(BaseModel):
+    correct: bool
+    target_word: Optional[str] = None
+    message: str
+
 # Game Manager Singleton
 class GameManager:
     def __init__(self):
@@ -76,8 +89,10 @@ class GameManager:
         self.vocab = None
         self.daily_words = []  # Lista di parole per ogni giorno
         self.rankings_cache = {}  # Cache dei ranking pre-calcolati
+        self.shot_words = []  # Lista di 300 parole per gioco Shot
+        self.active_shot_games = {}  # game_id -> target_word
         
-    def load_model(self, model_path: str = "../fasttext_it.model"):
+    def load_model(self, model_path: str = "fasttext_it.model"):
         """Carica il modello FastText"""
         logger.info("🔄 Caricamento modello FastText...")
         
@@ -87,7 +102,6 @@ class GameManager:
         
         self.model = KeyedVectors.load(model_path)
         self.vocab = list(self.model.key_to_index.keys())
-        
         logger.info(f"✅ Modello caricato: {len(self.vocab)} parole")
         
         # Carica dizionario italiano (60k parole verificate)
@@ -95,6 +109,9 @@ class GameManager:
         
         # Carica/genera lista parole giornaliere
         self.load_daily_words()
+        
+        # Carica parole per gioco Shot
+        self.load_shot_words()
     
     def load_italian_dictionary(self, dict_file: str = "280000_parole_italiane.txt"):
         """
@@ -143,6 +160,82 @@ class GameManager:
             
             self.daily_words = common_words[:1000]
             logger.info(f"✅ Generate {len(self.daily_words)} parole giornaliere")
+
+    def load_shot_words(self, words_file: str = "shot_words.txt"):
+        """Carica lista di 300 parole per il gioco Shot"""
+        if os.path.exists(words_file):
+            with open(words_file, 'r', encoding='utf-8') as f:
+                self.shot_words = [line.strip().lower() for line in f if line.strip()]
+            logger.info(f"✅ Caricate {len(self.shot_words)} parole Shot")
+        else:
+            logger.warning(f"⚠️ File '{words_file}' non trovato!")
+            self.shot_words = []
+
+    def start_new_shot_game(self) -> Dict:
+        """Avvia una nuova partita Shot"""
+        import uuid
+        import random
+        
+        if not self.shot_words:
+            raise HTTPException(status_code=500, detail="Lista parole Shot non caricata")
+            
+        # 1. Seleziona parola target
+        target_word = random.choice(self.shot_words)
+        
+        # 2. Trova le 30 parole più vicine
+        try:
+            similar_words = self.model.most_similar(target_word, topn=30)
+            # Estrai solo le stringhe
+            candidates = [word for word, sim in similar_words]
+        except Exception as e:
+            logger.error(f"Errore most_similar per {target_word}: {e}")
+            # Fallback se fallisce (es. parola non nel modello)
+            return self.start_new_shot_game()
+
+        # 3. Seleziona 5 parole casuali dalle 30
+        if len(candidates) < 5:
+             # Se per qualche motivo ne abbiamo meno di 5, riprova
+             return self.start_new_shot_game()
+             
+        clue_words = random.sample(candidates, 5)
+        
+        # 4. Genera ID e salva stato
+        game_id = str(uuid.uuid4())
+        self.active_shot_games[game_id] = target_word
+        
+        # Opzionale: pulizia vecchie partite se troppe
+        if len(self.active_shot_games) > 1000:
+            # Rimuovi una a caso (semplice garbage collection)
+            self.active_shot_games.pop(next(iter(self.active_shot_games)))
+            
+        return {
+            "game_id": game_id,
+            "clue_words": clue_words,
+            "target_word": target_word # Solo per debug/log
+        }
+
+    def check_shot_guess(self, game_id: str, guess: str) -> Dict:
+        """Verifica un tentativo Shot"""
+        if game_id not in self.active_shot_games:
+            raise HTTPException(status_code=404, detail="Partita non trovata o scaduta")
+            
+        target_word = self.active_shot_games[game_id]
+        guess = guess.strip().lower()
+        
+        is_correct = (guess == target_word)
+        
+        result = {
+            "correct": is_correct,
+            "message": "Hai indovinato! 🎉" if is_correct else "Non è la parola corretta."
+        }
+        
+        if is_correct:
+            result["target_word"] = target_word
+            # Rimuovi partita attiva? O lasciala per permettere refresh?
+            # Meglio lasciarla o rimuoverla dopo un po'. Per ora lasciamo.
+            del self.active_shot_games[game_id]
+            
+        return result
     
     def get_daily_word(self, date_str: Optional[str] = None) -> str:
         """Ottiene la parola del giorno (deterministica basata su data)"""
@@ -242,6 +335,7 @@ async def startup_event():
     """Inizializza il gioco al avvio del server"""
     try:
         game_manager.load_model()
+        game_manager.load_shot_words()
         logger.info("✅ Server pronto!")
     except Exception as e:
         logger.error(f"❌ Errore durante inizializzazione: {e}")
@@ -258,7 +352,11 @@ async def root():
             "stats": "/stats",
             "daily_word_info": "/daily-word-info",
             "guess": "/guess (POST)",
+            "daily_word_info": "/daily-word-info",
+            "guess": "/guess (POST)",
             "hint": "/hint/{date}",
+            "shot_new_game": "/shot/new-game (POST)",
+            "shot_guess": "/shot/guess (POST)",
         }
     }
 
@@ -401,6 +499,25 @@ async def get_hint_debug(date: str, top_n: int = 5):
         "hints": hints,
         "note": "Queste sono le parole più vicine alla soluzione"
     }
+
+@app.post("/shot/new-game", response_model=ShotNewGameResponse)
+async def shot_new_game():
+    """Avvia una nuova partita Shot"""
+    game_data = game_manager.start_new_shot_game()
+    return ShotNewGameResponse(
+        game_id=game_data["game_id"],
+        clue_words=game_data["clue_words"]
+    )
+
+@app.post("/shot/guess", response_model=ShotGuessResponse)
+async def shot_guess(request: ShotGuessRequest):
+    """Valuta un tentativo Shot"""
+    result = game_manager.check_shot_guess(request.game_id, request.guess)
+    return ShotGuessResponse(
+        correct=result["correct"],
+        target_word=result.get("target_word"),
+        message=result["message"]
+    )
 
 @app.get("/health")
 async def health_check():

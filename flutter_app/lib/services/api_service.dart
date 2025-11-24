@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/game_models.dart';
+import '../models/shot_models.dart';
 
 /// Service per comunicare con il backend FastAPI
 class ApiService {
@@ -8,6 +9,8 @@ class ApiService {
   // static const String baseUrl = 'http://localhost:8000';
   // Per testing su dispositivo fisico Android nella stessa rete WiFi:
   static const String baseUrl = 'https://semantico.duckdns.org';
+  // static const String baseUrl = 'http://localhost:8000';
+  // static const String baseUrl = 'http://192.168.1.102:8000';
 
   // Per testing su dispositivo fisico Android, usa:
   // static const String baseUrl = 'http://10.0.2.2:8000';
@@ -127,6 +130,46 @@ class ApiService {
       return null;
     } catch (e) {
       print('❌ Errore getHints: $e');
+      return null;
+    }
+  }
+    /// Avvia una nuova partita Shot
+  Future<ShotGame?> startNewShotGame() async {
+    try {
+      final response = await http.post(
+        Uri.parse('$baseUrl/shot/new-game'),
+      );
+
+      if (response.statusCode == 200) {
+        final data = json.decode(utf8.decode(response.bodyBytes));
+        return ShotGame.fromJson(data);
+      }
+      return null;
+    } catch (e) {
+      print('❌ Errore startNewShotGame: $e');
+      return null;
+    }
+  }
+
+  /// Invia un tentativo Shot
+  Future<ShotGuessResult?> makeShotGuess(String gameId, String word) async {
+    try {
+      final response = await http.post(
+        Uri.parse('$baseUrl/shot/guess'),
+        headers: {'Content-Type': 'application/json; charset=utf-8'},
+        body: json.encode({
+          'game_id': gameId,
+          'guess': word,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final data = json.decode(utf8.decode(response.bodyBytes));
+        return ShotGuessResult.fromJson(data);
+      }
+      return null;
+    } catch (e) {
+      print('❌ Errore makeShotGuess: $e');
       return null;
     }
   }

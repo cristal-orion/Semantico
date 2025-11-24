@@ -13,6 +13,17 @@ class PopTheme {
   static Color get magenta =>
       isDarkMode ? const Color(0xFFC2185B) : const Color(0xFFE91E63); // Darker Pink
   
+  static Color get orange =>
+      isDarkMode ? const Color(0xFFE65100) : const Color(0xFFFF9800);
+  static Color get blue =>
+      isDarkMode ? const Color(0xFF1565C0) : const Color(0xFF2196F3);
+  static Color get green =>
+      isDarkMode ? const Color(0xFF2E7D32) : const Color(0xFF4CAF50);
+  static Color get red =>
+      isDarkMode ? const Color(0xFFC62828) : const Color(0xFFF44336);
+  static Color get grey =>
+      isDarkMode ? const Color(0xFF424242) : const Color(0xFFE0E0E0);
+  
   // In Dark Mode, Black becomes White (for text/borders) and White becomes Black (for background)
   // In Dark Mode, Black becomes White (for text/borders) and White becomes Black (for background)
   static Color get black => isDarkMode ? const Color(0xFFE0E0E0) : Colors.black; // Off-white text
@@ -58,6 +69,8 @@ class PopTheme {
         color: black,
         letterSpacing: 1.0,
       );
+
+  static TextStyle get headingStyle => titleStyle;
 
   static TextStyle get bodyStyle => GoogleFonts.fredoka(
         fontSize: 16,
