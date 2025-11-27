@@ -2,7 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import '../theme/pop_theme.dart';
+import '../providers/auth_provider.dart';
 import 'game_screen.dart';
 
 class ArchiveScreen extends StatefulWidget {
@@ -19,10 +21,17 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   // Start date of the game (as defined in backend)
   final DateTime _startDate = DateTime(2025, 11, 1);
 
+  int? _userId;
+
   @override
   void initState() {
     super.initState();
-    _loadArchive();
+    // Get userId before async operation
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final auth = context.read<AuthProvider>();
+      _userId = auth.user?.id;
+      _loadArchive();
+    });
   }
 
   Future<void> _loadArchive() async {
@@ -30,12 +39,15 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     final now = DateTime.now();
     final List<Map<String, dynamic>> items = [];
 
+    // Use stored userId for correct storage key
+    final userKey = _userId != null ? 'user_${_userId}_' : 'guest_';
+
     // Iterate from today back to start date
     DateTime current = now;
     while (current.isAfter(_startDate) ||
         DateUtils.isSameDay(current, _startDate)) {
       final dateStr = DateFormat('yyyy-MM-dd').format(current);
-      final key = 'guesses_$dateStr';
+      final key = '${userKey}guesses_$dateStr';
       final saved = prefs.getString(key);
 
       bool played = false;

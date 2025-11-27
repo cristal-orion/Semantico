@@ -10,7 +10,7 @@ class HalftoneBackground extends StatefulWidget {
     super.key,
     required this.child,
     this.dotColor = const Color(0xFFE0E0E0), // Light grey dots
-    this.backgroundColor = PopTheme.white,
+    this.backgroundColor = const Color(0xFFFAFAFA), // PopTheme.white equivalent
   });
 
   @override

@@ -8,6 +8,10 @@ import '../services/api_service.dart';
 class GameProvider with ChangeNotifier {
   final ApiService _apiService = ApiService();
 
+  // Auth token for progress updates (set from outside)
+  String? authToken;
+  int? userId; // User ID for per-user guess storage
+
   // Stato del gioco
   List<GuessResult> _guesses = [];
   DailyWordInfo? _dailyWordInfo;
@@ -96,7 +100,9 @@ class GameProvider with ChangeNotifier {
 
     try {
       final prefs = await SharedPreferences.getInstance();
-      final key = 'guesses_$_currentDate';
+      // Include userId in key for per-user storage (fallback to 'guest' if not logged in)
+      final userKey = userId != null ? 'user_${userId}_' : 'guest_';
+      final key = '${userKey}guesses_$_currentDate';
       final saved = prefs.getString(key);
 
       if (saved != null) {
@@ -117,7 +123,9 @@ class GameProvider with ChangeNotifier {
 
     try {
       final prefs = await SharedPreferences.getInstance();
-      final key = 'guesses_$_currentDate';
+      // Include userId in key for per-user storage (fallback to 'guest' if not logged in)
+      final userKey = userId != null ? 'user_${userId}_' : 'guest_';
+      final key = '${userKey}guesses_$_currentDate';
       final encoded = json.encode(_guesses.map((e) => e.toJson()).toList());
       await prefs.setString(key, encoded);
     } catch (e) {
@@ -158,6 +166,9 @@ class GameProvider with ChangeNotifier {
 
       await _saveGuesses();
 
+      // Update progress on server if authenticated
+      await _updateProgress();
+
       _isLoading = false;
       notifyListeners();
       return true;
@@ -177,7 +188,8 @@ class GameProvider with ChangeNotifier {
 
     if (_currentDate != null) {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.remove('guesses_$_currentDate');
+      final userKey = userId != null ? 'user_${userId}_' : 'guest_';
+      await prefs.remove('${userKey}guesses_$_currentDate');
     }
 
     notifyListeners();
@@ -219,5 +231,33 @@ class GameProvider with ChangeNotifier {
     notifyListeners();
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isDarkMode', _isDarkMode);
+  }
+
+  /// Update progress on server for progress bar
+  Future<void> _updateProgress() async {
+    if (authToken == null || _currentDate == null) return;
+
+    // Calculate best rank
+    int bestRank = 999999;
+    for (final guess in _guesses) {
+      if (guess.valid && guess.rank != null && guess.rank! < bestRank) {
+        bestRank = guess.rank!;
+      }
+    }
+
+    try {
+      await _apiService.updateProgress(
+        token: authToken!,
+        gameDate: _currentDate!,
+        gameMode: 'daily',
+        bestRank: bestRank,
+        attempts: _guesses.length,
+        completed: _hasWon,
+        won: _hasWon,
+      );
+    } catch (e) {
+      // Ignore errors for progress updates
+      print('Error updating progress: $e');
+    }
   }
 }

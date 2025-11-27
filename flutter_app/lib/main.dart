@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'providers/game_provider.dart';
 import 'providers/theme_provider.dart';
 import 'providers/shot_provider.dart';
+import 'providers/auth_provider.dart';
 import 'screens/home_screen.dart';
 import 'theme/pop_theme.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => GameProvider()),
         ChangeNotifierProvider(create: (_) => ShotProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
       child: Consumer<GameProvider>(
         builder: (context, gameProvider, child) {

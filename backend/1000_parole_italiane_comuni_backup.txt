@@ -23,6 +23,7 @@ cratere
 leva
 medico
 aperto
+cristoforo
 fari
 prezzo
 versato
@@ -84,12 +85,14 @@ matita
 finta
 rotonda
 miniera
+eiffel
 padrino
 indipendente
 grosso
 diretto
 mista
 auguri
+maometto
 telefonica
 artificiale
 zampa
@@ -170,6 +173,7 @@ consiglio
 errore
 elementare
 assenso
+mentana
 anomala
 coltello
 movimento
@@ -199,7 +203,9 @@ agente
 metro
 guasta
 auto
+cannes
 abbronzante
+zurlì
 naturale
 malto
 libreria
@@ -237,8 +243,10 @@ nautico
 ombrellone
 giganti
 cavalli
+williams
 scopa
 pianeta
+turchina
 trionfale
 seconda
 prossimo
@@ -323,11 +331,13 @@ arancia
 pericolo
 visitare
 continente
+trevi
 cina
 assicurazione
 impiegato
 naufragio
 livello
+katrina
 tira
 drago
 solare
@@ -382,9 +392,11 @@ infinito
 carezza
 blindata
 toppa
+aladino
 appalto
 igienica
 carico
+uil
 termine
 piccante
 grazia
@@ -392,9 +404,11 @@ fuori
 straccia
 suono
 matrimonio
+vigia
 attesa
 riflesso
 ape
+cayenna
 pacco
 gonfiato
 adunata
@@ -447,6 +461,7 @@ pasqua
 vista
 rotto
 svizzero
+niagara
 indovino
 colpi
 soldato
@@ -458,6 +473,7 @@ mani
 biforcuta
 nano
 porta
+komodo
 valore
 abbraccio
 atleta
@@ -499,6 +515,7 @@ vigile
 disney
 spremuta
 parallelo
+jurassic
 presagio
 divina
 colpa
@@ -506,6 +523,7 @@ totale
 cadere
 neve
 pipa
+linus
 champagne
 secolo
 piuma
@@ -542,6 +560,7 @@ fisso
 pecora
 discoteca
 molesto
+rubamazzo
 postale
 marcia
 maggiore
@@ -564,12 +583,14 @@ intero
 repubblica
 don
 penisola
+tassametro
 salato
 meta
 api
 collina
 giri
 tennista
+raglio
 strumenti
 mettere
 palleggio
@@ -608,6 +629,7 @@ estate
 visivo
 turistico
 grotta
+walt
 quartiere
 sete
 fascia
@@ -631,6 +653,7 @@ traguardo
 flessibile
 saggio
 prescrivere
+zolletta
 cotta
 corso
 basket
@@ -640,6 +663,7 @@ testa
 allegria
 notizie
 sorpasso
+sahara
 box
 fumetti
 strato
@@ -654,6 +678,7 @@ colomba
 sorgere
 noia
 coccodrillo
+platone
 fondente
 ondoso
 botta
@@ -714,10 +739,12 @@ cenone
 siluro
 regno
 bambù
+scorsoio
 perdere
 corte
 amore
 disegno
+sgarbi
 sporco
 giorgio
 ginocchia
@@ -745,6 +772,7 @@ specchio
 vergogna
 acqua
 lunga
+cristalleria
 tarlo
 acuto
 pulcinella
@@ -754,6 +782,7 @@ chicco
 fragola
 pedalare
 torrenziale
+d'oro
 mal
 correre
 occhi
@@ -765,6 +794,7 @@ capo
 malattia
 porto
 luce
+cedrone
 bottiglia
 corda
 frutta
@@ -827,6 +857,7 @@ lama
 gomito
 gocce
 spirito
+conciare
 professionista
 orbita
 appetito
@@ -862,6 +893,7 @@ libera
 inaugurare
 profondo
 atlantico
+dorothy
 bussola
 purgatorio
 limone
@@ -894,6 +926,7 @@ nuovo
 vitale
 sfera
 rovescio
+guantone
 passaggio
 occhiello
 fisica
@@ -921,6 +954,7 @@ dorato
 rubare
 lanciatore
 lava
+tsè-tsè
 spada
 vita
 fango
@@ -967,6 +1001,7 @@ minore
 ricordi
 dente
 alfabetico
+d'ordine
 condizionata
 sotterraneo
 campagna
@@ -1057,11 +1092,14 @@ emergenza
 espansione
 carrabile
 grattugiare
+padulo
 rugby
 colore
 tratto
 fischio
 larga
+ustorio
+gracchiare
 rionale
 fritta
 vincente
@@ -1169,6 +1207,7 @@ stringere
 materia
 turbo
 ibrido
+affacciare
 infanzia
 centrale
 storico
@@ -1198,6 +1237,7 @@ notte
 tappeto
 guardie
 una
+shakespeare
 stare
 ascensore
 legno
@@ -1224,6 +1264,7 @@ piegare
 trave
 cambiamento
 pale
+sabatico
 volare
 denaro
 dormire
@@ -1233,6 +1274,7 @@ inglese
 menù
 eredità
 agro
+tarzan
 polare
 saltato
 retrovisore
@@ -1262,6 +1304,7 @@ mille
 banana
 diradare
 principe
+incartata
 confine
 tartari
 autista
@@ -1273,6 +1316,7 @@ petto
 gara
 racchetta
 traghetto
+ryan
 famosi
 fragoline
 abilità
@@ -1365,6 +1409,7 @@ operazioni
 castità
 giuda
 atomico
+mammola
 deserto
 onesto
 ricco
@@ -1487,6 +1532,7 @@ meccanico
 artificio
 calda
 compleanno
+caldarrosta
 votiva
 passare
 accettare
@@ -1509,6 +1555,7 @@ massimo
 altro
 vertice
 nobile
+antonelliana
 decollo
 ubriaco
 brodo
@@ -1524,6 +1571,7 @@ villaggio
 assegno
 risalita
 podio
+lourdes
 sale
 piedi
 scacchi
@@ -1542,6 +1590,7 @@ sospiri
 pulsante
 calice
 messa
+urlatrice
 ubiquità
 pastore
 finire
@@ -1570,6 +1619,7 @@ vergine
 stabilire
 vincere
 muti
+skandinava
 formica
 pinocchio
 farina
@@ -1595,6 +1645,7 @@ buco
 napoletana
 vigili
 botte
+halley
 angolo
 biglietto
 saluto
@@ -1636,11 +1687,13 @@ preghiera
 sostanza
 vecchio
 abbondanza
+biagi
 antica
 lattea
 volo
 flash
 vendere
+fellini
 babele
 cronaca
 pazienza
@@ -1664,6 +1717,7 @@ coreana
 geniale
 timbro
 pepe
+incarnita
 questione
 stalla
 strumento
@@ -1694,6 +1748,7 @@ profilo
 calcio
 soldi
 rumore
+peroni
 caffè
 donato
 via
@@ -1720,8 +1775,10 @@ speranza
 nonna
 arianna
 spiegare
+dundee
 soffio
 stomaco
+malesia
 vulcano
 tifare
 fischiare
@@ -1762,6 +1819,8 @@ piastra
 tradimento
 guardiani
 giurato
+nilo
+mercalli
 nucleare
 utente
 amico
@@ -1822,6 +1881,7 @@ fresca
 portatile
 mondo
 viola
+giulietta
 ragione
 rimbalzo
 stiro
@@ -2035,8 +2095,11 @@ quadrato
 gamba
 domani
 muro
+antartide
 sudare
+kansas
 indiano
+accavallare
 erba
 messaggera
 bolletta
@@ -2190,6 +2253,7 @@ santa
 birra
 mulino
 grani
+morgana
 maglia
 perso
 mente

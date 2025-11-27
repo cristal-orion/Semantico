@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 import '../providers/shot_provider.dart';
 import '../theme/pop_theme.dart';
 import '../widgets/shot_clue_card.dart';
+import '../widgets/shot_input.dart';
 import '../widgets/shot_stats_widget.dart';
 import '../widgets/shot_victory_dialog.dart';
+import '../widgets/vector_background.dart';
 
 class ShotGameScreen extends StatefulWidget {
   const ShotGameScreen({super.key});
@@ -14,9 +16,6 @@ class ShotGameScreen extends StatefulWidget {
 }
 
 class _ShotGameScreenState extends State<ShotGameScreen> {
-  final TextEditingController _controller = TextEditingController();
-  final FocusNode _focusNode = FocusNode();
-
   @override
   void initState() {
     super.initState();
@@ -29,56 +28,62 @@ class _ShotGameScreenState extends State<ShotGameScreen> {
     });
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    _focusNode.dispose();
-    super.dispose();
-  }
-
-  void _handleGuess() async {
-    final word = _controller.text.trim();
-    if (word.isEmpty) return;
-
+  void _handleGuess(String word) async {
     final provider = context.read<ShotProvider>();
     final result = await provider.makeGuess(word);
 
-    if (result != null) {
-      _controller.clear();
-      _focusNode.requestFocus();
-
-      if (result.correct && mounted) {
-        showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (context) => ShotVictoryDialog(
-            targetWord: result.targetWord ?? word,
-            onNewGame: () {
-              provider.startNewGame();
-            },
-          ),
-        );
-      } else {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(result.message),
-              backgroundColor: PopTheme.red,
-              duration: const Duration(seconds: 1),
-            ),
-          );
-        }
-      }
+    if (result != null && result.correct && mounted) {
+      // Solo quando vince chiudiamo la tastiera e mostriamo il dialog
+      FocusScope.of(context).unfocus();
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => ShotVictoryDialog(
+          targetWord: result.targetWord ?? word,
+          onNewGame: () {
+            provider.startNewGame();
+          },
+        ),
+      );
     }
+  }
+
+  void _showSkipDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Arrenditi?', style: PopTheme.headingStyle),
+        content: Text(
+          'Vuoi saltare questa parola?\nLa partita verrà contata come non completata.',
+          style: PopTheme.bodyStyle,
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Annulla', style: PopTheme.bodyStyle),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              Navigator.pop(context);
+              final provider = context.read<ShotProvider>();
+              await provider.skipGame();
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: PopTheme.magenta,
+            ),
+            child: Text('Salta', style: PopTheme.bodyStyle.copyWith(color: PopTheme.white)),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PopTheme.white,
       appBar: AppBar(
         title: Text('SHOT MODE', style: PopTheme.headingStyle),
-        backgroundColor: PopTheme.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
@@ -86,6 +91,15 @@ class _ShotGameScreenState extends State<ShotGameScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
+          // Pulsante Skip
+          IconButton(
+            icon: Icon(Icons.skip_next_rounded, color: PopTheme.black),
+            onPressed: () {
+              _showSkipDialog(context);
+            },
+            tooltip: 'Salta parola',
+          ),
+          // Pulsante Statistiche
           IconButton(
             icon: Icon(Icons.bar_chart, color: PopTheme.black),
             onPressed: () {
@@ -100,34 +114,49 @@ class _ShotGameScreenState extends State<ShotGameScreen> {
                 ),
               );
             },
+            tooltip: 'Statistiche',
           ),
         ],
       ),
+      backgroundColor: PopTheme.cyan,
       body: Consumer<ShotProvider>(
         builder: (context, provider, child) {
+          // Mostra loading completo SOLO al primo caricamento
           if (provider.isLoading && provider.currentGame == null) {
-            return Center(child: CircularProgressIndicator(color: PopTheme.black));
-          }
-
-          if (provider.currentGame == null) {
-            return Center(
-              child: ElevatedButton(
-                onPressed: () => provider.startNewGame(),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: PopTheme.blue,
-                  foregroundColor: PopTheme.white,
-                ),
-                child: const Text('INIZIA PARTITA'),
+            return const Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 16),
+                  Text('Caricamento gioco...',
+                      style: TextStyle(fontWeight: FontWeight.w500)),
+                ],
               ),
             );
           }
 
-          return Column(
-            children: [
-              // Area Indizi
-              Expanded(
-                flex: 3,
-                child: Center(
+          if (provider.currentGame == null) {
+            return Center(child: CircularProgressIndicator(color: PopTheme.black));
+          }
+
+          // USA SafeArea come GameScreen
+          return SafeArea(
+            child: Column(
+              children: [
+                // 1. INPUT FIELD (In alto)
+                Container(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                  color: PopTheme.white,
+                  child: ShotInput(
+                    onSubmit: _handleGuess,
+                    isLoading: provider.isLoading,
+                  ),
+                ),
+
+                // 2. Area Indizi
+                Expanded(
+                  flex: 2,
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.all(16),
                     child: Wrap(
@@ -144,117 +173,51 @@ class _ShotGameScreenState extends State<ShotGameScreen> {
                     ),
                   ),
                 ),
-              ),
 
-              // Area Tentativi
-              if (provider.guesses.isNotEmpty)
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 16),
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: PopTheme.grey,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: PopTheme.black),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'TENTATIVI:',
-                          style: PopTheme.bodyStyle.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
-                        Expanded(
-                          child: ListView.builder(
-                            itemCount: provider.guesses.length,
-                            itemBuilder: (context, index) {
-                              // Mostra in ordine inverso (più recente in alto)
-                              final guess = provider.guesses[provider.guesses.length - 1 - index];
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 2),
-                                child: Text(
-                                  guess,
-                                  style: PopTheme.bodyStyle.copyWith(
-                                    color: PopTheme.black.withOpacity(0.6),
-                                    decoration: TextDecoration.lineThrough,
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
-              // Area Input
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: PopTheme.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: PopTheme.black.withOpacity(0.1),
-                      offset: const Offset(0, -4),
-                      blurRadius: 10,
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: _controller,
-                        focusNode: _focusNode,
-                        decoration: InputDecoration(
-                          hintText: 'Indovina la parola...',
-                          hintStyle: PopTheme.bodyStyle.copyWith(color: Colors.grey),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: PopTheme.black, width: 2),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: PopTheme.black, width: 2),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: PopTheme.blue, width: 3),
-                          ),
-                          filled: true,
-                          fillColor: PopTheme.white,
-                        ),
-                        style: PopTheme.bodyStyle,
-                        textInputAction: TextInputAction.done,
-                        onSubmitted: (_) => _handleGuess(),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Container(
+                // 3. Area Tentativi - RESPONSIVE
+                if (provider.guesses.isNotEmpty)
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: PopTheme.green,
+                        color: PopTheme.grey,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: PopTheme.black, width: 2),
-                        boxShadow: [
-                          BoxShadow(
-                            color: PopTheme.black,
-                            offset: const Offset(2, 2),
-                            blurRadius: 0,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'TENTATIVI:',
+                            style: PopTheme.bodyStyle.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(height: 8),
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: provider.guesses.length,
+                              itemBuilder: (context, index) {
+                                final guess = provider.guesses[provider.guesses.length - 1 - index];
+                                return Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 2),
+                                  child: Text(
+                                    guess,
+                                    style: PopTheme.bodyStyle.copyWith(
+                                      color: PopTheme.black.withOpacity(0.6),
+                                      decoration: TextDecoration.lineThrough,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
                           ),
                         ],
                       ),
-                      child: IconButton(
-                        icon: Icon(Icons.send, color: PopTheme.white),
-                        onPressed: _handleGuess,
-                      ),
                     ),
-                  ],
-                ),
-              ),
-            ],
+                  ),
+              ],
+            ),
           );
         },
       ),

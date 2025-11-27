@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/game_provider.dart';
-import '../widgets/guess_input.dart';
-import '../widgets/guess_list.dart';
+import '../providers/auth_provider.dart';
 import '../widgets/guess_input.dart';
 import '../widgets/guess_list.dart';
 import '../widgets/victory_dialog.dart';
+import '../widgets/progress_bar_widget.dart';
+import '../services/api_service.dart';
 import '../theme/pop_theme.dart';
 import 'package:flutter/services.dart'; // For Clipboard
 
@@ -40,7 +41,12 @@ class _GameScreenState extends State<GameScreen> {
     super.initState();
     // Inizializza il gioco
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      context.read<GameProvider>().initialize(date: widget.date);
+      // Pass auth token and userId to game provider for progress updates and per-user storage
+      final auth = context.read<AuthProvider>();
+      final gameProvider = context.read<GameProvider>();
+      gameProvider.authToken = auth.token;
+      gameProvider.userId = auth.user?.id;
+      gameProvider.initialize(date: widget.date);
     });
   }
 
@@ -166,10 +172,37 @@ class _GameScreenState extends State<GameScreen> {
             return SafeArea(
               child: Column(
                 children: [
+                  // 0. PROGRESS BAR (sotto il titolo, prima dell'input)
+                  Consumer<AuthProvider>(
+                    builder: (context, auth, _) {
+                      final gameDate = gameProvider.dailyWordInfo?.date ??
+                          DateTime.now().toIso8601String().split('T')[0];
+
+                      // Calculate best rank from guesses
+                      int bestRank = 999999;
+                      for (final guess in gameProvider.guesses) {
+                        if (guess.valid && guess.rank != null && guess.rank! < bestRank) {
+                          bestRank = guess.rank!;
+                        }
+                      }
+
+                      return ProgressBarWidget(
+                        gameDate: gameDate,
+                        gameMode: 'daily',
+                        authToken: auth.token,
+                        currentUserId: auth.user?.id,
+                        currentUserBestRank: bestRank < 999999 ? bestRank : null,
+                        currentUserAvatar: auth.user?.avatarPath,
+                        currentUserName: auth.user?.username,
+                        showFriendsOnly: false,
+                      );
+                    },
+                  ),
+
                   // 1. INPUT FIELD (In alto)
                   if (!gameProvider.hasWon)
                     Container(
-                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
                       color: PopTheme.white,
                       child: GuessInput(
                         onSubmit: (word) async {

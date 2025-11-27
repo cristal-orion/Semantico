@@ -79,27 +79,51 @@ class ShotProvider with ChangeNotifier {
     }
   }
 
-  Future<void> _updateStats({required bool won}) async {
-    int newStreak = won ? _stats.currentStreak + 1 : 0;
-    int maxStreak = newStreak > _stats.maxStreak ? newStreak : _stats.maxStreak;
-    
-    // Calcolo nuova media tentativi (approssimata per semplicità)
-    // Media = ((Media * (Giocate-1)) + TentativiAttuali) / Giocate
-    // Ma qui è complicato perché aggiorniamo solo alla vittoria.
-    // Semplifichiamo: aggiorniamo media solo se vinto
-    
-    double newAvg = _stats.averageGuesses;
-    if (won) {
-       double totalGuesses = (_stats.averageGuesses * _stats.gamesWon) + _guesses.length;
-       newAvg = totalGuesses / (_stats.gamesWon + 1);
-    }
+  // Skip/Arrenditi alla partita corrente
+  Future<void> skipGame() async {
+    if (_currentGame == null) return;
 
     _stats = _stats.copyWith(
-      gamesPlayed: _stats.gamesPlayed + 1, // Conta partita finita
-      gamesWon: won ? _stats.gamesWon + 1 : _stats.gamesWon,
-      currentStreak: newStreak,
-      maxStreak: maxStreak,
+      totalGames: _stats.totalGames + 1,
+      gamesSkipped: _stats.gamesSkipped + 1,
+      fastWinStreak: 0, // Reset streak quando skippiamo
+    );
+
+    await _storageService.saveStats(_stats);
+
+    // Inizia nuova partita
+    await startNewGame();
+  }
+
+  Future<void> _updateStats({required bool won}) async {
+    if (!won) return; // Non aggiorniamo statistiche se non ha vinto
+
+    final numGuesses = _guesses.length;
+
+    // Calcola nuova media tentativi
+    double totalGuesses = (_stats.averageGuesses * _stats.gamesWon) + numGuesses;
+    double newAvg = totalGuesses / (_stats.gamesWon + 1);
+
+    // Aggiorna best/worst performance
+    int newBest = _stats.bestPerformance == 0
+        ? numGuesses
+        : (numGuesses < _stats.bestPerformance ? numGuesses : _stats.bestPerformance);
+    int newWorst = numGuesses > _stats.worstPerformance ? numGuesses : _stats.worstPerformance;
+
+    // Calcola fast win streak (vittorie con ≤5 tentativi)
+    int newFastStreak = numGuesses <= 5 ? _stats.fastWinStreak + 1 : 0;
+    int newMaxFastStreak = newFastStreak > _stats.maxFastWinStreak
+        ? newFastStreak
+        : _stats.maxFastWinStreak;
+
+    _stats = _stats.copyWith(
+      totalGames: _stats.totalGames + 1,
+      gamesWon: _stats.gamesWon + 1,
       averageGuesses: newAvg,
+      bestPerformance: newBest,
+      worstPerformance: newWorst,
+      fastWinStreak: newFastStreak,
+      maxFastWinStreak: newMaxFastStreak,
     );
 
     await _storageService.saveStats(_stats);

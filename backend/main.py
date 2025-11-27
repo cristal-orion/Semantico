@@ -7,6 +7,7 @@ Gestisce il modello FastText e la logica del gioco
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional, List, Dict
 import uvicorn
@@ -16,6 +17,13 @@ import os
 from gensim.models import KeyedVectors
 import numpy as np
 import logging
+
+# Import database and auth
+from database import init_db
+from routers.auth_router import router as auth_router
+from routers.users_router import router as users_router
+from routers.game_router import router as game_router
+from routers.friends_router import router as friends_router
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -36,6 +44,19 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(auth_router)
+app.include_router(users_router)
+app.include_router(game_router)
+app.include_router(friends_router)
+
+# Create uploads directory for avatars
+UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+# Serve static files (avatars)
+app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 # Modelli Pydantic per richieste/risposte
 class GuessRequest(BaseModel):
@@ -89,7 +110,7 @@ class GameManager:
         self.vocab = None
         self.daily_words = []  # Lista di parole per ogni giorno
         self.rankings_cache = {}  # Cache dei ranking pre-calcolati
-        self.shot_words = []  # Lista di 300 parole per gioco Shot
+        self.shot_word_database = []  # Database di parole con indizi per gioco Shot
         self.active_shot_games = {}  # game_id -> target_word
         
     def load_model(self, model_path: str = "fasttext_it.model"):
@@ -161,57 +182,47 @@ class GameManager:
             self.daily_words = common_words[:1000]
             logger.info(f"✅ Generate {len(self.daily_words)} parole giornaliere")
 
-    def load_shot_words(self, words_file: str = "shot_words.txt"):
-        """Carica lista di 300 parole per il gioco Shot"""
-        if os.path.exists(words_file):
-            with open(words_file, 'r', encoding='utf-8') as f:
-                self.shot_words = [line.strip().lower() for line in f if line.strip()]
-            logger.info(f"✅ Caricate {len(self.shot_words)} parole Shot")
+    def load_shot_words(self, database_file: str = "shot_words_database.json"):
+        """Carica il database di parole con indizi per il gioco Shot"""
+        import json
+
+        if os.path.exists(database_file):
+            with open(database_file, 'r', encoding='utf-8') as f:
+                self.shot_word_database = json.load(f)
+            logger.info(f"✅ Caricato database Shot con {len(self.shot_word_database)} parole")
         else:
-            logger.warning(f"⚠️ File '{words_file}' non trovato!")
-            self.shot_words = []
+            logger.warning(f"⚠️ File '{database_file}' non trovato!")
+            self.shot_word_database = []
 
     def start_new_shot_game(self) -> Dict:
         """Avvia una nuova partita Shot"""
         import uuid
         import random
-        
-        if not self.shot_words:
-            raise HTTPException(status_code=500, detail="Lista parole Shot non caricata")
-            
-        # 1. Seleziona parola target
-        target_word = random.choice(self.shot_words)
-        
-        # 2. Trova le 30 parole più vicine
-        try:
-            similar_words = self.model.most_similar(target_word, topn=30)
-            # Estrai solo le stringhe
-            candidates = [word for word, sim in similar_words]
-        except Exception as e:
-            logger.error(f"Errore most_similar per {target_word}: {e}")
-            # Fallback se fallisce (es. parola non nel modello)
-            return self.start_new_shot_game()
 
-        # 3. Seleziona 5 parole casuali dalle 30
-        if len(candidates) < 5:
-             # Se per qualche motivo ne abbiamo meno di 5, riprova
-             return self.start_new_shot_game()
-             
-        clue_words = random.sample(candidates, 5)
-        
-        # 4. Genera ID e salva stato
+        if not self.shot_word_database:
+            raise HTTPException(status_code=500, detail="Database parole Shot non caricato")
+
+        # 1. Seleziona una entry casuale dal database (già con target e indizi)
+        word_entry = random.choice(self.shot_word_database)
+
+        target_word = word_entry['target'].lower()
+        clue_words = [clue.upper() for clue in word_entry['clues']]
+
+        # 2. Genera ID e salva stato
         game_id = str(uuid.uuid4())
         self.active_shot_games[game_id] = target_word
-        
-        # Opzionale: pulizia vecchie partite se troppe
+
+        # 3. Opzionale: pulizia vecchie partite se troppe
         if len(self.active_shot_games) > 1000:
             # Rimuovi una a caso (semplice garbage collection)
             self.active_shot_games.pop(next(iter(self.active_shot_games)))
-            
+
+        logger.info(f"🎮 Nuova partita Shot: {game_id} -> {target_word.upper()}")
+
         return {
             "game_id": game_id,
             "clue_words": clue_words,
-            "target_word": target_word # Solo per debug/log
+            "target_word": target_word  # Solo per debug/log
         }
 
     def check_shot_guess(self, game_id: str, guess: str) -> Dict:
@@ -334,6 +345,10 @@ game_manager = GameManager()
 async def startup_event():
     """Inizializza il gioco al avvio del server"""
     try:
+        # Initialize database
+        init_db()
+        logger.info("✅ Database inizializzato!")
+
         game_manager.load_model()
         game_manager.load_shot_words()
         logger.info("✅ Server pronto!")

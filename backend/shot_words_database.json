@@ -1,0 +1,6932 @@
+[
+  {
+    "target": "CARTA",
+    "clues": [
+      "FORBICE",
+      "IGIENICA",
+      "IDENTITÀ",
+      "CREDITO",
+      "STRACCIA"
+    ]
+  },
+  {
+    "target": "PUNTO",
+    "clues": [
+      "VISTA",
+      "FERMO",
+      "CROCE",
+      "VENDITA",
+      "ESCLAMATIVO"
+    ]
+  },
+  {
+    "target": "CHIAVE",
+    "clues": [
+      "SOL",
+      "VOLTA",
+      "LETTURA",
+      "INGLESE",
+      "SUCCESSO"
+    ]
+  },
+  {
+    "target": "TESTA",
+    "clues": [
+      "CODA",
+      "CALDA",
+      "GIÙ",
+      "COLPO",
+      "SPALLE"
+    ]
+  },
+  {
+    "target": "MANO",
+    "clues": [
+      "SECONDA",
+      "LAVARE",
+      "FORZARE",
+      "PIEDE",
+      "OPERA"
+    ]
+  },
+  {
+    "target": "PIEDE",
+    "clues": [
+      "PORCO",
+      "LEVARE",
+      "SCARPA",
+      "MARTELLO",
+      "PARTENZA"
+    ]
+  },
+  {
+    "target": "CUORE",
+    "clues": [
+      "BATTERE",
+      "INFRANTO",
+      "SOLITARIO",
+      "SACRO",
+      "AMICO"
+    ]
+  },
+  {
+    "target": "NOTTE",
+    "clues": [
+      "BUONA",
+      "BIANCA",
+      "LEONI",
+      "STELLATA",
+      "PORTA"
+    ]
+  },
+  {
+    "target": "GIRO",
+    "clues": [
+      "VITE",
+      "MONDO",
+      "ITALIA",
+      "BOA",
+      "AFFARI"
+    ]
+  },
+  {
+    "target": "TEMPO",
+    "clues": [
+      "LIBERO",
+      "DENARO",
+      "PREVISIONI",
+      "PERSO",
+      "REALE"
+    ]
+  },
+  {
+    "target": "ACQUA",
+    "clues": [
+      "SAPONE",
+      "BOCCA",
+      "ROSE",
+      "PASSATA",
+      "DOLCE"
+    ]
+  },
+  {
+    "target": "FUOCO",
+    "clues": [
+      "LENTO",
+      "PAGLIA",
+      "ARTIFICIO",
+      "VIGILI",
+      "FATUO"
+    ]
+  },
+  {
+    "target": "ARIA",
+    "clues": [
+      "CONDIZIONATA",
+      "APERTA",
+      "FRITTA",
+      "CAMBIARE",
+      "VIGIA"
+    ]
+  },
+  {
+    "target": "TERRA",
+    "clues": [
+      "FERMA",
+      "COTTA",
+      "MEZZO",
+      "PIATTA",
+      "FUOCO"
+    ]
+  },
+  {
+    "target": "SOLE",
+    "clues": [
+      "LEONE",
+      "OCCHIALI",
+      "PIATTI",
+      "RAGGIO",
+      "SORGERE"
+    ]
+  },
+  {
+    "target": "LUNA",
+    "clues": [
+      "MIELE",
+      "PIENA",
+      "STORTO",
+      "POZZO",
+      "PARK"
+    ]
+  },
+  {
+    "target": "STELLA",
+    "clues": [
+      "CADENTE",
+      "POLARE",
+      "MARINA",
+      "ALBERGO",
+      "CINEMA"
+    ]
+  },
+  {
+    "target": "MARE",
+    "clues": [
+      "SALE",
+      "ONDA",
+      "FORZA",
+      "PORTO",
+      "ROSSO"
+    ]
+  },
+  {
+    "target": "MONTE",
+    "clues": [
+      "BIANCO",
+      "PREMI",
+      "PEGNO",
+      "ORE",
+      "SACRO"
+    ]
+  },
+  {
+    "target": "NEVE",
+    "clues": [
+      "BIANCA",
+      "PALLA",
+      "UOMO",
+      "CATENE",
+      "CADERE"
+    ]
+  },
+  {
+    "target": "PIANO",
+    "clues": [
+      "FORTE",
+      "TERRA",
+      "BATTAGLIA",
+      "STUDI",
+      "COTTURA"
+    ]
+  },
+  {
+    "target": "SCALA",
+    "clues": [
+      "MOBILE",
+      "REALE",
+      "GRIGI",
+      "MERCALLI",
+      "CHIOCCIOLA"
+    ]
+  },
+  {
+    "target": "FONDO",
+    "clues": [
+      "SCHIENA",
+      "BARILE",
+      "CORSA",
+      "CAFFÈ",
+      "INVESTIMENTO"
+    ]
+  },
+  {
+    "target": "LINEA",
+    "clues": [
+      "RETTA",
+      "VERDE",
+      "FEBBRE",
+      "CADUTA",
+      "DIFESA"
+    ]
+  },
+  {
+    "target": "ANGOLO",
+    "clues": [
+      "GIRO",
+      "COTTURA",
+      "ACUTO",
+      "CALCIO",
+      "VISUALE"
+    ]
+  },
+  {
+    "target": "CENTRO",
+    "clues": [
+      "MIRINO",
+      "STORICO",
+      "TAVOLA",
+      "COMMERCIALE",
+      "BENESSERE"
+    ]
+  },
+  {
+    "target": "MEZZO",
+    "clues": [
+      "FINE",
+      "BUSTO",
+      "TRASPORTO",
+      "GAUDIO",
+      "TERMINI"
+    ]
+  },
+  {
+    "target": "CAPO",
+    "clues": [
+      "ANNO",
+      "GABINETTO",
+      "LAVORO",
+      "FILO",
+      "SQUADRA"
+    ]
+  },
+  {
+    "target": "CODA",
+    "clues": [
+      "PAGLIA",
+      "PIANOFORTE",
+      "OCCHIO",
+      "ROSPO",
+      "VESTITO"
+    ]
+  },
+  {
+    "target": "BANCO",
+    "clues": [
+      "SCUOLA",
+      "PROVA",
+      "PESCE",
+      "VINCERE",
+      "IMPUTATI"
+    ]
+  },
+  {
+    "target": "RETE",
+    "clues": [
+      "MATERASSO",
+      "PESCATORI",
+      "SOCIALE",
+      "INTERNET",
+      "GOL"
+    ]
+  },
+  {
+    "target": "CAMPO",
+    "clues": [
+      "MINATO",
+      "VISIVO",
+      "SANTO",
+      "CALCIO",
+      "GRANO"
+    ]
+  },
+  {
+    "target": "POSTO",
+    "clues": [
+      "FISSO",
+      "SOLE",
+      "BLOCCO",
+      "TAVOLA",
+      "GUIDA"
+    ]
+  },
+  {
+    "target": "GIOCO",
+    "clues": [
+      "AZZARDO",
+      "FORZA",
+      "REGOLE",
+      "PARTITA",
+      "CARTE"
+    ]
+  },
+  {
+    "target": "FILO",
+    "clues": [
+      "DISCORSO",
+      "RASOIO",
+      "ARIANNA",
+      "PERLE",
+      "DIRETTO"
+    ]
+  },
+  {
+    "target": "NODO",
+    "clues": [
+      "GOLA",
+      "PETTINE",
+      "CRAVATTA",
+      "SAVOIA",
+      "SCORSOIO"
+    ]
+  },
+  {
+    "target": "BUSTA",
+    "clues": [
+      "PAGA",
+      "LETTERA",
+      "SPESA",
+      "SORPRESA",
+      "PLASTICA"
+    ]
+  },
+  {
+    "target": "CORDA",
+    "clues": [
+      "PAZZA",
+      "VIOLINO",
+      "SALTARE",
+      "DARE",
+      "SPEZZARE"
+    ]
+  },
+  {
+    "target": "LIBRO",
+    "clues": [
+      "CUORE",
+      "APERTO",
+      "SOGNI",
+      "PAGINA",
+      "GIUNGLA"
+    ]
+  },
+  {
+    "target": "CASA",
+    "clues": [
+      "DOLCE",
+      "BIANCA",
+      "RIPOSO",
+      "GIOCO",
+      "CURA"
+    ]
+  },
+  {
+    "target": "ORA",
+    "clues": [
+      "LEGALE",
+      "PUNTA",
+      "BUCA",
+      "QUARTO",
+      "MILLA"
+    ]
+  },
+  {
+    "target": "ANNO",
+    "clues": [
+      "NUOVO",
+      "ZERO",
+      "LUCE",
+      "SABATICO",
+      "BISESTILE"
+    ]
+  },
+  {
+    "target": "FINE",
+    "clues": [
+      "SETTIMANA",
+      "MONDO",
+      "LIETO",
+      "MEZZI",
+      "ULTIMO"
+    ]
+  },
+  {
+    "target": "INIZIO",
+    "clues": [
+      "PARTENZA",
+      "FINE",
+      "ANNO",
+      "LAVORI",
+      "SECOLO"
+    ]
+  },
+  {
+    "target": "STORIA",
+    "clues": [
+      "INFINITA",
+      "ARTE",
+      "MAESTRA",
+      "VERA",
+      "AMORE"
+    ]
+  },
+  {
+    "target": "PARTE",
+    "clues": [
+      "ALTRA",
+      "LEONE",
+      "DUE",
+      "RECITARE",
+      "PRENDERE"
+    ]
+  },
+  {
+    "target": "MODO",
+    "clues": [
+      "DIRE",
+      "MONDO",
+      "GIUSTO",
+      "TROVARE",
+      "VERBO"
+    ]
+  },
+  {
+    "target": "SENSO",
+    "clues": [
+      "UNICO",
+      "VIETATO",
+      "ORARIO",
+      "SESTO",
+      "COLPA"
+    ]
+  },
+  {
+    "target": "RAGIONE",
+    "clues": [
+      "TORTO",
+      "DARE",
+      "SENTIRE",
+      "STATO",
+      "FORZA"
+    ]
+  },
+  {
+    "target": "TORTO",
+    "clues": [
+      "COLLO",
+      "RAGIONE",
+      "MARCIO",
+      "SUBIRE",
+      "DIRITTO"
+    ]
+  },
+  {
+    "target": "PASSO",
+    "clues": [
+      "LUNGO",
+      "FALSO",
+      "UOMO",
+      "CARRABILE",
+      "DOPPIO"
+    ]
+  },
+  {
+    "target": "SALTO",
+    "clues": [
+      "LUNGO",
+      "OSTACOLI",
+      "QUALITÀ",
+      "BUIO",
+      "QUAGLIA"
+    ]
+  },
+  {
+    "target": "BALLO",
+    "clues": [
+      "SALA",
+      "MASCHERA",
+      "MATTONE",
+      "GIOCO",
+      "DEBUTTANTI"
+    ]
+  },
+  {
+    "target": "CANTO",
+    "clues": [
+      "GALLO",
+      "CIGNO",
+      "GREGORIANO",
+      "NATALE",
+      "DANTE"
+    ]
+  },
+  {
+    "target": "VOCE",
+    "clues": [
+      "ALTA",
+      "BIANCA",
+      "CAPITOLO",
+      "VERBO",
+      "CORRERE"
+    ]
+  },
+  {
+    "target": "SGUARDO",
+    "clues": [
+      "COLPO",
+      "FISSO",
+      "BASSO",
+      "INTESA",
+      "GHIACCIO"
+    ]
+  },
+  {
+    "target": "GESTO",
+    "clues": [
+      "ATLETICO",
+      "INSANO",
+      "NOBILE",
+      "MANO",
+      "ESTREMO"
+    ]
+  },
+  {
+    "target": "PENSIERO",
+    "clues": [
+      "FISSO",
+      "LIBERO",
+      "STUPENDO",
+      "VELOCE",
+      "LEGGERE"
+    ]
+  },
+  {
+    "target": "RICORDO",
+    "clues": [
+      "FOTO",
+      "BENE",
+      "VAGO",
+      "SOUVENIR",
+      "MEMORIA"
+    ]
+  },
+  {
+    "target": "ALTO",
+    "clues": [
+      "BASSO",
+      "MARE",
+      "TRADIMENTO",
+      "PIANO",
+      "MANI"
+    ]
+  },
+  {
+    "target": "BASSO",
+    "clues": [
+      "ALTO",
+      "COLPO",
+      "PROFILO",
+      "PREZZO",
+      "IMPATTO"
+    ]
+  },
+  {
+    "target": "PIENO",
+    "clues": [
+      "VUOTO",
+      "BENZINA",
+      "CENTRO",
+      "ZEPPO",
+      "REGIME"
+    ]
+  },
+  {
+    "target": "VUOTO",
+    "clues": [
+      "RENDERE",
+      "PERDERE",
+      "SACCO",
+      "ASSEGNO",
+      "SPINTO"
+    ]
+  },
+  {
+    "target": "DOLCE",
+    "clues": [
+      "AMARO",
+      "VITA",
+      "FORNO",
+      "ACQUA",
+      "ATTESA"
+    ]
+  },
+  {
+    "target": "AMARO",
+    "clues": [
+      "BOCCA",
+      "RISO",
+      "LUCANO",
+      "CALICE",
+      "MEDICINA"
+    ]
+  },
+  {
+    "target": "FREDDO",
+    "clues": [
+      "SUDORE",
+      "DOCCIA",
+      "PIATTO",
+      "CANE",
+      "SANGUE"
+    ]
+  },
+  {
+    "target": "CALDO",
+    "clues": [
+      "BAGNO",
+      "CANE",
+      "TAVOLA",
+      "PUNTO",
+      "FRONTE"
+    ]
+  },
+  {
+    "target": "DURO",
+    "clues": [
+      "PANE",
+      "OSSO",
+      "MORIRE",
+      "VISO",
+      "LAVORO"
+    ]
+  },
+  {
+    "target": "MOLE",
+    "clues": [
+      "ANTONELLIANA",
+      "DENTE",
+      "QUANTITÀ",
+      "CHIMICA",
+      "LAVORO"
+    ]
+  },
+  {
+    "target": "UOVO",
+    "clues": [
+      "COLOMBO",
+      "PASQUA",
+      "SODO",
+      "GALLINA",
+      "PELO"
+    ]
+  },
+  {
+    "target": "FARINA",
+    "clues": [
+      "SACCO",
+      "BIANCA",
+      "GRANO",
+      "LIEVITO",
+      "MULINO"
+    ]
+  },
+  {
+    "target": "RISO",
+    "clues": [
+      "AMARO",
+      "PIANTO",
+      "ABBONDANZA",
+      "INSALATA",
+      "CHICCO"
+    ]
+  },
+  {
+    "target": "FORMAGGIO",
+    "clues": [
+      "GRATTUGIARE",
+      "BUCHI",
+      "TOPO",
+      "PERE",
+      "LATTE"
+    ]
+  },
+  {
+    "target": "CARNE",
+    "clues": [
+      "FUOCO",
+      "DEBOLE",
+      "TREMARE",
+      "MACELLAIO",
+      "OSSA"
+    ]
+  },
+  {
+    "target": "FRUTTA",
+    "clues": [
+      "MARE",
+      "SECCA",
+      "STAGIONE",
+      "CANDITA",
+      "GIACCHINO"
+    ]
+  },
+  {
+    "target": "PENTOLA",
+    "clues": [
+      "COPERCHIO",
+      "BOLLIRE",
+      "PRESSIONE",
+      "DIAVOLO",
+      "ORO"
+    ]
+  },
+  {
+    "target": "CUCCHIAIO",
+    "clues": [
+      "LEGNO",
+      "FORCHETTA",
+      "MINESTRA",
+      "RACCOGLIERE",
+      "BRODO"
+    ]
+  },
+  {
+    "target": "LUPO",
+    "clues": [
+      "FAME",
+      "BOSCO",
+      "CAPPUCCETTO",
+      "SOLITARIO",
+      "MARE"
+    ]
+  },
+  {
+    "target": "ORSO",
+    "clues": [
+      "POLARE",
+      "ABBRACCIO",
+      "MINORE",
+      "VENDERE",
+      "PELLE"
+    ]
+  },
+  {
+    "target": "VOLPE",
+    "clues": [
+      "UVA",
+      "FURBO",
+      "CODA",
+      "CACCIA",
+      "DESERTO"
+    ]
+  },
+  {
+    "target": "AQUILA",
+    "clues": [
+      "REALE",
+      "VISTA",
+      "TESTA",
+      "ROMANA",
+      "NIDO"
+    ]
+  },
+  {
+    "target": "SERPENTE",
+    "clues": [
+      "SENO",
+      "VELENO",
+      "INCANTATORE",
+      "MELA",
+      "STRISCIARE"
+    ]
+  },
+  {
+    "target": "RAGNO",
+    "clues": [
+      "TELA",
+      "UOMO",
+      "BUCO",
+      "ZAMPE",
+      "CAVATO"
+    ]
+  },
+  {
+    "target": "MOSCA",
+    "clues": [
+      "CIECA",
+      "BIANCA",
+      "TSÈ-TSÈ",
+      "ZITTA",
+      "NASO"
+    ]
+  },
+  {
+    "target": "APE",
+    "clues": [
+      "REGINA",
+      "MIELE",
+      "OPERAIA",
+      "MAYA",
+      "PUNGERE"
+    ]
+  },
+  {
+    "target": "FORMICA",
+    "clues": [
+      "CICALA",
+      "LAVORO",
+      "ATOMICA",
+      "COLONIA",
+      "ROSSA"
+    ]
+  },
+  {
+    "target": "ELEFANTE",
+    "clues": [
+      "MEMORIA",
+      "CRISTALLERIA",
+      "ZANNE",
+      "PROBOSCIDE",
+      "AFRICA"
+    ]
+  },
+  {
+    "target": "LEGNO",
+    "clues": [
+      "TESTA",
+      "TOCCO",
+      "CUCCHIAIO",
+      "GAMBA",
+      "TARLO"
+    ]
+  },
+  {
+    "target": "FERRO",
+    "clues": [
+      "CAVALLO",
+      "STIRO",
+      "FUOCO",
+      "BATTERE",
+      "MAGLIA"
+    ]
+  },
+  {
+    "target": "ORO",
+    "clues": [
+      "SILENZIO",
+      "COLATO",
+      "MEDAGLIA",
+      "ETÀ",
+      "MATTINO"
+    ]
+  },
+  {
+    "target": "ARGENTO",
+    "clues": [
+      "VIVO",
+      "NOZZE",
+      "MEDAGLIA",
+      "PIATTO",
+      "CAPELLI"
+    ]
+  },
+  {
+    "target": "PLASTICA",
+    "clues": [
+      "CHIRURGIA",
+      "BOTTIGLIA",
+      "ISOLA",
+      "SACCHETTO",
+      "FESTA"
+    ]
+  },
+  {
+    "target": "GOMMA",
+    "clues": [
+      "PUMA",
+      "MASTICARE",
+      "CANCELLARE",
+      "MURO",
+      "BUCATA"
+    ]
+  },
+  {
+    "target": "STOFFA",
+    "clues": [
+      "CAMPIONE",
+      "METRO",
+      "TAGLIARE",
+      "VENDERE",
+      "SARTORIA"
+    ]
+  },
+  {
+    "target": "LANA",
+    "clues": [
+      "CAPRA",
+      "GOMITOLO",
+      "PECORA",
+      "VETRO",
+      "BERRETTO"
+    ]
+  },
+  {
+    "target": "SETA",
+    "clues": [
+      "BACO",
+      "STRADA",
+      "PELLE",
+      "GUANTI",
+      "FILO"
+    ]
+  },
+  {
+    "target": "RE",
+    "clues": [
+      "GIORGIO",
+      "LEONE",
+      "SOLE",
+      "MAGI",
+      "NUDO"
+    ]
+  },
+  {
+    "target": "REGINA",
+    "clues": [
+      "ELISABETTA",
+      "SCACCHI",
+      "CUORI",
+      "API",
+      "MADRE"
+    ]
+  },
+  {
+    "target": "MEDICO",
+    "clues": [
+      "DOTTORE",
+      "FAMIGLIA",
+      "MELA",
+      "PRESCRIVERE",
+      "LEGALE"
+    ]
+  },
+  {
+    "target": "PADRE",
+    "clues": [
+      "SANTO",
+      "NOSTRO",
+      "PADRONE",
+      "ETERNO",
+      "FIGLIO"
+    ]
+  },
+  {
+    "target": "OCCHIO",
+    "clues": [
+      "CICLONE",
+      "BUE",
+      "MALOCCHIO",
+      "RIGUARDO",
+      "CODA"
+    ]
+  },
+  {
+    "target": "BOCCA",
+    "clues": [
+      "LUPO",
+      "STOMACO",
+      "VERITÀ",
+      "CUCITA",
+      "FUOCO"
+    ]
+  },
+  {
+    "target": "NASO",
+    "clues": [
+      "PINOCCHIO",
+      "LUNGO",
+      "PAGLIACCIO",
+      "SENSO",
+      "GOCCIOLARE"
+    ]
+  },
+  {
+    "target": "DENTE",
+    "clues": [
+      "AVVELENATO",
+      "GIUDIZIO",
+      "LEONE",
+      "BATTERE",
+      "OCCHIO"
+    ]
+  },
+  {
+    "target": "LINGUA",
+    "clues": [
+      "BIFORCUTA",
+      "STRANIERA",
+      "GATTO",
+      "TAGLIO",
+      "FUOCO"
+    ]
+  },
+  {
+    "target": "SPALLA",
+    "clues": [
+      "COMICO",
+      "ARMA",
+      "VOLTARE",
+      "FREDDA",
+      "LARGA"
+    ]
+  },
+  {
+    "target": "BRACCIO",
+    "clues": [
+      "FERRO",
+      "DESTRO",
+      "CORTO",
+      "SECCO",
+      "LEVA"
+    ]
+  },
+  {
+    "target": "GOMITO",
+    "clues": [
+      "ALZARE",
+      "OLIO",
+      "CONTATTO",
+      "PIEGA",
+      "TENNISTA"
+    ]
+  },
+  {
+    "target": "DITO",
+    "clues": [
+      "MEDIO",
+      "ANULARE",
+      "PIAGA",
+      "PUNTARE",
+      "LUNA"
+    ]
+  },
+  {
+    "target": "UNGHIA",
+    "clues": [
+      "INCARNITA",
+      "SMALTO",
+      "DENTI",
+      "CARNE",
+      "GATTO"
+    ]
+  },
+  {
+    "target": "PANCIA",
+    "clues": [
+      "PIENA",
+      "GAMBE",
+      "TERRA",
+      "ARIA",
+      "MAL"
+    ]
+  },
+  {
+    "target": "SCHIENA",
+    "clues": [
+      "DRITTA",
+      "COLTELLO",
+      "MURO",
+      "CARICO",
+      "NUOTO"
+    ]
+  },
+  {
+    "target": "GAMBA",
+    "clues": [
+      "TAVOLO",
+      "LUNGA",
+      "CORTO",
+      "ACCAVALLARE",
+      "TESA"
+    ]
+  },
+  {
+    "target": "GINOCCHIO",
+    "clues": [
+      "ROTULA",
+      "FLETTERE",
+      "PREGARE",
+      "PIEGARE",
+      "MENISCO"
+    ]
+  },
+  {
+    "target": "SANGUE",
+    "clues": [
+      "BLU",
+      "FREDDO",
+      "AMARO",
+      "TESTA",
+      "DONATORE"
+    ]
+  },
+  {
+    "target": "OSSO",
+    "clues": [
+      "BUCO",
+      "DURO",
+      "ROMPERE",
+      "CANE",
+      "SEPPIA"
+    ]
+  },
+  {
+    "target": "PELLE",
+    "clues": [
+      "OCA",
+      "AMICI",
+      "CONCIARE",
+      "SECONDA",
+      "NUDO"
+    ]
+  },
+  {
+    "target": "CAPELLI",
+    "clues": [
+      "DIAVOLO",
+      "BIANCHI",
+      "TAGLIO",
+      "RICCI",
+      "TIRARE"
+    ]
+  },
+  {
+    "target": "BARBA",
+    "clues": [
+      "NOIA",
+      "PAPÀ",
+      "BLU",
+      "FINTA",
+      "FATTA"
+    ]
+  },
+  {
+    "target": "COLLO",
+    "clues": [
+      "BOTTIGLIA",
+      "ALTO",
+      "TORCERE",
+      "ROMPE",
+      "PIEDE"
+    ]
+  },
+  {
+    "target": "PORTA",
+    "clues": [
+      "CALCIO",
+      "SFONDATA",
+      "FACCIA",
+      "AEREA",
+      "SERRATA"
+    ]
+  },
+  {
+    "target": "FINESTRA",
+    "clues": [
+      "CORTILE",
+      "MERCATO",
+      "LANCIARSI",
+      "APERTA",
+      "VETRO"
+    ]
+  },
+  {
+    "target": "TETTO",
+    "clues": [
+      "SCOTTA",
+      "MONDO",
+      "TEGOLA",
+      "SENZA",
+      "SOLARE"
+    ]
+  },
+  {
+    "target": "MURO",
+    "clues": [
+      "PIANTO",
+      "GOMMA",
+      "SUONO",
+      "DIVISORIO",
+      "SECCO"
+    ]
+  },
+  {
+    "target": "PAVIMENTO",
+    "clues": [
+      "PELVICO",
+      "LUCIDARE",
+      "PIASTRELLE",
+      "TOCCARE",
+      "LEGNO"
+    ]
+  },
+  {
+    "target": "SEDIA",
+    "clues": [
+      "ELETTRICA",
+      "GIREVOLE",
+      "ROTELLE",
+      "DONDOLO",
+      "GAMBE"
+    ]
+  },
+  {
+    "target": "TAVOLO",
+    "clues": [
+      "GIOCO",
+      "ROTONDA",
+      "CARTE",
+      "VERDE",
+      "PRENOTARE"
+    ]
+  },
+  {
+    "target": "LETTO",
+    "clues": [
+      "FIUME",
+      "RIFARE",
+      "CASTELLO",
+      "MALATO",
+      "MATRIMONIALE"
+    ]
+  },
+  {
+    "target": "CUSCINO",
+    "clues": [
+      "PIUME",
+      "DORMIRE",
+      "FEDERA",
+      "BATTAGLIA",
+      "TESTATA"
+    ]
+  },
+  {
+    "target": "COPERTA",
+    "clues": [
+      "LINUS",
+      "CORTA",
+      "LANA",
+      "PONTE",
+      "SCOPRIRE"
+    ]
+  },
+  {
+    "target": "SPECCHIO",
+    "clues": [
+      "RIFLESSO",
+      "ROMPERE",
+      "ALICE",
+      "ANIMA",
+      "USTORIO"
+    ]
+  },
+  {
+    "target": "QUADRO",
+    "clues": [
+      "ELETTRICO",
+      "DIPINTO",
+      "SVEDESE",
+      "COMANDO",
+      "CORNICE"
+    ]
+  },
+  {
+    "target": "OROLOGIO",
+    "clues": [
+      "BIOLOGICO",
+      "CUCÙ",
+      "POLSO",
+      "SABBIA",
+      "PENDOLO"
+    ]
+  },
+  {
+    "target": "TELEFONO",
+    "clues": [
+      "CASA",
+      "AZZURRO",
+      "SENZA",
+      "NUMERO",
+      "FISSO"
+    ]
+  },
+  {
+    "target": "COMPUTER",
+    "clues": [
+      "MOUSE",
+      "SCHERMO",
+      "VIRUS",
+      "PORTATILE",
+      "RETE"
+    ]
+  },
+  {
+    "target": "PENNA",
+    "clues": [
+      "SFERA",
+      "PAVONE",
+      "INDIANO",
+      "RIGATONI",
+      "STILO"
+    ]
+  },
+  {
+    "target": "MATITA",
+    "clues": [
+      "DISEGNO",
+      "CERA",
+      "TEMPERARE",
+      "GOMMA",
+      "TRATTO"
+    ]
+  },
+  {
+    "target": "COLTELLO",
+    "clues": [
+      "DENTI",
+      "PIAGA",
+      "SERRAMANICO",
+      "BURRO",
+      "TAGLIO"
+    ]
+  },
+  {
+    "target": "FORCHETTA",
+    "clues": [
+      "DENTI",
+      "COLTELLO",
+      "LINGUAGGIO",
+      "BUONA",
+      "ARROTOLARE"
+    ]
+  },
+  {
+    "target": "PIATTO",
+    "clues": [
+      "FONDO",
+      "PIANGERE",
+      "RICCO",
+      "FORTE",
+      "BILANCIA"
+    ]
+  },
+  {
+    "target": "BICCHIERE",
+    "clues": [
+      "MEZZO",
+      "TEMPESTA",
+      "STAFF",
+      "VETRO",
+      "ACQUA"
+    ]
+  },
+  {
+    "target": "BOTTIGLIA",
+    "clues": [
+      "MESSAGGIO",
+      "VETRO",
+      "PLASTICA",
+      "TAPPO",
+      "VERDE"
+    ]
+  },
+  {
+    "target": "TAPPO",
+    "clues": [
+      "CERUME",
+      "SUGHERO",
+      "CORONA",
+      "BASSO",
+      "SALTATO"
+    ]
+  },
+  {
+    "target": "LAMPADA",
+    "clues": [
+      "GENIO",
+      "ALADINO",
+      "ABBRONZANTE",
+      "TAVOLO",
+      "OLIO"
+    ]
+  },
+  {
+    "target": "LUCE",
+    "clues": [
+      "VELOCITÀ",
+      "SPENTA",
+      "VERDE",
+      "ANNO",
+      "BOLLETTA"
+    ]
+  },
+  {
+    "target": "INTERRUTTORE",
+    "clues": [
+      "ACCENDERE",
+      "LUCE",
+      "SCATTO",
+      "PREMERE",
+      "PARETE"
+    ]
+  },
+  {
+    "target": "SCATOLA",
+    "clues": [
+      "NERA",
+      "CARTONE",
+      "CHIUSA",
+      "STERZO",
+      "ROMPERE"
+    ]
+  },
+  {
+    "target": "VALIGIA",
+    "clues": [
+      "CARTONE",
+      "DIPLOMATICA",
+      "VIAGGIO",
+      "FARE",
+      "ROTELLE"
+    ]
+  },
+  {
+    "target": "BORSA",
+    "clues": [
+      "STUDIO",
+      "NERA",
+      "ACQUA",
+      "SPESA",
+      "VALORI"
+    ]
+  },
+  {
+    "target": "LEGGE",
+    "clues": [
+      "UGUALE",
+      "MARZIALE",
+      "INFRANGERE",
+      "DETTARE",
+      "MOSAICA"
+    ]
+  },
+  {
+    "target": "ORDINE",
+    "clues": [
+      "DISCIPLINA",
+      "PUBBLICO",
+      "ALFABETICO",
+      "ARRIVO",
+      "GIORNO"
+    ]
+  },
+  {
+    "target": "PACE",
+    "clues": [
+      "GUERRA",
+      "COLOMBA",
+      "PIPA",
+      "ETERNA",
+      "SENSI"
+    ]
+  },
+  {
+    "target": "GUERRA",
+    "clues": [
+      "PACE",
+      "LAMPO",
+      "SANTA",
+      "FREDDA",
+      "TRENTANNI"
+    ]
+  },
+  {
+    "target": "AMORE",
+    "clues": [
+      "CIECO",
+      "ETERNO",
+      "PLATONICO",
+      "LETTERA",
+      "PRIMO"
+    ]
+  },
+  {
+    "target": "ODIO",
+    "clues": [
+      "AMORE",
+      "PROFONDO",
+      "RAZZIALE",
+      "VISCERALE",
+      "SENTIMENTO"
+    ]
+  },
+  {
+    "target": "VITA",
+    "clues": [
+      "BELLA",
+      "MIA",
+      "ETERNO",
+      "MORTE",
+      "STILE"
+    ]
+  },
+  {
+    "target": "MORTE",
+    "clues": [
+      "NERA",
+      "VITA",
+      "FALCE",
+      "CERTA",
+      "CIVILE"
+    ]
+  },
+  {
+    "target": "SOGNO",
+    "clues": [
+      "CASSETTO",
+      "INCUBO",
+      "DESTO",
+      "REALTÀ",
+      "INTERPRETARE"
+    ]
+  },
+  {
+    "target": "VERITÀ",
+    "clues": [
+      "MACCHINA",
+      "NASCOSTA",
+      "AMARA",
+      "NUDA",
+      "BUGIA"
+    ]
+  },
+  {
+    "target": "BUGIA",
+    "clues": [
+      "GAMBE",
+      "CORTE",
+      "BIANCA",
+      "VERITÀ",
+      "DIRE"
+    ]
+  },
+  {
+    "target": "SEGRETO",
+    "clues": [
+      "PULCINELLA",
+      "AGENTE",
+      "STATO",
+      "SERVIZIO",
+      "PROFESSIONALE"
+    ]
+  },
+  {
+    "target": "SILENZIO",
+    "clues": [
+      "STAMPA",
+      "ASSENSO",
+      "RUMORE",
+      "TOMBA",
+      "ORO"
+    ]
+  },
+  {
+    "target": "RUMORE",
+    "clues": [
+      "NEMICI",
+      "MOLESTO",
+      "FONDO",
+      "BIANCO",
+      "SORDO"
+    ]
+  },
+  {
+    "target": "MUSICA",
+    "clues": [
+      "MAESTRO",
+      "CAMERA",
+      "LEGGERA",
+      "CLASSICA",
+      "STRUMENTO"
+    ]
+  },
+  {
+    "target": "SUONO",
+    "clues": [
+      "BARRIERA",
+      "CAMPANA",
+      "IMMAGINE",
+      "DOLCE",
+      "VOCE"
+    ]
+  },
+  {
+    "target": "COLORE",
+    "clues": [
+      "VIVO",
+      "SOLDI",
+      "PELLE",
+      "PRIMARIO",
+      "MATITA"
+    ]
+  },
+  {
+    "target": "FORMA",
+    "clues": [
+      "FISICA",
+      "SOSTANZA",
+      "PANE",
+      "GEOMETRICA",
+      "PARMIGIANO"
+    ]
+  },
+  {
+    "target": "NUMERO",
+    "clues": [
+      "PRIMO",
+      "VERDE",
+      "SCARPE",
+      "CIVICO",
+      "LOTTO"
+    ]
+  },
+  {
+    "target": "LETTERA",
+    "clues": [
+      "SCARLATTA",
+      "AMORE",
+      "MORTA",
+      "MAIUSCOLA",
+      "BUCA"
+    ]
+  },
+  {
+    "target": "PAROLA",
+    "clues": [
+      "D'ORDINE",
+      "CROCIATE",
+      "ONORE",
+      "GIRO",
+      "BOCCA"
+    ]
+  },
+  {
+    "target": "NOME",
+    "clues": [
+      "COSE",
+      "BATTESIMO",
+      "ARTE",
+      "UTENTE",
+      "CHIAMARE"
+    ]
+  },
+  {
+    "target": "COGNOME",
+    "clues": [
+      "NOME",
+      "FAMIGLIA",
+      "ORIGINE",
+      "DOPPIO",
+      "FIRMA"
+    ]
+  },
+  {
+    "target": "INDIRIZZO",
+    "clues": [
+      "SALUTO",
+      "EMAIL",
+      "CASA",
+      "VIA",
+      "SPEDIRE"
+    ]
+  },
+  {
+    "target": "CITTÀ",
+    "clues": [
+      "ETERNA",
+      "CAPO",
+      "VECCHIA",
+      "STATO",
+      "PROIBITA"
+    ]
+  },
+  {
+    "target": "PAESE",
+    "clues": [
+      "MONDO",
+      "MERAVIGLIE",
+      "BEL",
+      "CAMPANELLO",
+      "PICCOLO"
+    ]
+  },
+  {
+    "target": "STATO",
+    "clues": [
+      "CONFUSIONE",
+      "LIQUIDO",
+      "SOLIDO",
+      "COLPO",
+      "MAGGIORE"
+    ]
+  },
+  {
+    "target": "MONDO",
+    "clues": [
+      "NUOVO",
+      "CANE",
+      "PALLE",
+      "FINE",
+      "ANTICO"
+    ]
+  },
+  {
+    "target": "UNIVERSO",
+    "clues": [
+      "MISS",
+      "CENTRO",
+      "INFINITO",
+      "GALASSIA",
+      "PARALLELO"
+    ]
+  },
+  {
+    "target": "DIO",
+    "clues": [
+      "PREGARE",
+      "PO",
+      "DENARO",
+      "GRECO",
+      "GIORNO"
+    ]
+  },
+  {
+    "target": "ANIMA",
+    "clues": [
+      "GEMELLA",
+      "CORPO",
+      "PURGATORIO",
+      "VENDERE",
+      "LUNGA"
+    ]
+  },
+  {
+    "target": "SPIRITO",
+    "clues": [
+      "SANTO",
+      "DIVINO",
+      "PATATA",
+      "ARMONIA",
+      "CORPO"
+    ]
+  },
+  {
+    "target": "FANTASMA",
+    "clues": [
+      "OPERA",
+      "CASTELLO",
+      "LENZUOLO",
+      "FORMAGGINO",
+      "TRENO"
+    ]
+  },
+  {
+    "target": "STREGA",
+    "clues": [
+      "CACCIA",
+      "SCOPA",
+      "NOCCIOLA",
+      "BIANCA",
+      "POZIONE"
+    ]
+  },
+  {
+    "target": "MAGO",
+    "clues": [
+      "FORESTA",
+      "OZ",
+      "CILINDRO",
+      "BACCHETTA",
+      "ZURLÌ"
+    ]
+  },
+  {
+    "target": "FATA",
+    "clues": [
+      "TURCHINA",
+      "IGNORANTE",
+      "MORGANA",
+      "POLVERE",
+      "MADRINA"
+    ]
+  },
+  {
+    "target": "GIGANTE",
+    "clues": [
+      "BUONO",
+      "SLALOM",
+      "PIEDI",
+      "ARGILLA",
+      "NANO"
+    ]
+  },
+  {
+    "target": "DRAGO",
+    "clues": [
+      "SPUTAFUOCO",
+      "KOMODO",
+      "SAN GIORGIO",
+      "PALLA",
+      "CINA"
+    ]
+  },
+  {
+    "target": "EROE",
+    "clues": [
+      "DUE MONDI",
+      "SUPER",
+      "FUMETTI",
+      "GUERRA",
+      "MEDAGLIA"
+    ]
+  },
+  {
+    "target": "NEMICO",
+    "clues": [
+      "PUBBLICO",
+      "GIURATO",
+      "AMICO",
+      "CONFINE",
+      "FUOCO"
+    ]
+  },
+  {
+    "target": "AMICO",
+    "clues": [
+      "TESORO",
+      "GENIALE",
+      "QUATTRO",
+      "IMMAGINARIO",
+      "CUORE"
+    ]
+  },
+  {
+    "target": "OSPITE",
+    "clues": [
+      "PESCE",
+      "ONORE",
+      "INATTESO",
+      "ALBERGO",
+      "CASA"
+    ]
+  },
+  {
+    "target": "LADRO",
+    "clues": [
+      "GENTILUOMO",
+      "GUARDIE",
+      "OCCASIONE",
+      "BICI",
+      "RUBAMAZZO"
+    ]
+  },
+  {
+    "target": "GUARDIA",
+    "clues": [
+      "LADRI",
+      "CORPO",
+      "MEDICA",
+      "ALTA",
+      "FINANZA"
+    ]
+  },
+  {
+    "target": "PRIGIONE",
+    "clues": [
+      "DORATA",
+      "EVADERE",
+      "SBARRE",
+      "MONOPOLI",
+      "CELLULARE"
+    ]
+  },
+  {
+    "target": "CHIESA",
+    "clues": [
+      "CENTRO",
+      "VILLAGGIO",
+      "PRETE",
+      "DOMENICA",
+      "MESSA"
+    ]
+  },
+  {
+    "target": "SCUOLA",
+    "clues": [
+      "GUIDA",
+      "OBBLIGO",
+      "ELEMENTARE",
+      "VITA",
+      "BANCHI"
+    ]
+  },
+  {
+    "target": "UFFICIO",
+    "clues": [
+      "RECLAMI",
+      "COLLOCAMENTO",
+      "INFORMAZIONI",
+      "CAPO",
+      "SCRIVANIA"
+    ]
+  },
+  {
+    "target": "PANE",
+    "clues": [
+      "QUOTIDIANO",
+      "VINO",
+      "DENTI",
+      "INTEGRALE",
+      "FORNO"
+    ]
+  },
+  {
+    "target": "PASTA",
+    "clues": [
+      "DENTI",
+      "SALE",
+      "SOGLIA",
+      "MILLE",
+      "FILATA"
+    ]
+  },
+  {
+    "target": "PIZZA",
+    "clues": [
+      "MARGHERITA",
+      "FANGO",
+      "TAGLIO",
+      "ANANAS",
+      "NAPOLI"
+    ]
+  },
+  {
+    "target": "VINO",
+    "clues": [
+      "ROSSO",
+      "BOTTE",
+      "VERITAS",
+      "CANTINA",
+      "NOVELLO"
+    ]
+  },
+  {
+    "target": "BIRRA",
+    "clues": [
+      "DOPPIO",
+      "MALTO",
+      "SPINA",
+      "BIONDA",
+      "PERONI"
+    ]
+  },
+  {
+    "target": "LATTE",
+    "clues": [
+      "VERSATO",
+      "MIELE",
+      "GINOCCHIA",
+      "DERIVATI",
+      "INTERO"
+    ]
+  },
+  {
+    "target": "CAFFÈ",
+    "clues": [
+      "MOKA",
+      "NERO",
+      "SOSPESO",
+      "ZUCCHERO",
+      "LUNGO"
+    ]
+  },
+  {
+    "target": "TÈ",
+    "clues": [
+      "DESERTO",
+      "PASTICCINI",
+      "CINQUE",
+      "LIMONE",
+      "BUSTINA"
+    ]
+  },
+  {
+    "target": "ZUCCHERO",
+    "clues": [
+      "VELO",
+      "CANNA",
+      "FILATO",
+      "AMARO",
+      "ZOLLETTA"
+    ]
+  },
+  {
+    "target": "SALE",
+    "clues": [
+      "ZUCCA",
+      "GROSSO",
+      "MARE",
+      "PEPE",
+      "MINIERA"
+    ]
+  },
+  {
+    "target": "PEPE",
+    "clues": [
+      "CAYENNA",
+      "SALE",
+      "NERO",
+      "GRANI",
+      "MACINARE"
+    ]
+  },
+  {
+    "target": "OLIO",
+    "clues": [
+      "GOMITO",
+      "EXTRAVERGINE",
+      "TELA",
+      "MOTORE",
+      "SANTO"
+    ]
+  },
+  {
+    "target": "ACETO",
+    "clues": [
+      "BALSAMICO",
+      "VINO",
+      "MELE",
+      "INSALATA",
+      "CONDIMENTO"
+    ]
+  },
+  {
+    "target": "LIMONE",
+    "clues": [
+      "GIALLO",
+      "SPREMERE",
+      "SUCCO",
+      "AGRO",
+      "CANARINO"
+    ]
+  },
+  {
+    "target": "ARANCIA",
+    "clues": [
+      "MECCANICA",
+      "SPREMUTA",
+      "ROSSA",
+      "METÀ",
+      "FIORI"
+    ]
+  },
+  {
+    "target": "MELA",
+    "clues": [
+      "STREGATA",
+      "PECCATO",
+      "MARCIA",
+      "GIORNO",
+      "GRAN"
+    ]
+  },
+  {
+    "target": "PERA",
+    "clues": [
+      "COTTA",
+      "FORMA",
+      "ALBERO",
+      "CADERE",
+      "WILLIAM"
+    ]
+  },
+  {
+    "target": "BANANA",
+    "clues": [
+      "BUCCIA",
+      "REPUBBLICA",
+      "GIALLA",
+      "SCIVOLARE",
+      "SPLIT"
+    ]
+  },
+  {
+    "target": "UVA",
+    "clues": [
+      "VOLPE",
+      "PASSA",
+      "VINO",
+      "GRAPPOLO",
+      "ACERBA"
+    ]
+  },
+  {
+    "target": "CILIEGIA",
+    "clues": [
+      "UNA",
+      "TIRA",
+      "ALTRA",
+      "TORTA",
+      "ROSSA"
+    ]
+  },
+  {
+    "target": "FRAGOLA",
+    "clues": [
+      "BOSCO",
+      "PANNA",
+      "ROSSA",
+      "GELATO",
+      "MATTA"
+    ]
+  },
+  {
+    "target": "CIOCCOLATO",
+    "clues": [
+      "FONDENTE",
+      "LATTE",
+      "SVIZZERO",
+      "SALAME",
+      "CALDO"
+    ]
+  },
+  {
+    "target": "TORTA",
+    "clues": [
+      "NONNA",
+      "CANDELINE",
+      "FETTA",
+      "MELE",
+      "NUZIALE"
+    ]
+  },
+  {
+    "target": "GELATO",
+    "clues": [
+      "CONO",
+      "GUSTO",
+      "FREDDO",
+      "SCIOGLIERE",
+      "FRITTO"
+    ]
+  },
+  {
+    "target": "CARAMELLA",
+    "clues": [
+      "SCONOSCIUTI",
+      "GOMMOSA",
+      "INCARTATA",
+      "MENTA",
+      "DOLCE"
+    ]
+  },
+  {
+    "target": "MIELE",
+    "clues": [
+      "LUNA",
+      "API",
+      "DOLCE",
+      "ORSO",
+      "AMBRA"
+    ]
+  },
+  {
+    "target": "BURRO",
+    "clues": [
+      "FUSO",
+      "ARACHIDI",
+      "ULTIMO",
+      "CACAO",
+      "PANE"
+    ]
+  },
+  {
+    "target": "POLLO",
+    "clues": [
+      "ARROSTO",
+      "SPIEDO",
+      "RUSPANTE",
+      "SPENNARE",
+      "CONOSCERE"
+    ]
+  },
+  {
+    "target": "CANE",
+    "clues": [
+      "PASTORE",
+      "SOLO",
+      "FEDELE",
+      "OSSO",
+      "ZAMPA"
+    ]
+  },
+  {
+    "target": "GATTO",
+    "clues": [
+      "STIVALI",
+      "VITE",
+      "NERO",
+      "TOPO",
+      "SACCO"
+    ]
+  },
+  {
+    "target": "CAVALLO",
+    "clues": [
+      "BATTAGLIA",
+      "VAPORE",
+      "TROIA",
+      "DONATO",
+      "PAZZO"
+    ]
+  },
+  {
+    "target": "MUCCA",
+    "clues": [
+      "VIOLA",
+      "PAZZA",
+      "LATTE",
+      "MUNGERE",
+      "STALLA"
+    ]
+  },
+  {
+    "target": "MAIALE",
+    "clues": [
+      "SALVADANAIO",
+      "GRASSO",
+      "PROSCIUTTO",
+      "ROSA",
+      "GHIANDA"
+    ]
+  },
+  {
+    "target": "PECORA",
+    "clues": [
+      "NERA",
+      "SMARRITA",
+      "LANA",
+      "GREGGE",
+      "CONTARE"
+    ]
+  },
+  {
+    "target": "CAPRA",
+    "clues": [
+      "ESPIATORIO",
+      "CAVOLI",
+      "BARBA",
+      "GARAGE",
+      "SGARBI"
+    ]
+  },
+  {
+    "target": "GALLINA",
+    "clues": [
+      "VECCHIA",
+      "UOVA",
+      "ZAMPA",
+      "BRODO",
+      "DOMANI"
+    ]
+  },
+  {
+    "target": "UCCELLO",
+    "clues": [
+      "VOLARE",
+      "GABBIA",
+      "MALAUGURIO",
+      "BOSCO",
+      "SPINA"
+    ]
+  },
+  {
+    "target": "LEONE",
+    "clues": [
+      "GABBIA",
+      "RE",
+      "RUGGITO",
+      "SAN MARCO",
+      "PARTE"
+    ]
+  },
+  {
+    "target": "TIGRE",
+    "clues": [
+      "MALESIA",
+      "DENTI",
+      "BENGALA",
+      "OCCHI",
+      "CARTA"
+    ]
+  },
+  {
+    "target": "SCIMMIA",
+    "clues": [
+      "URLATRICE",
+      "SPALLA",
+      "EVOLUZIONE",
+      "ALBERO",
+      "BANANA"
+    ]
+  },
+  {
+    "target": "DELFINO",
+    "clues": [
+      "CURIOSO",
+      "EREDE",
+      "FRANCIA",
+      "MARE",
+      "SALTARE"
+    ]
+  },
+  {
+    "target": "SQUALO",
+    "clues": [
+      "BIANCO",
+      "PINNA",
+      "DENTI",
+      "FINANZA",
+      "PREDATORE"
+    ]
+  },
+  {
+    "target": "BALENA",
+    "clues": [
+      "BIANCA",
+      "BLU",
+      "PINOCCHIO",
+      "FIOR DI",
+      "SOFFIO"
+    ]
+  },
+  {
+    "target": "FARFALLA",
+    "clues": [
+      "EFFETTO",
+      "CRAVATTA",
+      "PASTA",
+      "STILE",
+      "BOZZOLO"
+    ]
+  },
+  {
+    "target": "GRILLO",
+    "clues": [
+      "PARLANTE",
+      "TESTA",
+      "SALTO",
+      "MARCHESE",
+      "NOTTE"
+    ]
+  },
+  {
+    "target": "CICALA",
+    "clues": [
+      "FORMICA",
+      "CANTARE",
+      "ESTATE",
+      "RUMORE",
+      "INSETTO"
+    ]
+  },
+  {
+    "target": "BIANCO",
+    "clues": [
+      "ASSEGNO",
+      "MATRIMONIO",
+      "VESTITO",
+      "VINO",
+      "LAVORARE"
+    ]
+  },
+  {
+    "target": "NERO",
+    "clues": [
+      "UMORISMO",
+      "GATTO",
+      "CRONACA",
+      "LAVORO",
+      "SEPPIA"
+    ]
+  },
+  {
+    "target": "ROSSO",
+    "clues": [
+      "STOP",
+      "RELATIVO",
+      "CAPPUCCETTO",
+      "VERGOGNA",
+      "POMODORO"
+    ]
+  },
+  {
+    "target": "BLU",
+    "clues": [
+      "SANGUE",
+      "PROFONDO",
+      "PRINCIPE",
+      "AUTO",
+      "NOTTE"
+    ]
+  },
+  {
+    "target": "GIALLO",
+    "clues": [
+      "PAGINE",
+      "LIBRO",
+      "FEBBRE",
+      "POLIZIESCO",
+      "SEMAFORO"
+    ]
+  },
+  {
+    "target": "VERDE",
+    "clues": [
+      "ETÀ",
+      "SPERANZA",
+      "POLLICE",
+      "NUMERO",
+      "TAPPETO"
+    ]
+  },
+  {
+    "target": "FIORE",
+    "clues": [
+      "MAZZO",
+      "OCCHIELLO",
+      "SERRA",
+      "SBOCCIARE",
+      "DESERTO"
+    ]
+  },
+  {
+    "target": "ALBERO",
+    "clues": [
+      "MAESTRA",
+      "NATALE",
+      "GENEALOGICO",
+      "MOTORE",
+      "FRUTTO"
+    ]
+  },
+  {
+    "target": "FOGLIA",
+    "clues": [
+      "FICO",
+      "TÈ",
+      "CADERE",
+      "VENTO",
+      "ALBERO"
+    ]
+  },
+  {
+    "target": "RADICE",
+    "clues": [
+      "QUADRATA",
+      "ALBERO",
+      "DENTE",
+      "ZENZERO",
+      "ESTIRPARE"
+    ]
+  },
+  {
+    "target": "RAMO",
+    "clues": [
+      "SECCO",
+      "PAZZO",
+      "AZIENDA",
+      "CADETTO",
+      "LAGO"
+    ]
+  },
+  {
+    "target": "CIELO",
+    "clues": [
+      "APERTO",
+      "TOCCARE",
+      "STELLATO",
+      "BLU",
+      "SETTIMO"
+    ]
+  },
+  {
+    "target": "NUVOLA",
+    "clues": [
+      "FUMETTI",
+      "PASSEGGERA",
+      "PIOGGIA",
+      "BIANCA",
+      "RAPIDA"
+    ]
+  },
+  {
+    "target": "PIOGGIA",
+    "clues": [
+      "ACIDA",
+      "CANTANDO",
+      "BATTENTE",
+      "GOCCE",
+      "OMBRELLO"
+    ]
+  },
+  {
+    "target": "VENTO",
+    "clues": [
+      "ROSA",
+      "VIA",
+      "POPPA",
+      "MULINO",
+      "GRIDARE"
+    ]
+  },
+  {
+    "target": "LAMPO",
+    "clues": [
+      "GENIO",
+      "CHIUSURA",
+      "GUERRA",
+      "TUONO",
+      "FLASH"
+    ]
+  },
+  {
+    "target": "TUONO",
+    "clues": [
+      "FULMINE",
+      "ROMBO",
+      "TROPICI",
+      "VOCE",
+      "TEMPORALE"
+    ]
+  },
+  {
+    "target": "NEBBIA",
+    "clues": [
+      "BANCHI",
+      "FITTA",
+      "AGLI",
+      "FARI",
+      "DIRADARE"
+    ]
+  },
+  {
+    "target": "GHIACCIO",
+    "clues": [
+      "ROMPERE",
+      "SECCO",
+      "BOLLENTE",
+      "PATTINARE",
+      "CUBETTO"
+    ]
+  },
+  {
+    "target": "DESERTO",
+    "clues": [
+      "TARTARI",
+      "ISOLA",
+      "SABBIA",
+      "OASI",
+      "PREDICARE"
+    ]
+  },
+  {
+    "target": "TAGLIO",
+    "clues": [
+      "CAPELLI",
+      "PREZZI",
+      "CESAREO",
+      "BISTECCA",
+      "NETTO"
+    ]
+  },
+  {
+    "target": "DONO",
+    "clues": [
+      "UBIQUITÀ",
+      "NATURA",
+      "CAVALLO",
+      "PACCO",
+      "RICEVERE"
+    ]
+  },
+  {
+    "target": "REGALO",
+    "clues": [
+      "PACCO",
+      "NATALE",
+      "COMPLEANNO",
+      "CARTA",
+      "SORPRESA"
+    ]
+  },
+  {
+    "target": "FESTA",
+    "clues": [
+      "GUASTA",
+      "DONNA",
+      "MAMMA",
+      "PALLONI",
+      "MOBILE"
+    ]
+  },
+  {
+    "target": "VIAGGIO",
+    "clues": [
+      "NOZZE",
+      "TEMPO",
+      "AGENZIA",
+      "BIGLIETTO",
+      "LUNGO"
+    ]
+  },
+  {
+    "target": "VACANZA",
+    "clues": [
+      "MARE",
+      "ESTIVA",
+      "STUDIO",
+      "ROMANA",
+      "PACCHETTO"
+    ]
+  },
+  {
+    "target": "LAVORO",
+    "clues": [
+      "SPORCO",
+      "SQUADRA",
+      "NERO",
+      "MERCATO",
+      "CAVALLO"
+    ]
+  },
+  {
+    "target": "RIPOSO",
+    "clues": [
+      "GUERRIERO",
+      "ETERNO",
+      "CASA",
+      "GIORNO",
+      "LETTO"
+    ]
+  },
+  {
+    "target": "SONNO",
+    "clues": [
+      "ARRETRATO",
+      "VEGLIA",
+      "RAGIONE",
+      "PROFONDO",
+      "PESANTE"
+    ]
+  },
+  {
+    "target": "FAME",
+    "clues": [
+      "LUPO",
+      "MONDO",
+      "APPETITO",
+      "SCIOPERO",
+      "TAGLIARE"
+    ]
+  },
+  {
+    "target": "SETE",
+    "clues": [
+      "ACQUA",
+      "POTERE",
+      "VENDETTA",
+      "CANNA",
+      "PROSCIUTTO"
+    ]
+  },
+  {
+    "target": "PAURA",
+    "clues": [
+      "TREMARE",
+      "FA",
+      "NOVANTA",
+      "BUIO",
+      "FILM"
+    ]
+  },
+  {
+    "target": "CORAGGIO",
+    "clues": [
+      "LEONE",
+      "MANI",
+      "MADRE",
+      "PAURA",
+      "PRENDERE"
+    ]
+  },
+  {
+    "target": "RABBIA",
+    "clues": [
+      "ROSSO",
+      "SFOGARE",
+      "UVA",
+      "CANE",
+      "SCATTO"
+    ]
+  },
+  {
+    "target": "GIOIA",
+    "clues": [
+      "LACRIME",
+      "VIVERE",
+      "SALTI",
+      "DOLORE",
+      "PIENA"
+    ]
+  },
+  {
+    "target": "TRISTEZZA",
+    "clues": [
+      "ALLEGRIA",
+      "VELO",
+      "OCCHI",
+      "MOMENTO",
+      "SOLITUDINE"
+    ]
+  },
+  {
+    "target": "SORRISO",
+    "clues": [
+      "SMAGLIANTE",
+      "AMARO",
+      "GATTO",
+      "BOCCA",
+      "DENTI"
+    ]
+  },
+  {
+    "target": "LACRIMA",
+    "clues": [
+      "VALLE",
+      "COCCODRILLO",
+      "VITE",
+      "SANGUE",
+      "PIANGERE"
+    ]
+  },
+  {
+    "target": "BACIO",
+    "clues": [
+      "GIUDA",
+      "FRANCESE",
+      "PERUGINA",
+      "DAMA",
+      "RUBARE"
+    ]
+  },
+  {
+    "target": "ABBRACCIO",
+    "clues": [
+      "MORTALE",
+      "ORSO",
+      "STRINGERE",
+      "CALDO",
+      "SALUTO"
+    ]
+  },
+  {
+    "target": "CAREZZA",
+    "clues": [
+      "MANO",
+      "DOLCE",
+      "PAPA",
+      "VISO",
+      "LIEVE"
+    ]
+  },
+  {
+    "target": "SCHIAFFO",
+    "clues": [
+      "MORALE",
+      "GUANTO",
+      "FACCIA",
+      "VOLARE",
+      "PRENDERE"
+    ]
+  },
+  {
+    "target": "PUGNO",
+    "clues": [
+      "CHIUSO",
+      "MOSCHE",
+      "FERRO",
+      "SPUGNA",
+      "DIBATTERE"
+    ]
+  },
+  {
+    "target": "POZZO",
+    "clues": [
+      "DESIDERI",
+      "FONDO",
+      "LUNA",
+      "SAN PATRIZIO",
+      "PETROLIO"
+    ]
+  },
+  {
+    "target": "PONTE",
+    "clues": [
+      "LEVATOIO",
+      "SOSPIRI",
+      "DENTISTA",
+      "LUNGO",
+      "COMANDO"
+    ]
+  },
+  {
+    "target": "STRADA",
+    "clues": [
+      "MAESTRA",
+      "FACENDO",
+      "INTERROTTA",
+      "FERRATA",
+      "ASFALTO"
+    ]
+  },
+  {
+    "target": "PIAZZA",
+    "clues": [
+      "AFFARI",
+      "PULITA",
+      "GRANDE",
+      "MERCATO",
+      "MEZZA"
+    ]
+  },
+  {
+    "target": "VICOLO",
+    "clues": [
+      "CIECO",
+      "STRETTO",
+      "MIRACOLI",
+      "BUIO",
+      "STRADA"
+    ]
+  },
+  {
+    "target": "FONTANA",
+    "clues": [
+      "TREVI",
+      "GETTONI",
+      "GIOVINEZZA",
+      "ACQUA",
+      "PIAZZA"
+    ]
+  },
+  {
+    "target": "GIARDINO",
+    "clues": [
+      "EDEN",
+      "PENSILE",
+      "INFANZIA",
+      "BOTANICO",
+      "ZOOLOGICO"
+    ]
+  },
+  {
+    "target": "PARCO",
+    "clues": [
+      "VITTORIA",
+      "GIOCHI",
+      "NATURALE",
+      "JURASSIC",
+      "DIVERTIMENTI"
+    ]
+  },
+  {
+    "target": "BOSCO",
+    "clues": [
+      "ADDORMENTATA",
+      "LUPO",
+      "FRAGOLINE",
+      "SOTTO",
+      "ALBERI"
+    ]
+  },
+  {
+    "target": "MONTAGNA",
+    "clues": [
+      "MAOMETTO",
+      "INCANTATA",
+      "RUSSA",
+      "SCALARE",
+      "ALTA"
+    ]
+  },
+  {
+    "target": "LAGO",
+    "clues": [
+      "CIGNI",
+      "COMO",
+      "SALATO",
+      "SANGUE",
+      "BILANCIA"
+    ]
+  },
+  {
+    "target": "FIUME",
+    "clues": [
+      "PIENA",
+      "LETTO",
+      "LUNGO",
+      "NILO",
+      "CORRENTE"
+    ]
+  },
+  {
+    "target": "ISOLA",
+    "clues": [
+      "TESORO",
+      "DESERTA",
+      "ECOLOGICA",
+      "GIGLIO",
+      "PEDONALE"
+    ]
+  },
+  {
+    "target": "SPIAGGIA",
+    "clues": [
+      "SABBIA",
+      "OMBRELLONE",
+      "LIBERA",
+      "MARE",
+      "TIGRE"
+    ]
+  },
+  {
+    "target": "SABBIA",
+    "clues": [
+      "CASTELLI",
+      "MOBILE",
+      "OROLOGIO",
+      "DESERTO",
+      "GRANELLO"
+    ]
+  },
+  {
+    "target": "ONDA",
+    "clues": [
+      "URTO",
+      "ANOMALA",
+      "LUNGA",
+      "VERDE",
+      "MARE"
+    ]
+  },
+  {
+    "target": "SCOGLIO",
+    "clues": [
+      "SUPERARE",
+      "MARE",
+      "D'ORO",
+      "DURI",
+      "ONDA"
+    ]
+  },
+  {
+    "target": "GROTTA",
+    "clues": [
+      "AZZURRA",
+      "LOURDES",
+      "PRESEPE",
+      "ORSO",
+      "BUIO"
+    ]
+  },
+  {
+    "target": "VULCANO",
+    "clues": [
+      "LAVA",
+      "SPENTO",
+      "ERUZIONE",
+      "CRATERE",
+      "ATTIVO"
+    ]
+  },
+  {
+    "target": "SPIRITO",
+    "clues": [
+      "LEGGE",
+      "PATATA",
+      "SOTTO",
+      "SACRIFICIO",
+      "FANTASMA"
+    ]
+  },
+  {
+    "target": "BOSCO",
+    "clues": [
+      "STRADA",
+      "DON",
+      "FRUTTO",
+      "TAGLIO",
+      "CAPPUCCETTO"
+    ]
+  },
+  {
+    "target": "SCHIENA",
+    "clues": [
+      "SCENA",
+      "MAESTRO",
+      "CALDO",
+      "FREDDO",
+      "BRIVIDO"
+    ]
+  },
+  {
+    "target": "PASSATO",
+    "clues": [
+      "MENTE",
+      "PEGGIO",
+      "VERDURA",
+      "MODA",
+      "PROSSIMO"
+    ]
+  },
+  {
+    "target": "CAMBIO",
+    "clues": [
+      "PARI",
+      "OLIO",
+      "GUARDIA",
+      "BIANCHERIA",
+      "VALUTA"
+    ]
+  },
+  {
+    "target": "TASCA",
+    "clues": [
+      "LACRIME",
+      "BUCO",
+      "PANE",
+      "VITTORIA",
+      "TOPPA"
+    ]
+  },
+  {
+    "target": "REPUBBLICA",
+    "clues": [
+      "PISA",
+      "RAGAZZI",
+      "PIAZZA",
+      "FESTA",
+      "PLATONE"
+    ]
+  },
+  {
+    "target": "TUFFO",
+    "clues": [
+      "CUORE",
+      "CAPODANNO",
+      "TESTA",
+      "PASSATO",
+      "PARATA"
+    ]
+  },
+  {
+    "target": "CARTELLA",
+    "clues": [
+      "SCUOLA",
+      "COMPUTER",
+      "CHIMICA",
+      "TASSE",
+      "TOMBOLA"
+    ]
+  },
+  {
+    "target": "AGENTE",
+    "clues": [
+      "PIOGGIA",
+      "SEGRETO",
+      "COMMERCIO",
+      "BORSA",
+      "POLIZIA"
+    ]
+  },
+  {
+    "target": "QUADRO",
+    "clues": [
+      "IMPIEGATO",
+      "LEGGE",
+      "CONTROLLO",
+      "SVEDESE",
+      "OLIO"
+    ]
+  },
+  {
+    "target": "COPPA",
+    "clues": [
+      "MAIALE",
+      "MONDO",
+      "OLIO",
+      "SENO",
+      "GELATO"
+    ]
+  },
+  {
+    "target": "UNIONE",
+    "clues": [
+      "FORZA",
+      "QUADRO",
+      "SPORTIVA",
+      "FATTO",
+      "UIL"
+    ]
+  },
+  {
+    "target": "LATTE",
+    "clues": [
+      "FRATELLINI",
+      "POLVERE",
+      "DENTE",
+      "GALLINA",
+      "CENTRALE"
+    ]
+  },
+  {
+    "target": "PACCO",
+    "clues": [
+      "DOPPIO",
+      "CARTA",
+      "SOLDI",
+      "PASTA",
+      "REGALO"
+    ]
+  },
+  {
+    "target": "SOCIETÀ",
+    "clues": [
+      "RIFIUTO",
+      "ALTA",
+      "NAZIONI",
+      "GIOCO",
+      "AZIONI"
+    ]
+  },
+  {
+    "target": "PIASTRA",
+    "clues": [
+      "MONETA",
+      "OROLOGIO",
+      "CAPELLI",
+      "PESCE",
+      "FERRO"
+    ]
+  },
+  {
+    "target": "PRESIDENTE",
+    "clues": [
+      "UOMINI",
+      "GIURIA",
+      "SQUADRA",
+      "LEONE",
+      "CONSIGLIO"
+    ]
+  },
+  {
+    "target": "COLLANA",
+    "clues": [
+      "GIRI",
+      "LIBRI",
+      "FILO",
+      "FIORI",
+      "ORO"
+    ]
+  },
+  {
+    "target": "SERA",
+    "clues": [
+      "PREGHIERA",
+      "SUBITO",
+      "ROSSO",
+      "VERSO",
+      "BUONA"
+    ]
+  },
+  {
+    "target": "FILM",
+    "clues": [
+      "BIANCA",
+      "PROVA",
+      "RAGAZZO",
+      "METÀ",
+      "FELLINI"
+    ]
+  },
+  {
+    "target": "ORARIO",
+    "clues": [
+      "LAVORO",
+      "SPETTACOLO",
+      "DISCO",
+      "SENSO",
+      "RIDOTTO"
+    ]
+  },
+  {
+    "target": "VISO",
+    "clues": [
+      "ROSSO",
+      "PULIZIA",
+      "APERTO",
+      "BUON",
+      "LACRIMA"
+    ]
+  },
+  {
+    "target": "TEMA",
+    "clues": [
+      "FESTA",
+      "NATALE",
+      "LIBERO",
+      "GIGANTI",
+      "FUORI"
+    ]
+  },
+  {
+    "target": "COLAZIONE",
+    "clues": [
+      "LAVORO",
+      "ERBA",
+      "CAMERA",
+      "AMERICANA",
+      "PRIMA"
+    ]
+  },
+  {
+    "target": "LIMITE",
+    "clues": [
+      "CASO",
+      "MASSIMO",
+      "AREA",
+      "VELOCITÀ",
+      "PAZIENZA"
+    ]
+  },
+  {
+    "target": "DATA",
+    "clues": [
+      "VECCHIA",
+      "TIMBRO",
+      "PARTENZA",
+      "FISSARE",
+      "CAMBIAMENTO"
+    ]
+  },
+  {
+    "target": "BRUTTA",
+    "clues": [
+      "ARIA",
+      "STORIA",
+      "PECCATO",
+      "CANINO",
+      "FINE"
+    ]
+  },
+  {
+    "target": "QUESTIONE",
+    "clues": [
+      "TERMINI",
+      "TEMPO",
+      "SUCCO",
+      "FORTUNA",
+      "PELLE"
+    ]
+  },
+  {
+    "target": "SOGGETTO",
+    "clues": [
+      "DIRITTO",
+      "FILM",
+      "RECITARE",
+      "CATTIVO",
+      "QUADRO"
+    ]
+  },
+  {
+    "target": "SCELTA",
+    "clues": [
+      "LIBERTÀ",
+      "CAMPO",
+      "PRIMA",
+      "TEMPO",
+      "VITA"
+    ]
+  },
+  {
+    "target": "MATERIA",
+    "clues": [
+      "PRIMA",
+      "STATO",
+      "ESAME",
+      "ESPERTO",
+      "PLASTICA"
+    ]
+  },
+  {
+    "target": "LUNA",
+    "clues": [
+      "MONTE",
+      "CONQUISTA",
+      "VOLERE",
+      "FACCIA",
+      "PELLE"
+    ]
+  },
+  {
+    "target": "PROGRAMMA",
+    "clues": [
+      "ESSERE",
+      "SALA",
+      "RAGAZZI",
+      "ACCORDO",
+      "CAMBIO"
+    ]
+  },
+  {
+    "target": "BANDIERA",
+    "clues": [
+      "VECCHIA",
+      "SORELLA",
+      "COMPAGNIA",
+      "SCACCHI",
+      "SALUTO"
+    ]
+  },
+  {
+    "target": "MEDICO",
+    "clues": [
+      "DIZIONARIO",
+      "BASE",
+      "STUDIO",
+      "PERSONALE",
+      "LEGALE"
+    ]
+  },
+  {
+    "target": "TORRE",
+    "clues": [
+      "LAGO",
+      "OROLOGIO",
+      "GRECO",
+      "ANTICA",
+      "CONTROLLO"
+    ]
+  },
+  {
+    "target": "BOTTA",
+    "clues": [
+      "PRENDERE",
+      "SONNO",
+      "BELLA",
+      "CALDA",
+      "TESTA"
+    ]
+  },
+  {
+    "target": "METRO",
+    "clues": [
+      "TRAMONTO",
+      "POESIA",
+      "ORO",
+      "TESSUTO",
+      "QUADRATO"
+    ]
+  },
+  {
+    "target": "GIUSTIZIA",
+    "clues": [
+      "FARE",
+      "CORSO",
+      "DIVINA",
+      "PALAZZO",
+      "BILANCIA"
+    ]
+  },
+  {
+    "target": "SCHERZO",
+    "clues": [
+      "STARE",
+      "MUSICA",
+      "TELEFONO",
+      "NATURA",
+      "MANO"
+    ]
+  },
+  {
+    "target": "SCENA",
+    "clues": [
+      "RUBARE",
+      "COLPO",
+      "GELOSIA",
+      "DELITTO",
+      "MUTA"
+    ]
+  },
+  {
+    "target": "LOCALE",
+    "clues": [
+      "NOTTURNO",
+      "ORA",
+      "MONTE",
+      "TRENO",
+      "RADIO"
+    ]
+  },
+  {
+    "target": "TERMINE",
+    "clues": [
+      "PORTARE",
+      "MEDIO",
+      "PRONTI",
+      "CONTRASTO",
+      "PARAGONE"
+    ]
+  },
+  {
+    "target": "FUGA",
+    "clues": [
+      "EGITTO",
+      "PIASTRELLE",
+      "VIA",
+      "GALLINE",
+      "CERVELLI"
+    ]
+  },
+  {
+    "target": "DIVISIONE",
+    "clues": [
+      "EREDITÀ",
+      "PAROLA",
+      "GENERALE",
+      "MASSIMA",
+      "OPERAZIONE"
+    ]
+  },
+  {
+    "target": "SCARPE",
+    "clues": [
+      "PUNTA",
+      "SCATOLA",
+      "CERA",
+      "FARE",
+      "TENNIS"
+    ]
+  },
+  {
+    "target": "ALBERGO",
+    "clues": [
+      "CASA",
+      "TOPO",
+      "ORE",
+      "STELLE",
+      "PORTIERE"
+    ]
+  },
+  {
+    "target": "MODELLO",
+    "clues": [
+      "STUDENTE",
+      "CARTA",
+      "ULTIMO",
+      "SCALA",
+      "UNICO"
+    ]
+  },
+  {
+    "target": "SIGNORE",
+    "clues": [
+      "GUERRA",
+      "PIRATA",
+      "PAROLA",
+      "VITA",
+      "SIGNORI"
+    ]
+  },
+  {
+    "target": "DISCOTECA",
+    "clues": [
+      "STATO",
+      "LOCALE",
+      "CUBO",
+      "PALLA",
+      "BUSSOLA"
+    ]
+  },
+  {
+    "target": "SEGRETO",
+    "clues": [
+      "CASSETTO",
+      "UFFICIO",
+      "VOTO",
+      "PASSAGGIO",
+      "AGENTE"
+    ]
+  },
+  {
+    "target": "CONTROLLO",
+    "clues": [
+      "SOTTO",
+      "PERDERE",
+      "PASSAPORTO",
+      "MEDICO",
+      "TORRE"
+    ]
+  },
+  {
+    "target": "STREGA",
+    "clues": [
+      "VITA",
+      "PREMIO",
+      "MELA",
+      "COLPO",
+      "SCOPA"
+    ]
+  },
+  {
+    "target": "DANZA",
+    "clues": [
+      "COMPAGNIA",
+      "PIOGGIA",
+      "PASSO",
+      "ORE",
+      "VENTRE"
+    ]
+  },
+  {
+    "target": "SFERA",
+    "clues": [
+      "PUBBLICA",
+      "SOLIDO",
+      "CELESTE",
+      "PENNA",
+      "CRISTALLO"
+    ]
+  },
+  {
+    "target": "TEMPESTA",
+    "clues": [
+      "ARIA",
+      "SABBIA",
+      "QUIETE",
+      "PERFETTA",
+      "SHAKESPEARE"
+    ]
+  },
+  {
+    "target": "FIDUCIA",
+    "clues": [
+      "TRADIRE",
+      "PERSONA",
+      "VOTO",
+      "GODERE",
+      "CIECA"
+    ]
+  },
+  {
+    "target": "ALLARME",
+    "clues": [
+      "FALSO",
+      "AEREO",
+      "STATO",
+      "SISTEMA",
+      "ROSSO"
+    ]
+  },
+  {
+    "target": "CASSA",
+    "clues": [
+      "STARE",
+      "SERVIZIO",
+      "FORTE",
+      "ACCIAIO",
+      "LIBRO"
+    ]
+  },
+  {
+    "target": "FORTUNA",
+    "clues": [
+      "VINCERE",
+      "CALCIO",
+      "MEZZI",
+      "COLPI",
+      "BISCOTTI"
+    ]
+  },
+  {
+    "target": "FUGA",
+    "clues": [
+      "VITTORIA",
+      "VIA",
+      "PUNTO",
+      "NOTIZIE",
+      "PERICOLO"
+    ]
+  },
+  {
+    "target": "DIFESA",
+    "clues": [
+      "GIOCARE",
+      "MEZZI",
+      "ERRORE",
+      "PAROLA",
+      "PERSONALE"
+    ]
+  },
+  {
+    "target": "UOVO",
+    "clues": [
+      "DIPINTO",
+      "POSIZIONE",
+      "LEGNO",
+      "CAMICIA",
+      "COLOMBO"
+    ]
+  },
+  {
+    "target": "GRAZIA",
+    "clues": [
+      "STATO",
+      "ANNO",
+      "DOMANDA",
+      "RICEVUTA",
+      "ELEFANTE"
+    ]
+  },
+  {
+    "target": "FIDUCIA",
+    "clues": [
+      "DARE",
+      "UOMO",
+      "MEDICO",
+      "PROVA",
+      "INIEZIONE"
+    ]
+  },
+  {
+    "target": "USCITA",
+    "clues": [
+      "ORARIO",
+      "PORTIERE",
+      "VIA",
+      "FILM",
+      "LIBERA"
+    ]
+  },
+  {
+    "target": "PROGRAMMA",
+    "clues": [
+      "CONCERTO",
+      "GOVERNO",
+      "FUORI",
+      "QUOTIDIANO",
+      "LAVATRICE"
+    ]
+  },
+  {
+    "target": "COLLARE",
+    "clues": [
+      "ORSO",
+      "MICROFONO",
+      "ELISABETTA",
+      "SACERDOTE",
+      "CANE"
+    ]
+  },
+  {
+    "target": "PARTITA",
+    "clues": [
+      "DOPPIA",
+      "CUORE",
+      "DOPO",
+      "IVA",
+      "CARTE"
+    ]
+  },
+  {
+    "target": "NATURALE",
+    "clues": [
+      "TONNO",
+      "MEDICINA",
+      "PARTO",
+      "BIONDA",
+      "ACQUA"
+    ]
+  },
+  {
+    "target": "FRATE",
+    "clues": [
+      "BARBA",
+      "MINORE",
+      "CRISTOFORO",
+      "SOLE",
+      "INDOVINO"
+    ]
+  },
+  {
+    "target": "STORIA",
+    "clues": [
+      "CORSO",
+      "AMORE",
+      "PASSARE",
+      "ARTE",
+      "INFINITA"
+    ]
+  },
+  {
+    "target": "MARTELLO",
+    "clues": [
+      "PAVONE",
+      "SUONARE",
+      "LANCIO",
+      "PNEUMATICO",
+      "CARLO"
+    ]
+  },
+  {
+    "target": "SICUREZZA",
+    "clues": [
+      "LAVORO",
+      "SISTEMA",
+      "PACCHETTO",
+      "CODICE",
+      "SPILLA"
+    ]
+  },
+  {
+    "target": "FILM",
+    "clues": [
+      "PIZZA",
+      "AZIONE",
+      "GIRARE",
+      "ADULTI",
+      "MUTO"
+    ]
+  },
+  {
+    "target": "EQUILIBRIO",
+    "clues": [
+      "PERDERE",
+      "SENSO",
+      "TRAVE",
+      "ORECCHIO",
+      "GIOCO"
+    ]
+  },
+  {
+    "target": "COMBINAZIONE",
+    "clues": [
+      "COLORI",
+      "LUCCHETTO",
+      "CARTE",
+      "VINCENTE",
+      "NUMERI"
+    ]
+  },
+  {
+    "target": "BACCHETTA",
+    "clues": [
+      "ACQUA",
+      "BATTERIA",
+      "CINESE",
+      "COMANDARE",
+      "MUTI"
+    ]
+  },
+  {
+    "target": "CADUTA",
+    "clues": [
+      "REGNO",
+      "LIBERA",
+      "STILE",
+      "MURO",
+      "CAPELLI"
+    ]
+  },
+  {
+    "target": "FATTORE",
+    "clues": [
+      "SANGUE",
+      "TENUTA",
+      "SORPRESA",
+      "PROTEZIONE",
+      "CAMPO"
+    ]
+  },
+  {
+    "target": "NERO",
+    "clues": [
+      "LAVORO",
+      "UOMO",
+      "LIBRO",
+      "PUNTO",
+      "ORO"
+    ]
+  },
+  {
+    "target": "RACCOLTA",
+    "clues": [
+      "CHIAMARE",
+      "TEMPO",
+      "CENTRO",
+      "PORTA",
+      "LEGGI"
+    ]
+  },
+  {
+    "target": "INCONTRO",
+    "clues": [
+      "VENERE",
+      "PUNTO",
+      "CHAMPAGNE",
+      "CALCIO",
+      "VERTICE"
+    ]
+  },
+  {
+    "target": "LUNGO",
+    "clues": [
+      "LINEA",
+      "TERMINE",
+      "CORSO",
+      "CAFFÈ",
+      "MARE"
+    ]
+  },
+  {
+    "target": "PREZZO",
+    "clues": [
+      "BASE",
+      "SUCCESSO",
+      "ONESTO",
+      "CARO",
+      "COPERTINA"
+    ]
+  },
+  {
+    "target": "FATTO",
+    "clues": [
+      "NOME",
+      "SANGUE",
+      "FAMIGLIA",
+      "BIAGI",
+      "AFFARE"
+    ]
+  },
+  {
+    "target": "MADRE",
+    "clues": [
+      "TERRA",
+      "PATRIA",
+      "LINGUA",
+      "NATURA",
+      "SANTA"
+    ]
+  },
+  {
+    "target": "PALLA",
+    "clues": [
+      "CANNONE",
+      "NEVE",
+      "VETRO",
+      "PIEDE",
+      "OVALE"
+    ]
+  },
+  {
+    "target": "PORTA",
+    "clues": [
+      "GIREVOLE",
+      "BLINDATA",
+      "CALCIO",
+      "FORTUNA",
+      "SBATTERE"
+    ]
+  },
+  {
+    "target": "TAVOLO",
+    "clues": [
+      "VERDE",
+      "BILIARDO",
+      "OPERATORIO",
+      "CARTE",
+      "SOTTO"
+    ]
+  },
+  {
+    "target": "CROCE",
+    "clues": [
+      "ROSSA",
+      "FERRO",
+      "SEGNO",
+      "DELIZIA",
+      "SANTA"
+    ]
+  },
+  {
+    "target": "GIORNALE",
+    "clues": [
+      "RADIO",
+      "QUOTIDIANO",
+      "CHIOSCO",
+      "MURO",
+      "VENDERE"
+    ]
+  },
+  {
+    "target": "LETTERA",
+    "clues": [
+      "MORTA",
+      "MAIUSCOLA",
+      "AMORE",
+      "RACCOMANDATA",
+      "BUSTA"
+    ]
+  },
+  {
+    "target": "NUMERO",
+    "clues": [
+      "PRIMO",
+      "TELEFONO",
+      "CHIUSO",
+      "UNO",
+      "LOTTO"
+    ]
+  },
+  {
+    "target": "PAROLA",
+    "clues": [
+      "ONORE",
+      "CHIAVE",
+      "MUTA",
+      "ORDINE",
+      "CROCE"
+    ]
+  },
+  {
+    "target": "CORSA",
+    "clues": [
+      "CAVALLI",
+      "OSTACOLI",
+      "TOPI",
+      "ARMI",
+      "MACCHINA"
+    ]
+  },
+  {
+    "target": "RUOTA",
+    "clues": [
+      "FORTUNA",
+      "SCORTA",
+      "MULINO",
+      "PAVONE",
+      "LIBERA"
+    ]
+  },
+  {
+    "target": "TAVOLA",
+    "clues": [
+      "ROTONDA",
+      "CALDA",
+      "PITAGORICA",
+      "SURF",
+      "PERIODICA"
+    ]
+  },
+  {
+    "target": "CHIESA",
+    "clues": [
+      "CAMPANA",
+      "PADRE",
+      "STATO",
+      "SPOSARE",
+      "SILENZIO"
+    ]
+  },
+  {
+    "target": "GUERRA",
+    "clues": [
+      "FREDDA",
+      "MONDIALE",
+      "PACE",
+      "DICHIARARE",
+      "TRINCEA"
+    ]
+  },
+  {
+    "target": "PACE",
+    "clues": [
+      "GUERRA",
+      "TRATTATO",
+      "SANTA",
+      "FARE",
+      "COLOMBA"
+    ]
+  },
+  {
+    "target": "GIORNO",
+    "clues": [
+      "DOPO",
+      "OGGI",
+      "SANTO",
+      "BUON",
+      "ORDINE"
+    ]
+  },
+  {
+    "target": "MATTINO",
+    "clues": [
+      "PRESTO",
+      "ORO",
+      "BUON",
+      "CORRIERE",
+      "ALBA"
+    ]
+  },
+  {
+    "target": "LUCE",
+    "clues": [
+      "VELOCITÀ",
+      "ANNO",
+      "VERDE",
+      "NATURA",
+      "DARE"
+    ]
+  },
+  {
+    "target": "OMBRA",
+    "clues": [
+      "DUBBIO",
+      "SEGUIRE",
+      "CINESE",
+      "GOVERNO",
+      "PROIETTARE"
+    ]
+  },
+  {
+    "target": "FIORE",
+    "clues": [
+      "LOTO",
+      "OCCHIELLO",
+      "CAMPO",
+      "SECCO",
+      "MAZZO"
+    ]
+  },
+  {
+    "target": "RADICE",
+    "clues": [
+      "QUADRATA",
+      "MALE",
+      "PROBLEMA",
+      "ALBERO",
+      "METTERE"
+    ]
+  },
+  {
+    "target": "FOGLIA",
+    "clues": [
+      "FICO",
+      "MORTA",
+      "TREMARE",
+      "CADERE",
+      "ORO"
+    ]
+  },
+  {
+    "target": "RAMO",
+    "clues": [
+      "OLIVO",
+      "SECCO",
+      "CADERE",
+      "FAMIGLIA",
+      "PAZZIA"
+    ]
+  },
+  {
+    "target": "FRUTTO",
+    "clues": [
+      "PROIBITO",
+      "PASSIONE",
+      "BOSCO",
+      "LAVORO",
+      "MATURO"
+    ]
+  },
+  {
+    "target": "SEME",
+    "clues": [
+      "DISCORDIA",
+      "PIANTARE",
+      "CARTE",
+      "MELA",
+      "DUBBIO"
+    ]
+  },
+  {
+    "target": "VINO",
+    "clues": [
+      "ROSSO",
+      "BIANCO",
+      "VERITÀ",
+      "BOTTE",
+      "ANNATA"
+    ]
+  },
+  {
+    "target": "BIRRA",
+    "clues": [
+      "SPINA",
+      "CHIARA",
+      "PANCIA",
+      "BOCCALE",
+      "FRESCA"
+    ]
+  },
+  {
+    "target": "BOTTIGLIA",
+    "clues": [
+      "MESSAGGIO",
+      "VETRO",
+      "VUOTO",
+      "TAPPO",
+      "NAUFRAGIO"
+    ]
+  },
+  {
+    "target": "BICCHIERE",
+    "clues": [
+      "MEZZO",
+      "ACQUA",
+      "TEMPESTA",
+      "VUOTO",
+      "PIENO"
+    ]
+  },
+  {
+    "target": "PIATTO",
+    "clues": [
+      "FONDO",
+      "FORTE",
+      "PORTATA",
+      "FREDDO",
+      "PIANO"
+    ]
+  },
+  {
+    "target": "COLTELLO",
+    "clues": [
+      "AFFILATO",
+      "BURRO",
+      "PIAGA",
+      "FERITA",
+      "SVIZZERO"
+    ]
+  },
+  {
+    "target": "SALE",
+    "clues": [
+      "GROSSO",
+      "PEPE",
+      "ZUCCA",
+      "FERITA",
+      "TABACCHI"
+    ]
+  },
+  {
+    "target": "ZUCCHERO",
+    "clues": [
+      "FILATO",
+      "CANNA",
+      "VELO",
+      "SANGUE",
+      "DOLCE"
+    ]
+  },
+  {
+    "target": "PEPE",
+    "clues": [
+      "SALE",
+      "NERO",
+      "MACINATO",
+      "GRANI",
+      "PICCANTE"
+    ]
+  },
+  {
+    "target": "VERDURA",
+    "clues": [
+      "FRUTTA",
+      "MINESTRA",
+      "ORTO",
+      "STAGIONE",
+      "PASSATO"
+    ]
+  },
+  {
+    "target": "INSALATA",
+    "clues": [
+      "RUSSA",
+      "MISTA",
+      "RISO",
+      "CONDIRE",
+      "MARE"
+    ]
+  },
+  {
+    "target": "PATATA",
+    "clues": [
+      "BOLLENTE",
+      "AMERICANA",
+      "SPIRITO",
+      "FRITTA",
+      "SACCO"
+    ]
+  },
+  {
+    "target": "POMODORO",
+    "clues": [
+      "ROSSO",
+      "SUGO",
+      "INSALATA",
+      "SALSA",
+      "CILIEGINO"
+    ]
+  },
+  {
+    "target": "CIPOLLA",
+    "clues": [
+      "ROSSA",
+      "PIANGERE",
+      "STRATO",
+      "TAGLIARE",
+      "SFOGLIARE"
+    ]
+  },
+  {
+    "target": "AGLIO",
+    "clues": [
+      "OLIO",
+      "VAMPIRO",
+      "CAMICIA",
+      "SPICCHIO",
+      "PEPERONCINO"
+    ]
+  },
+  {
+    "target": "FUNGO",
+    "clues": [
+      "ATOMICO",
+      "VELENOSO",
+      "PORCINO",
+      "NUVOLA",
+      "BOSCO"
+    ]
+  },
+  {
+    "target": "NOCE",
+    "clues": [
+      "GUSCIO",
+      "MOSCATA",
+      "BURRO",
+      "COCCO",
+      "SCHIACCIANOCI"
+    ]
+  },
+  {
+    "target": "MELA",
+    "clues": [
+      "COTOGNA",
+      "VERDE",
+      "STRUDEL",
+      "PECCATO",
+      "OCCHIO"
+    ]
+  },
+  {
+    "target": "PERA",
+    "clues": [
+      "COTTA",
+      "FORMAGGIO",
+      "KAISER",
+      "WILLIAMS",
+      "TESTA"
+    ]
+  },
+  {
+    "target": "BANANA",
+    "clues": [
+      "BUCCIA",
+      "SCIVOLARE",
+      "GIALLA",
+      "REPUBBLICA",
+      "SPLIT"
+    ]
+  },
+  {
+    "target": "ARANCIA",
+    "clues": [
+      "MECCANICA",
+      "SPREMUTA",
+      "BUCCIA",
+      "ROSSA",
+      "FIORI"
+    ]
+  },
+  {
+    "target": "LIMONE",
+    "clues": [
+      "SPREMERE",
+      "SUCCO",
+      "GIALLO",
+      "LIMONATA",
+      "ACIDO"
+    ]
+  },
+  {
+    "target": "FRAGOLA",
+    "clues": [
+      "PANNA",
+      "ROSSA",
+      "CAMPO",
+      "TORTA",
+      "BOSCO"
+    ]
+  },
+  {
+    "target": "CILIEGIA",
+    "clues": [
+      "ROSSA",
+      "NOCCIOLO",
+      "TORTA",
+      "ALBERO",
+      "DOPPIA"
+    ]
+  },
+  {
+    "target": "UVA",
+    "clues": [
+      "PASSA",
+      "BIANCA",
+      "VOLPE",
+      "VENDEMMIA",
+      "GRAPPOLO"
+    ]
+  },
+  {
+    "target": "CASTAGNA",
+    "clues": [
+      "CAVARE",
+      "MATTA",
+      "FUOCO",
+      "CALDARROSTA",
+      "RICCIO"
+    ]
+  },
+  {
+    "target": "MANDORLA",
+    "clues": [
+      "OCCHIO",
+      "AMARA",
+      "LATTE",
+      "CONFETTO",
+      "PASTA"
+    ]
+  },
+  {
+    "target": "PECORA",
+    "clues": [
+      "NERA",
+      "GREGGE",
+      "LANA",
+      "CONTARE",
+      "PERDERE"
+    ]
+  },
+  {
+    "target": "MUCCA",
+    "clues": [
+      "PAZZA",
+      "LATTE",
+      "PASCOLO",
+      "VACCA",
+      "SACRA"
+    ]
+  },
+  {
+    "target": "MAIALE",
+    "clues": [
+      "PORCO",
+      "SUDARE",
+      "COPPA",
+      "PERLE",
+      "GRASSO"
+    ]
+  },
+  {
+    "target": "GALLINA",
+    "clues": [
+      "UOVO",
+      "PELLE",
+      "VECCHIA",
+      "BRODO",
+      "POLLAIO"
+    ]
+  },
+  {
+    "target": "GALLO",
+    "clues": [
+      "CANTO",
+      "CEDRONE",
+      "FRANCIA",
+      "ALBA",
+      "COMBATTIMENTO"
+    ]
+  },
+  {
+    "target": "CAVALLO",
+    "clues": [
+      "TROIA",
+      "BATTAGLIA",
+      "CORSA",
+      "FERRO",
+      "VAPORE"
+    ]
+  },
+  {
+    "target": "ASINO",
+    "clues": [
+      "PONTE",
+      "ORECCHIE",
+      "RAGLIO",
+      "TESTARDO",
+      "ORO"
+    ]
+  },
+  {
+    "target": "CANE",
+    "clues": [
+      "SCIOLTO",
+      "FREDDO",
+      "GUARDIA",
+      "PASTORE",
+      "FEDELE"
+    ]
+  },
+  {
+    "target": "GATTO",
+    "clues": [
+      "STIVALI",
+      "SACCO",
+      "RANDAGIO",
+      "MORTO",
+      "CURIOSITÀ"
+    ]
+  },
+  {
+    "target": "TOPO",
+    "clues": [
+      "BIBLIOTECA",
+      "ALBERGO",
+      "CITTÀ",
+      "FORMAGGIO",
+      "FOGNA"
+    ]
+  },
+  {
+    "target": "UCCELLO",
+    "clues": [
+      "GABBIA",
+      "PADULO",
+      "RARO",
+      "MIGRATORE",
+      "PIUMA"
+    ]
+  },
+  {
+    "target": "PESCE",
+    "clues": [
+      "APRILE",
+      "ROSSO",
+      "SPADA",
+      "FUORI",
+      "ACQUA"
+    ]
+  },
+  {
+    "target": "BALENA",
+    "clues": [
+      "BIANCA",
+      "PINOCCHIO",
+      "GRASSO",
+      "PANCIA",
+      "MARE"
+    ]
+  },
+  {
+    "target": "SQUALO",
+    "clues": [
+      "BIANCO",
+      "PINNA",
+      "DENTI",
+      "FINANZA",
+      "AFFARI"
+    ]
+  },
+  {
+    "target": "LEONE",
+    "clues": [
+      "CUORE",
+      "GABBIA",
+      "FOSSA",
+      "SAN",
+      "VENEZIA"
+    ]
+  },
+  {
+    "target": "TIGRE",
+    "clues": [
+      "CARTA",
+      "BENGALA",
+      "STRISCE",
+      "ASIATICA",
+      "DENTE"
+    ]
+  },
+  {
+    "target": "GIRAFFA",
+    "clues": [
+      "COLLO",
+      "LUNGO",
+      "MACCHIE",
+      "AFRICA",
+      "ZOO"
+    ]
+  },
+  {
+    "target": "SCIMMIA",
+    "clues": [
+      "NUDA",
+      "PROCESSO",
+      "IMITARE",
+      "BANANA",
+      "EVOLUZIONE"
+    ]
+  },
+  {
+    "target": "COCCODRILLO",
+    "clues": [
+      "LACRIME",
+      "DUNDEE",
+      "PELLE",
+      "NILO",
+      "BORSA"
+    ]
+  },
+  {
+    "target": "TARTARUGA",
+    "clues": [
+      "NINJA",
+      "PASSO",
+      "GUSCIO",
+      "LEPRE",
+      "MARE"
+    ]
+  },
+  {
+    "target": "FARFALLA",
+    "clues": [
+      "EFFETTO",
+      "NUOTO",
+      "CRISALIDE",
+      "NODO",
+      "STOMACO"
+    ]
+  },
+  {
+    "target": "CIGNO",
+    "clues": [
+      "NERO",
+      "LAGO",
+      "CANTO",
+      "BRUTTO",
+      "ANATROCCOLO"
+    ]
+  },
+  {
+    "target": "COLOMBA",
+    "clues": [
+      "PACE",
+      "PASQUA",
+      "BIANCA",
+      "OLIVO",
+      "MESSAGGERA"
+    ]
+  },
+  {
+    "target": "CORVO",
+    "clues": [
+      "NERO",
+      "GRACCHIARE",
+      "PENNA",
+      "PRESAGIO",
+      "VOLPE"
+    ]
+  },
+  {
+    "target": "GUFO",
+    "clues": [
+      "REALE",
+      "NOTTE",
+      "PORTARE",
+      "SFIGA",
+      "SAGGIO"
+    ]
+  },
+  {
+    "target": "PAVONE",
+    "clues": [
+      "CODA",
+      "VANITOSO",
+      "PIUME",
+      "RUOTA",
+      "MARTELLO"
+    ]
+  },
+  {
+    "target": "PINGUINO",
+    "clues": [
+      "IMPERATORE",
+      "MARCIA",
+      "ANTARTIDE",
+      "GHIACCIO",
+      "SMOKING"
+    ]
+  },
+  {
+    "target": "ROSA",
+    "clues": [
+      "NOME",
+      "SPINA",
+      "VENTO",
+      "DESERTO",
+      "ROSSA"
+    ]
+  },
+  {
+    "target": "VIOLA",
+    "clues": [
+      "STRUMENTO",
+      "MAMMOLA",
+      "COLORE",
+      "FIORE",
+      "PENSIERO"
+    ]
+  },
+  {
+    "target": "GIRASOLE",
+    "clues": [
+      "OLIO",
+      "CAMPO",
+      "SEMI",
+      "VAN GOGH",
+      "TRAMONTO"
+    ]
+  },
+  {
+    "target": "TULIPANO",
+    "clues": [
+      "OLANDA",
+      "BULBO",
+      "PRIMAVERA",
+      "COLORATO",
+      "MULINO"
+    ]
+  },
+  {
+    "target": "MARGHERITA",
+    "clues": [
+      "PIZZA",
+      "PETALO",
+      "CAMPO",
+      "AMARE",
+      "SFOGLIARE"
+    ]
+  },
+  {
+    "target": "GIGLIO",
+    "clues": [
+      "FIRENZE",
+      "BIANCO",
+      "ARALDICO",
+      "PROFUMO",
+      "PUREZZA"
+    ]
+  },
+  {
+    "target": "ORCHIDEA",
+    "clues": [
+      "SELVAGGIA",
+      "RARA",
+      "TROPICALE",
+      "FIORE",
+      "ELEGANTE"
+    ]
+  },
+  {
+    "target": "CACTUS",
+    "clues": [
+      "SPINE",
+      "DESERTO",
+      "SUCCULENTA",
+      "MESSICO",
+      "SECCO"
+    ]
+  },
+  {
+    "target": "PALMA",
+    "clues": [
+      "MANO",
+      "ORO",
+      "CANNES",
+      "COCCO",
+      "DOMENICA"
+    ]
+  },
+  {
+    "target": "QUERCIA",
+    "clues": [
+      "ROVERE",
+      "FORTE",
+      "FOGLIA",
+      "GHIANDA",
+      "SECOLARE"
+    ]
+  },
+  {
+    "target": "PINO",
+    "clues": [
+      "MARITTIMO",
+      "PIGNA",
+      "NATALE",
+      "DANIELE",
+      "RESINA"
+    ]
+  },
+  {
+    "target": "OLIVO",
+    "clues": [
+      "OLIO",
+      "RAMO",
+      "PACE",
+      "PUGLIA",
+      "SECOLARE"
+    ]
+  },
+  {
+    "target": "VITE",
+    "clues": [
+      "GIRO",
+      "CROCE",
+      "VINO",
+      "UVA",
+      "SENZA"
+    ]
+  },
+  {
+    "target": "BAMBÙ",
+    "clues": [
+      "PANDA",
+      "CANNA",
+      "ASIA",
+      "FORESTA",
+      "FLESSIBILE"
+    ]
+  },
+  {
+    "target": "CIELO",
+    "clues": [
+      "APERTO",
+      "SETTIMO",
+      "STELLE",
+      "AZZURRO",
+      "TOCCARE"
+    ]
+  },
+  {
+    "target": "NUVOLA",
+    "clues": [
+      "ROSA",
+      "TEMPESTA",
+      "TESTA",
+      "PASSARE",
+      "FUNGO"
+    ]
+  },
+  {
+    "target": "PIOGGIA",
+    "clues": [
+      "ACIDA",
+      "DANZA",
+      "GOCCIA",
+      "TORRENZIALE",
+      "ORO"
+    ]
+  },
+  {
+    "target": "FULMINE",
+    "clues": [
+      "TUONO",
+      "GUERRA",
+      "COLPO",
+      "LAMPO",
+      "SAETTA"
+    ]
+  },
+  {
+    "target": "TUONO",
+    "clues": [
+      "FULMINE",
+      "ROMBO",
+      "TEMPESTA",
+      "PAURA",
+      "RUMORE"
+    ]
+  },
+  {
+    "target": "ARCOBALENO",
+    "clues": [
+      "COLORI",
+      "PIOGGIA",
+      "SOLE",
+      "PENTOLA",
+      "ORO"
+    ]
+  },
+  {
+    "target": "NEBBIA",
+    "clues": [
+      "FITTA",
+      "LONDRA",
+      "PIANURA",
+      "VEDERE",
+      "BANCO"
+    ]
+  },
+  {
+    "target": "GHIACCIO",
+    "clues": [
+      "SECCO",
+      "PATTINAGGIO",
+      "HOCKEY",
+      "SCIOGLIERE",
+      "SGUARDO"
+    ]
+  },
+  {
+    "target": "GELO",
+    "clues": [
+      "INVERNO",
+      "FREDDO",
+      "PUNTO",
+      "NOTTE",
+      "CALARE"
+    ]
+  },
+  {
+    "target": "GRANDINE",
+    "clues": [
+      "CHICCO",
+      "TEMPESTA",
+      "DANNI",
+      "ESTATE",
+      "TETTO"
+    ]
+  },
+  {
+    "target": "VENTO",
+    "clues": [
+      "ROSA",
+      "MULINO",
+      "CONTRO",
+      "TRAMONTANA",
+      "PAROLE"
+    ]
+  },
+  {
+    "target": "TORNADO",
+    "clues": [
+      "KANSAS",
+      "VORTICE",
+      "DISTRUZIONE",
+      "DOROTHY",
+      "AMERICA"
+    ]
+  },
+  {
+    "target": "URAGANO",
+    "clues": [
+      "OCCHIO",
+      "TROPICALE",
+      "KATRINA",
+      "DEVASTANTE",
+      "NOME"
+    ]
+  },
+  {
+    "target": "TRAMONTO",
+    "clues": [
+      "VIALE",
+      "ROSSO",
+      "SOLE",
+      "SERA",
+      "ORIZZONTE"
+    ]
+  },
+  {
+    "target": "ALBA",
+    "clues": [
+      "ROSSO",
+      "GALLO",
+      "MATTINO",
+      "SORGERE",
+      "JESSICA"
+    ]
+  },
+  {
+    "target": "AURORA",
+    "clues": [
+      "BOREALE",
+      "BELLA",
+      "DISNEY",
+      "LUCE",
+      "ADDORMENTATA"
+    ]
+  },
+  {
+    "target": "ECLISSI",
+    "clues": [
+      "SOLE",
+      "LUNA",
+      "TOTALE",
+      "PARZIALE",
+      "OSCURARE"
+    ]
+  },
+  {
+    "target": "COMETA",
+    "clues": [
+      "HALLEY",
+      "CODA",
+      "NATALE",
+      "CIELO",
+      "PASSAGGIO"
+    ]
+  },
+  {
+    "target": "PIANETA",
+    "clues": [
+      "TERRA",
+      "ROSSO",
+      "SISTEMA",
+      "SCIMMIE",
+      "SOLITARIO"
+    ]
+  },
+  {
+    "target": "GALASSIA",
+    "clues": [
+      "VIA",
+      "LATTEA",
+      "SPIRALE",
+      "GUARDIANI",
+      "UNIVERSO"
+    ]
+  },
+  {
+    "target": "SATELLITE",
+    "clues": [
+      "ARTIFICIALE",
+      "LUNA",
+      "ORBITA",
+      "SPAZIO",
+      "TELEVISIONE"
+    ]
+  },
+  {
+    "target": "RAZZO",
+    "clues": [
+      "SPAZIALE",
+      "PARTIRE",
+      "LUNA",
+      "FUOCO",
+      "VELOCITÀ"
+    ]
+  },
+  {
+    "target": "ASTRONAVE",
+    "clues": [
+      "SPAZIO",
+      "EQUIPAGGIO",
+      "VIAGGIO",
+      "ALIENA",
+      "INTERSTELLARE"
+    ]
+  },
+  {
+    "target": "ALIENO",
+    "clues": [
+      "EXTRATERRESTRE",
+      "SPAZIO",
+      "UFO",
+      "VERDE",
+      "MARZIANO"
+    ]
+  },
+  {
+    "target": "MONDO",
+    "clues": [
+      "FINE",
+      "GIRO",
+      "NUOVO",
+      "ALTRO",
+      "WALT"
+    ]
+  },
+  {
+    "target": "UNIVERSO",
+    "clues": [
+      "PARALLELO",
+      "INFINITO",
+      "ESPANSIONE",
+      "MISS",
+      "ORIGINE"
+    ]
+  },
+  {
+    "target": "SPAZIO",
+    "clues": [
+      "TEMPO",
+      "VITALE",
+      "VUOTO",
+      "CORSA",
+      "VERDE"
+    ]
+  },
+  {
+    "target": "ORBITA",
+    "clues": [
+      "FUORI",
+      "ELLITTICA",
+      "SATELLITE",
+      "OCCHIO",
+      "METTERE"
+    ]
+  },
+  {
+    "target": "CRATERE",
+    "clues": [
+      "LUNA",
+      "VULCANO",
+      "METEORITE",
+      "IMPATTO",
+      "PROFONDO"
+    ]
+  },
+  {
+    "target": "MONTAGNA",
+    "clues": [
+      "RUSSA",
+      "SACRA",
+      "SCALARE",
+      "VETTA",
+      "PARTORIRE"
+    ]
+  },
+  {
+    "target": "COLLINA",
+    "clues": [
+      "DOLCE",
+      "TORINESE",
+      "VERDE",
+      "PENDIO",
+      "VIGNETO"
+    ]
+  },
+  {
+    "target": "VALLE",
+    "clues": [
+      "LACRIME",
+      "AOSTA",
+      "OMBRA",
+      "FIUME",
+      "VERDE"
+    ]
+  },
+  {
+    "target": "FIUME",
+    "clues": [
+      "LETTO",
+      "FOCE",
+      "PAROLE",
+      "SACRO",
+      "SORGENTE"
+    ]
+  },
+  {
+    "target": "LAGO",
+    "clues": [
+      "CIGNI",
+      "GARDA",
+      "ARTIFICIALE",
+      "RIVA",
+      "MAGGIORE"
+    ]
+  },
+  {
+    "target": "CASCATA",
+    "clues": [
+      "NIAGARA",
+      "ACQUA",
+      "CAPELLI",
+      "EFFETTO",
+      "RUMORE"
+    ]
+  },
+  {
+    "target": "SORGENTE",
+    "clues": [
+      "ACQUA",
+      "FIUME",
+      "PURA",
+      "CODICE",
+      "NATURALE"
+    ]
+  },
+  {
+    "target": "OCEANO",
+    "clues": [
+      "ATLANTICO",
+      "PACIFICO",
+      "PROFONDO",
+      "BLU",
+      "INFINITO"
+    ]
+  },
+  {
+    "target": "ISOLA",
+    "clues": [
+      "DESERTA",
+      "FAMOSI",
+      "FELICE",
+      "PEDONALE",
+      "TESORO"
+    ]
+  },
+  {
+    "target": "CONTINENTE",
+    "clues": [
+      "AFRICA",
+      "NERO",
+      "DERIVA",
+      "ANTICO",
+      "PERDUTO"
+    ]
+  },
+  {
+    "target": "PENISOLA",
+    "clues": [
+      "ITALICA",
+      "IBERICA",
+      "ARABA",
+      "COREANA",
+      "SKANDINAVA"
+    ]
+  },
+  {
+    "target": "DESERTO",
+    "clues": [
+      "SAHARA",
+      "ROSSO",
+      "ATTRAVERSARE",
+      "OASI",
+      "CALDO"
+    ]
+  },
+  {
+    "target": "FORESTA",
+    "clues": [
+      "AMAZZONICA",
+      "PLUVIALE",
+      "NERA",
+      "INCANTATA",
+      "VERGINE"
+    ]
+  },
+  {
+    "target": "GIUNGLA",
+    "clues": [
+      "ASFALTO",
+      "LIBRO",
+      "LEGGE",
+      "TARZAN",
+      "SELVAGGIA"
+    ]
+  },
+  {
+    "target": "PRATO",
+    "clues": [
+      "VERDE",
+      "FIORITO",
+      "ERBA",
+      "CAMPAGNA",
+      "STENDERE"
+    ]
+  },
+  {
+    "target": "PONTE",
+    "clues": [
+      "SOSPESO",
+      "COMANDO",
+      "ASINO",
+      "SOSPIRI",
+      "BRUCIARE"
+    ]
+  },
+  {
+    "target": "MURO",
+    "clues": [
+      "BERLINO",
+      "SUONO",
+      "PIANGERE",
+      "PORTANTE",
+      "GOMMA"
+    ]
+  },
+  {
+    "target": "TETTO",
+    "clues": [
+      "SOTTO",
+      "TEGOLA",
+      "SPIOVENTE",
+      "SOFFITTA",
+      "MONDO"
+    ]
+  },
+  {
+    "target": "FINESTRA",
+    "clues": [
+      "AFFACCIARE",
+      "TETTO",
+      "VETRO",
+      "ROMPERE",
+      "APERTA"
+    ]
+  },
+  {
+    "target": "BALCONE",
+    "clues": [
+      "GIULIETTA",
+      "AFFACCIO",
+      "VISTA",
+      "FIORI",
+      "ROMEO"
+    ]
+  },
+  {
+    "target": "SCALA",
+    "clues": [
+      "EMERGENZA",
+      "VALORI",
+      "MOBILE",
+      "PIOLI",
+      "CHIOCCIOLA"
+    ]
+  },
+  {
+    "target": "ASCENSORE",
+    "clues": [
+      "PIANO",
+      "CHIAMARE",
+      "PULSANTE",
+      "DISCORSO",
+      "SOCIALE"
+    ]
+  },
+  {
+    "target": "CANTINA",
+    "clues": [
+      "VINO",
+      "SOCIALE",
+      "BOTTI",
+      "FRESCA",
+      "UMIDA"
+    ]
+  },
+  {
+    "target": "SOFFITTA",
+    "clues": [
+      "TETTO",
+      "POLVERE",
+      "RICORDI",
+      "VECCHIO",
+      "NASCONDERE"
+    ]
+  },
+  {
+    "target": "GARAGE",
+    "clues": [
+      "MACCHINA",
+      "ROCK",
+      "BOX",
+      "APRIRE",
+      "BAND"
+    ]
+  },
+  {
+    "target": "GIARDINO",
+    "clues": [
+      "SEGRETO",
+      "INFANZIA",
+      "INVERNO",
+      "BOTANICO",
+      "FIORI"
+    ]
+  },
+  {
+    "target": "ORTO",
+    "clues": [
+      "BOTANICO",
+      "VERDURA",
+      "COLTIVARE",
+      "CONTADINO",
+      "CASA"
+    ]
+  },
+  {
+    "target": "PISCINA",
+    "clues": [
+      "OLIMPIONICA",
+      "COPERTA",
+      "TUFFO",
+      "CLORO",
+      "NUOTO"
+    ]
+  },
+  {
+    "target": "STRADA",
+    "clues": [
+      "MAESTRA",
+      "FERRATA",
+      "PERDERE",
+      "DRITTA",
+      "FARE"
+    ]
+  },
+  {
+    "target": "AUTOSTRADA",
+    "clues": [
+      "SOLE",
+      "CASELLO",
+      "CORSIA",
+      "PEDAGGIO",
+      "VELOCE"
+    ]
+  },
+  {
+    "target": "BINARIO",
+    "clues": [
+      "MORTO",
+      "TRENO",
+      "PARALLELO",
+      "STAZIONE",
+      "CODICE"
+    ]
+  },
+  {
+    "target": "STAZIONE",
+    "clues": [
+      "CENTRALE",
+      "TRENO",
+      "SERVIZIO",
+      "SPAZIALE",
+      "RADIO"
+    ]
+  },
+  {
+    "target": "AEROPORTO",
+    "clues": [
+      "INTERNAZIONALE",
+      "DECOLLO",
+      "PISTA",
+      "VOLO",
+      "RITARDO"
+    ]
+  },
+  {
+    "target": "PORTO",
+    "clues": [
+      "SICURO",
+      "FRANCO",
+      "ARMI",
+      "ATTRACCO",
+      "MARE"
+    ]
+  },
+  {
+    "target": "CITTÀ",
+    "clues": [
+      "ETERNA",
+      "SANTA",
+      "STATO",
+      "FANTASMA",
+      "CAPITALE"
+    ]
+  },
+  {
+    "target": "VILLAGGIO",
+    "clues": [
+      "GLOBALE",
+      "VACANZE",
+      "TURISTICO",
+      "OLIMPICO",
+      "NATALE"
+    ]
+  },
+  {
+    "target": "CASTELLO",
+    "clues": [
+      "CARTE",
+      "SABBIA",
+      "INCANTATO",
+      "ARIA",
+      "CONTE"
+    ]
+  },
+  {
+    "target": "PALAZZO",
+    "clues": [
+      "REALE",
+      "GIUSTIZIA",
+      "VETRO",
+      "POTERE",
+      "CONGRESSO"
+    ]
+  },
+  {
+    "target": "TORRE",
+    "clues": [
+      "EIFFEL",
+      "CONTROLLO",
+      "PISA",
+      "BABELE",
+      "OROLOGIO"
+    ]
+  },
+  {
+    "target": "CATTEDRALE",
+    "clues": [
+      "GOTICA",
+      "MARE",
+      "SILENZIO",
+      "NAVATA",
+      "ORGANO"
+    ]
+  },
+  {
+    "target": "MUSEO",
+    "clues": [
+      "CERA",
+      "ORRORI",
+      "ARTE",
+      "NATURALE",
+      "VISITARE"
+    ]
+  },
+  {
+    "target": "TEATRO",
+    "clues": [
+      "OPERAZIONI",
+      "ANATOMICO",
+      "GUERRA",
+      "PALCO",
+      "TRAGEDIA"
+    ]
+  },
+  {
+    "target": "CINEMA",
+    "clues": [
+      "MUTO",
+      "PARADISO",
+      "STELLA",
+      "SALA",
+      "PROIEZIONE"
+    ]
+  },
+  {
+    "target": "STADIO",
+    "clues": [
+      "OLIMPICO",
+      "MALATTIA",
+      "TIFO",
+      "CASA",
+      "FINALE"
+    ]
+  },
+  {
+    "target": "OSPEDALE",
+    "clues": [
+      "GENERALE",
+      "PRONTO",
+      "RICOVERO",
+      "CAMPO",
+      "NAVALE"
+    ]
+  },
+  {
+    "target": "SCUOLA",
+    "clues": [
+      "GUIDA",
+      "ELEMENTARE",
+      "PENSIERO",
+      "VECCHIA",
+      "PUBBLICA"
+    ]
+  },
+  {
+    "target": "UNIVERSITÀ",
+    "clues": [
+      "TERZA",
+      "STRADA",
+      "LIBERA",
+      "DOTTORATO",
+      "CAMPUS"
+    ]
+  },
+  {
+    "target": "BIBLIOTECA",
+    "clues": [
+      "TOPO",
+      "ALESSANDRIA",
+      "SILENZIO",
+      "PRESTITO",
+      "SCAFFALE"
+    ]
+  },
+  {
+    "target": "LIBRERIA",
+    "clues": [
+      "LEGNO",
+      "ACQUISTO",
+      "SCAFFALE",
+      "INDIPENDENTE",
+      "MENSOLA"
+    ]
+  },
+  {
+    "target": "EDICOLA",
+    "clues": [
+      "GIORNALE",
+      "CHIOSCO",
+      "VOTIVA",
+      "RIVISTA",
+      "ANGOLO"
+    ]
+  },
+  {
+    "target": "FARMACIA",
+    "clues": [
+      "TURNO",
+      "CROCE",
+      "RICETTA",
+      "GUARDIA",
+      "BANCO"
+    ]
+  },
+  {
+    "target": "BANCA",
+    "clues": [
+      "CENTRALE",
+      "DATI",
+      "SANGUE",
+      "TEMPO",
+      "CONTO"
+    ]
+  },
+  {
+    "target": "UFFICIO",
+    "clues": [
+      "POSTALE",
+      "STAMPA",
+      "COLLOCAMENTO",
+      "OGGETTI",
+      "TECNICO"
+    ]
+  },
+  {
+    "target": "NEGOZIO",
+    "clues": [
+      "AFFARE",
+      "APRIRE",
+      "VETRINA",
+      "COMMESSO",
+      "ANGOLO"
+    ]
+  },
+  {
+    "target": "MERCATO",
+    "clues": [
+      "NERO",
+      "LIBERO",
+      "RIONALE",
+      "BORSA",
+      "AZIONARIO"
+    ]
+  },
+  {
+    "target": "SUPERMERCATO",
+    "clues": [
+      "CASSA",
+      "SCAFFALE",
+      "CARRELLO",
+      "SPESA",
+      "CORSIA"
+    ]
+  },
+  {
+    "target": "RISTORANTE",
+    "clues": [
+      "STELLATO",
+      "PRENOTARE",
+      "MENÙ",
+      "CAMERIERE",
+      "CONTO"
+    ]
+  },
+  {
+    "target": "PIZZERIA",
+    "clues": [
+      "NAPOLETANA",
+      "FORNO",
+      "MARGHERITA",
+      "ASPORTO",
+      "TAVOLO"
+    ]
+  },
+  {
+    "target": "DISCOTECA",
+    "clues": [
+      "BALLO",
+      "NOTTE",
+      "LOCALE",
+      "MUSICA",
+      "INGRESSO"
+    ]
+  },
+  {
+    "target": "PALESTRA",
+    "clues": [
+      "CORPO",
+      "MENTE",
+      "ATTREZZO",
+      "SUDARE",
+      "ABBONAMENTO"
+    ]
+  },
+  {
+    "target": "SPIAGGIA",
+    "clues": [
+      "OMBRELLONE",
+      "LIBERA",
+      "SABBIA",
+      "PRIVATA",
+      "TELO"
+    ]
+  },
+  {
+    "target": "CAMPEGGIO",
+    "clues": [
+      "TENDA",
+      "NATURA",
+      "LIBERO",
+      "FUOCO",
+      "VACANZA"
+    ]
+  },
+  {
+    "target": "RIFUGIO",
+    "clues": [
+      "ALPINO",
+      "ANTIAEREO",
+      "ANIMALI",
+      "MONTAGNA",
+      "CERCARE"
+    ]
+  },
+  {
+    "target": "MATRIMONIO",
+    "clues": [
+      "NOZZE",
+      "ANELLO",
+      "CHIESA",
+      "CIVILE",
+      "RELIGIOSO"
+    ]
+  },
+  {
+    "target": "BATTESIMO",
+    "clues": [
+      "FUOCO",
+      "ARIA",
+      "ACQUA",
+      "PADRINO",
+      "NOME"
+    ]
+  },
+  {
+    "target": "FUNERALE",
+    "clues": [
+      "STATO",
+      "MARCIA",
+      "FIORI",
+      "CORTEO",
+      "LUTTO"
+    ]
+  },
+  {
+    "target": "COMPLEANNO",
+    "clues": [
+      "AUGURI",
+      "TORTA",
+      "CANDELE",
+      "FESTA",
+      "REGALO"
+    ]
+  },
+  {
+    "target": "NATALE",
+    "clues": [
+      "BABBO",
+      "ALBERO",
+      "BIANCO",
+      "SPIRITO",
+      "REGALO"
+    ]
+  },
+  {
+    "target": "PASQUA",
+    "clues": [
+      "UOVO",
+      "COLOMBA",
+      "RESURREZIONE",
+      "CONIGLIO",
+      "ALTA"
+    ]
+  },
+  {
+    "target": "CARNEVALE",
+    "clues": [
+      "MASCHERA",
+      "VENEZIA",
+      "CORIANDOLI",
+      "SCHERZO",
+      "FESTA"
+    ]
+  },
+  {
+    "target": "CAPODANNO",
+    "clues": [
+      "MEZZANOTTE",
+      "FUOCHI",
+      "BRINDISI",
+      "CENONE",
+      "TUFFO"
+    ]
+  },
+  {
+    "target": "VACANZA",
+    "clues": [
+      "MARE",
+      "STUDIO",
+      "MERITATA",
+      "LAVORO",
+      "PAGATA"
+    ]
+  },
+  {
+    "target": "VIAGGIO",
+    "clues": [
+      "NOZZE",
+      "SOLA",
+      "ANDATA",
+      "PREMIO",
+      "ISTRUZIONE"
+    ]
+  },
+  {
+    "target": "AEREO",
+    "clues": [
+      "CARTA",
+      "POSTA",
+      "SPAZIO",
+      "VOLO",
+      "ALLARME"
+    ]
+  },
+  {
+    "target": "TRENO",
+    "clues": [
+      "VAPORE",
+      "ALTA",
+      "PERDERE",
+      "LOCALE",
+      "VITA"
+    ]
+  },
+  {
+    "target": "NAVE",
+    "clues": [
+      "SCUOLA",
+      "AMMIRAGLIA",
+      "GUERRA",
+      "SPAZIALE",
+      "ROMPIGHIACCIO"
+    ]
+  },
+  {
+    "target": "BARCA",
+    "clues": [
+      "VELA",
+      "REMI",
+      "STESSO",
+      "PERDERE",
+      "AFFONDARE"
+    ]
+  },
+  {
+    "target": "AUTOMOBILE",
+    "clues": [
+      "CLUB",
+      "CORSA",
+      "EPOCA",
+      "ELETTRICA",
+      "GUIDA"
+    ]
+  },
+  {
+    "target": "MOTO",
+    "clues": [
+      "PERPETUO",
+      "ONDOSO",
+      "ACQUA",
+      "CIRCOLARE",
+      "CORSA"
+    ]
+  },
+  {
+    "target": "BICICLETTA",
+    "clues": [
+      "LADRI",
+      "CORSA",
+      "PEDALARE",
+      "CATENA",
+      "ELETTRICA"
+    ]
+  },
+  {
+    "target": "ELICOTTERO",
+    "clues": [
+      "PALE",
+      "SALVATAGGIO",
+      "VOLO",
+      "DECOLLO",
+      "VERTICALE"
+    ]
+  },
+  {
+    "target": "AMBULANZA",
+    "clues": [
+      "SIRENA",
+      "CORSA",
+      "PRONTO",
+      "EMERGENZA",
+      "RINCORRERE"
+    ]
+  },
+  {
+    "target": "POMPIERE",
+    "clues": [
+      "CASERMA",
+      "FUOCO",
+      "VIGILE",
+      "SCALA",
+      "SAM"
+    ]
+  },
+  {
+    "target": "POLIZIA",
+    "clues": [
+      "STRADALE",
+      "SCIENTIFICA",
+      "AGENTE",
+      "SIRENA",
+      "STATO"
+    ]
+  },
+  {
+    "target": "SOLDATO",
+    "clues": [
+      "SEMPLICE",
+      "IGNOTO",
+      "PIOMBO",
+      "RYAN",
+      "SCONOSCIUTO"
+    ]
+  },
+  {
+    "target": "GENERALE",
+    "clues": [
+      "LINEA",
+      "QUARTIERE",
+      "PROCURATORE",
+      "PRATICA",
+      "ADUNATA"
+    ]
+  },
+  {
+    "target": "CAPITANO",
+    "clues": [
+      "ULTIMO",
+      "NAVE",
+      "FASCIA",
+      "CORAGGIOSO",
+      "UNCINO"
+    ]
+  },
+  {
+    "target": "PILOTA",
+    "clues": [
+      "AUTOMATICO",
+      "PUNTATA",
+      "FORMULA",
+      "CACCIA",
+      "AEREO"
+    ]
+  },
+  {
+    "target": "MEDAGLIA",
+    "clues": [
+      "ORO",
+      "ROVESCIO",
+      "BRONZO",
+      "PETTO",
+      "VALORE"
+    ]
+  },
+  {
+    "target": "TROFEO",
+    "clues": [
+      "COPPA",
+      "CACCIA",
+      "ALZARE",
+      "PREMIO",
+      "BACHECA"
+    ]
+  },
+  {
+    "target": "RECORD",
+    "clues": [
+      "MONDIALE",
+      "BATTERE",
+      "STABILIRE",
+      "GUINNESS",
+      "ASCOLTI"
+    ]
+  },
+  {
+    "target": "VITTORIA",
+    "clues": [
+      "ALATA",
+      "MUTILATA",
+      "MORALE",
+      "FUGA",
+      "SCHIACCIANTE"
+    ]
+  },
+  {
+    "target": "SCONFITTA",
+    "clues": [
+      "AMARA",
+      "BRUCIANTE",
+      "SUBIRE",
+      "INCASSARE",
+      "ACCETTARE"
+    ]
+  },
+  {
+    "target": "PAREGGIO",
+    "clues": [
+      "BILANCIO",
+      "RISULTATO",
+      "ACCONTENTARE",
+      "GIUSTO",
+      "RAGGIUNGERE"
+    ]
+  },
+  {
+    "target": "PARTENZA",
+    "clues": [
+      "FALSA",
+      "ARRIVO",
+      "LINEA",
+      "GRIGLIA",
+      "PIEDE"
+    ]
+  },
+  {
+    "target": "ARRIVO",
+    "clues": [
+      "PARTENZA",
+      "TRAGUARDO",
+      "LINEA",
+      "ORARIO",
+      "NUOVO"
+    ]
+  },
+  {
+    "target": "TRAGUARDO",
+    "clues": [
+      "TAGLIARE",
+      "VOLANTE",
+      "LINEA",
+      "FINALE",
+      "OBIETTIVO"
+    ]
+  },
+  {
+    "target": "PODIO",
+    "clues": [
+      "SALIRE",
+      "PRIMO",
+      "GRADINO",
+      "MEDAGLIA",
+      "CENTRO"
+    ]
+  },
+  {
+    "target": "CAMPIONE",
+    "clues": [
+      "MONDO",
+      "GRATUITO",
+      "STOFFA",
+      "PROVARE",
+      "USCENTE"
+    ]
+  },
+  {
+    "target": "ATLETA",
+    "clues": [
+      "OLIMPICO",
+      "PROFESSIONISTA",
+      "ALLENAMENTO",
+      "GESTO",
+      "PRESTAZIONE"
+    ]
+  },
+  {
+    "target": "ALLENATORE",
+    "clues": [
+      "PANCHINA",
+      "SQUADRA",
+      "TATTICA",
+      "TECNICO",
+      "ESONERO"
+    ]
+  },
+  {
+    "target": "ARBITRO",
+    "clues": [
+      "FISCHIO",
+      "CAMPO",
+      "DECISIONE",
+      "VAR",
+      "ELEGANZA"
+    ]
+  },
+  {
+    "target": "TIFOSO",
+    "clues": [
+      "CURVA",
+      "CALDO",
+      "FEDE",
+      "ULTRÀ",
+      "TIFARE"
+    ]
+  },
+  {
+    "target": "STADIO",
+    "clues": [
+      "CASA",
+      "PIENO",
+      "VUOTO",
+      "INAUGURARE",
+      "MALATTIA"
+    ]
+  },
+  {
+    "target": "PALLONE",
+    "clues": [
+      "ORO",
+      "GONFIATO",
+      "SONDA",
+      "CUOIO",
+      "AEROSTATICO"
+    ]
+  },
+  {
+    "target": "RETE",
+    "clues": [
+      "PORTA",
+      "SICUREZZA",
+      "CADERE",
+      "FISSA",
+      "WIRELESS"
+    ]
+  },
+  {
+    "target": "RIGORE",
+    "clues": [
+      "CALCIO",
+      "AREA",
+      "TIRARE",
+      "MASSIMO",
+      "SBAGLIARE"
+    ]
+  },
+  {
+    "target": "FALLO",
+    "clues": [
+      "GIOCO",
+      "FISCHIARE",
+      "SIMULARE",
+      "TECNICO",
+      "REAZIONE"
+    ]
+  },
+  {
+    "target": "DRIBBLING",
+    "clues": [
+      "PALLA",
+      "SALTARE",
+      "UOMO",
+      "ABILITÀ",
+      "UBRIACO"
+    ]
+  },
+  {
+    "target": "PASSAGGIO",
+    "clues": [
+      "CHIAVE",
+      "CONSEGNE",
+      "SEGRETO",
+      "LIVELLO",
+      "FILTRANTE"
+    ]
+  },
+  {
+    "target": "TRAVERSA",
+    "clues": [
+      "PIENO",
+      "LEGNO",
+      "PALO",
+      "COLPIRE",
+      "SOGNO"
+    ]
+  },
+  {
+    "target": "PALO",
+    "clues": [
+      "LUCE",
+      "PORTA",
+      "SANTO",
+      "COLPIRE",
+      "TELEGRAFICO"
+    ]
+  },
+  {
+    "target": "PORTIERE",
+    "clues": [
+      "NOTTE",
+      "GUANTI",
+      "PARATA",
+      "USCITA",
+      "ALBERGO"
+    ]
+  },
+  {
+    "target": "DIFENSORE",
+    "clues": [
+      "CENTRALE",
+      "UFFICIO",
+      "CIVICO",
+      "MARCATURA",
+      "MURO"
+    ]
+  },
+  {
+    "target": "ATTACCANTE",
+    "clues": [
+      "PUNTA",
+      "GOL",
+      "BOMBER",
+      "MOVIMENTO",
+      "RETE"
+    ]
+  },
+  {
+    "target": "CENTROCAMPISTA",
+    "clues": [
+      "REGIA",
+      "MEDIANO",
+      "INSERIMENTO",
+      "CORSA",
+      "GEOMETRIE"
+    ]
+  },
+  {
+    "target": "TENNIS",
+    "clues": [
+      "TAVOLO",
+      "RACCHETTA",
+      "CAMPO",
+      "PALLA",
+      "GOMITO"
+    ]
+  },
+  {
+    "target": "GOLF",
+    "clues": [
+      "CORRENTE",
+      "BUCA",
+      "VERDE",
+      "CLUB",
+      "MAZZA"
+    ]
+  },
+  {
+    "target": "NUOTO",
+    "clues": [
+      "SINCRONIZZATO",
+      "VASCA",
+      "STILE",
+      "LIBERO",
+      "DORSO"
+    ]
+  },
+  {
+    "target": "CORSA",
+    "clues": [
+      "FONDO",
+      "CAMPESTRE",
+      "OSTACOLI",
+      "ARMI",
+      "SACCO"
+    ]
+  },
+  {
+    "target": "MARATONA",
+    "clues": [
+      "MENTANA",
+      "TELEVISIVA",
+      "CORRERE",
+      "MURO",
+      "CLASSICA"
+    ]
+  },
+  {
+    "target": "CICLISMO",
+    "clues": [
+      "GIRO",
+      "TOUR",
+      "TAPPA",
+      "MAGLIA",
+      "BICICLETTA"
+    ]
+  },
+  {
+    "target": "BOXE",
+    "clues": [
+      "RING",
+      "GUANTONI",
+      "PUGILE",
+      "INCONTRO",
+      "PESO"
+    ]
+  },
+  {
+    "target": "SCHERMA",
+    "clues": [
+      "FIORETTO",
+      "STOCCATA",
+      "MASCHERA",
+      "ASSALTO",
+      "LAMA"
+    ]
+  },
+  {
+    "target": "VELA",
+    "clues": [
+      "LATINA",
+      "BARCA",
+      "SPORT",
+      "CANDELA",
+      "SPIEGARE"
+    ]
+  },
+  {
+    "target": "SCI",
+    "clues": [
+      "NAUTICO",
+      "FONDO",
+      "PISTA",
+      "DISCESA",
+      "ACQUA"
+    ]
+  },
+  {
+    "target": "PATTINAGGIO",
+    "clues": [
+      "ARTISTICO",
+      "VELOCITÀ",
+      "GHIACCIO",
+      "ROTELLE",
+      "FIGURA"
+    ]
+  },
+  {
+    "target": "BASEBALL",
+    "clues": [
+      "MAZZA",
+      "GUANTONE",
+      "AMERICANO",
+      "LANCIATORE",
+      "DIAMANTE"
+    ]
+  },
+  {
+    "target": "BASKET",
+    "clues": [
+      "CANESTRO",
+      "RIMBALZO",
+      "SCHIACCIATA",
+      "PALLEGGIO",
+      "TRIPLA"
+    ]
+  },
+  {
+    "target": "PALLAVOLO",
+    "clues": [
+      "RETE",
+      "SCHIACCIATA",
+      "MURO",
+      "BATTUTA",
+      "SET"
+    ]
+  },
+  {
+    "target": "RUGBY",
+    "clues": [
+      "OVALE",
+      "META",
+      "MISCHIA",
+      "PLACCAGGIO",
+      "TERZO"
+    ]
+  },
+  {
+    "target": "FORMULA",
+    "clues": [
+      "UNO",
+      "MAGICA",
+      "CHIMICA",
+      "MATEMATICA",
+      "VINCENTE"
+    ]
+  },
+  {
+    "target": "GARA",
+    "clues": [
+      "APPALTO",
+      "PODIO",
+      "VITTORIA",
+      "AUTOMOBILISTICA",
+      "QUALIFICAZIONE"
+    ]
+  },
+  {
+    "target": "CIRCUITO",
+    "clues": [
+      "CHIUSO",
+      "INTEGRATO",
+      "CORTO",
+      "PISTA",
+      "ELETTRICO"
+    ]
+  },
+  {
+    "target": "PISTA",
+    "clues": [
+      "CICLABILE",
+      "BALLO",
+      "ATTERRAGGIO",
+      "SEGUIRE",
+      "FALSA"
+    ]
+  },
+  {
+    "target": "CURVA",
+    "clues": [
+      "PERICOLOSA",
+      "SUD",
+      "NORD",
+      "CIECA",
+      "PRENDERE"
+    ]
+  },
+  {
+    "target": "RETTILINEO",
+    "clues": [
+      "ARRIVO",
+      "FINALE",
+      "PARTENZA",
+      "VELOCITÀ",
+      "LUNGO"
+    ]
+  },
+  {
+    "target": "SORPASSO",
+    "clues": [
+      "DIVIETO",
+      "EFFETTUARE",
+      "AZZARDATO",
+      "DESTRA",
+      "MANOVRA"
+    ]
+  },
+  {
+    "target": "GOMMA",
+    "clues": [
+      "PISTA",
+      "MESCOLA",
+      "CAMBIO",
+      "USURA",
+      "BRUCIARE"
+    ]
+  },
+  {
+    "target": "MOTORE",
+    "clues": [
+      "RICERCA",
+      "CAVALLI",
+      "SCOPPIO",
+      "IBRIDO",
+      "TURBO"
+    ]
+  },
+  {
+    "target": "VOLANTE",
+    "clues": [
+      "DISCO",
+      "OLANDESE",
+      "SQUADRA",
+      "STERZO",
+      "OGGETTO"
+    ]
+  },
+  {
+    "target": "FRENO",
+    "clues": [
+      "MANO",
+      "EMERGENZA",
+      "TIRARE",
+      "DISCO",
+      "LINGUA"
+    ]
+  },
+  {
+    "target": "MARCIA",
+    "clues": [
+      "FUNEBRE",
+      "TRIONFALE",
+      "CAMBIO",
+      "NUZIALE",
+      "INDIETRO"
+    ]
+  },
+  {
+    "target": "BENZINA",
+    "clues": [
+      "VERDE",
+      "SENZA",
+      "PIOMBO",
+      "FINIRE",
+      "PIENO"
+    ]
+  },
+  {
+    "target": "CRUSCOTTO",
+    "clues": [
+      "INDICATORE",
+      "SPIA",
+      "AUTO",
+      "STRUMENTI",
+      "PLANCIA"
+    ]
+  },
+  {
+    "target": "SPECCHIO",
+    "clues": [
+      "RETROVISORE",
+      "ANIMA",
+      "ROTTO",
+      "MAGIA",
+      "RIFLESSO"
+    ]
+  },
+  {
+    "target": "CINTURA",
+    "clues": [
+      "SICUREZZA",
+      "NERA",
+      "CASTITÀ",
+      "ALLACCIARE",
+      "PELLE"
+    ]
+  },
+  {
+    "target": "AIRBAG",
+    "clues": [
+      "GONFIARE",
+      "SALVARE",
+      "SICUREZZA",
+      "ESPLODERE",
+      "FRONTALE"
+    ]
+  },
+  {
+    "target": "CASCO",
+    "clues": [
+      "BLU",
+      "MOTO",
+      "INTEGRALE",
+      "OBBLIGO",
+      "SICUREZZA"
+    ]
+  },
+  {
+    "target": "PATENTE",
+    "clues": [
+      "GUIDA",
+      "PUNTI",
+      "RITIRARE",
+      "CONSEGUIRE",
+      "INTERNAZIONALE"
+    ]
+  },
+  {
+    "target": "MULTA",
+    "clues": [
+      "SALATA",
+      "CONTRAVVENZIONE",
+      "PAGARE",
+      "VERBALE",
+      "ECCESSO"
+    ]
+  },
+  {
+    "target": "SEMAFORO",
+    "clues": [
+      "ROSSO",
+      "VERDE",
+      "BRUCIARE",
+      "INCROCIO",
+      "GIALLO"
+    ]
+  },
+  {
+    "target": "ROTONDA",
+    "clues": [
+      "TAVOLA",
+      "TRAFFICO",
+      "PRENDERE",
+      "CENTRO",
+      "PIAZZA"
+    ]
+  },
+  {
+    "target": "INCROCIO",
+    "clues": [
+      "PERICOLOSO",
+      "DESTINI",
+      "STRADE",
+      "PRECEDENZA",
+      "SVOLTA"
+    ]
+  },
+  {
+    "target": "PARCHEGGIO",
+    "clues": [
+      "PAGAMENTO",
+      "SOTTERRANEO",
+      "CUSTODITO",
+      "DISCO",
+      "ABUSIVO"
+    ]
+  },
+  {
+    "target": "VIGILE",
+    "clues": [
+      "URBANO",
+      "FUOCO",
+      "ATTESA",
+      "FISCHIETTO",
+      "NOTTURNO"
+    ]
+  },
+  {
+    "target": "CODICE",
+    "clues": [
+      "STRADA",
+      "BARRE",
+      "SEGRETO",
+      "CIVILE",
+      "FISCALE"
+    ]
+  },
+  {
+    "target": "LIMITE",
+    "clues": [
+      "VELOCITÀ",
+      "SUPERARE",
+      "MASSIMO",
+      "MINIMO",
+      "TEMPO"
+    ]
+  },
+  {
+    "target": "INCIDENTE",
+    "clues": [
+      "DIPLOMATICO",
+      "STRADALE",
+      "GRAVE",
+      "PERCORSO",
+      "MORTALE"
+    ]
+  },
+  {
+    "target": "TAMPONAMENTO",
+    "clues": [
+      "CATENA",
+      "AUTOSTRADA",
+      "POSTERIORE",
+      "DANNO",
+      "NEBBIA"
+    ]
+  },
+  {
+    "target": "ASSICURAZIONE",
+    "clues": [
+      "VITA",
+      "POLIZZA",
+      "PREMIO",
+      "SCADENZA",
+      "RISCHIO"
+    ]
+  },
+  {
+    "target": "CARROZZERIA",
+    "clues": [
+      "RIPARAZIONE",
+      "DANNO",
+      "BOTTA",
+      "VERNICIATURA",
+      "OFFICINA"
+    ]
+  },
+  {
+    "target": "MECCANICO",
+    "clues": [
+      "OROLOGIO",
+      "PROBLEMA",
+      "OFFICINA",
+      "GUASTO",
+      "RIPARAZIONE"
+    ]
+  },
+  {
+    "target": "MOTOCICLETTA",
+    "clues": [
+      "DIARIO",
+      "SELLA",
+      "CASCO",
+      "LIBERTÀ",
+      "ROMBO"
+    ]
+  },
+  {
+    "target": "CAMION",
+    "clues": [
+      "RIMORCHIO",
+      "CISTERNA",
+      "AUTISTA",
+      "PESANTE",
+      "BOMBOLE"
+    ]
+  },
+  {
+    "target": "AUTOBUS",
+    "clues": [
+      "LINEA",
+      "FERMATA",
+      "URBANO",
+      "TURISTICO",
+      "SCUOLA"
+    ]
+  },
+  {
+    "target": "TRAM",
+    "clues": [
+      "DESIDERIO",
+      "ROTAIA",
+      "LINEA",
+      "STORICO",
+      "CITTÀ"
+    ]
+  },
+  {
+    "target": "METROPOLITANA",
+    "clues": [
+      "LINEA",
+      "SOTTERRANEA",
+      "STAZIONE",
+      "FERMATA",
+      "CITTÀ"
+    ]
+  },
+  {
+    "target": "TAXI",
+    "clues": [
+      "CHIAMARE",
+      "TASSAMETRO",
+      "DRIVER",
+      "CORSA",
+      "GIALLO"
+    ]
+  },
+  {
+    "target": "TRAGHETTO",
+    "clues": [
+      "AUTO",
+      "ISOLA",
+      "PONTE",
+      "CABINA",
+      "ATTRAVERSARE"
+    ]
+  },
+  {
+    "target": "SOMMERGIBILE",
+    "clues": [
+      "GIALLO",
+      "PROFONDITÀ",
+      "SILURO",
+      "NUCLEARE",
+      "PERISCOPIO"
+    ]
+  },
+  {
+    "target": "MONGOLFIERA",
+    "clues": [
+      "PALLONE",
+      "ARIA",
+      "CALDA",
+      "CESTO",
+      "VOLO"
+    ]
+  },
+  {
+    "target": "ALIANTE",
+    "clues": [
+      "VOLO",
+      "SILENZIOSO",
+      "CORRENTE",
+      "ASCENDENTE",
+      "PLANARE"
+    ]
+  },
+  {
+    "target": "PARACADUTE",
+    "clues": [
+      "DORATO",
+      "LANCIO",
+      "APRIRE",
+      "EMERGENZA",
+      "CADUTA"
+    ]
+  },
+  {
+    "target": "DELTAPLANO",
+    "clues": [
+      "VOLO",
+      "LIBERO",
+      "MONTAGNA",
+      "LANCIARE",
+      "ALA"
+    ]
+  },
+  {
+    "target": "FUNIVIA",
+    "clues": [
+      "CABINA",
+      "MONTAGNA",
+      "CAVO",
+      "SALITA",
+      "PANORAMA"
+    ]
+  },
+  {
+    "target": "SEGGIOVIA",
+    "clues": [
+      "SCI",
+      "PISTA",
+      "IMPIANTO",
+      "RISALITA",
+      "INVERNO"
+    ]
+  },
+  {
+    "target": "SLITTINO",
+    "clues": [
+      "NEVE",
+      "PISTA",
+      "DISCESA",
+      "BOB",
+      "GHIACCIO"
+    ]
+  },
+  {
+    "target": "CABINA",
+    "clues": [
+      "TELEFONICA",
+      "PILOTA",
+      "REGIA",
+      "DOCCIA",
+      "PROVA"
+    ]
+  }
+]

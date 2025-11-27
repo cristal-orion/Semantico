@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 # Carica la lista di parole giornaliere
 try:
-    with open('daily_words.txt', 'r', encoding='utf-8') as f:
+    with open('1000_parole_italiane_comuni.txt', 'r', encoding='utf-8') as f:
         daily_words = [line.strip().lower() for line in f if line.strip()]
 except FileNotFoundError:
     print("❌ File daily_words.txt non trovato!")
@@ -27,7 +27,7 @@ word_index = hash_int % len(daily_words)
 
 secret_word = daily_words[word_index]
 
-print(f"📅 Data: {date_str}")
-print(f"🔒 Parola segreta del giorno: {secret_word.upper()}")
-print(f"📊 Lunghezza: {len(secret_word)} lettere")
-print(f"🎯 Indice: {word_index}/{len(daily_words)}")
+print(f"Data: {date_str}")
+print(f"Parola segreta del giorno: {secret_word.upper()}")
+print(f"Lunghezza: {len(secret_word)} lettere")
+print(f"Indice: {word_index}/{len(daily_words)}")
