@@ -8,9 +8,8 @@ class ApiService {
   // Modifica questo URL con l'indirizzo del tuo server
   // static const String baseUrl = 'http://localhost:8000';
   // Per testing su dispositivo fisico Android nella stessa rete WiFi:
-  // static const String baseUrl = 'https://semantico.duckdns.org';
-  // static const String baseUrl = 'http://localhost:8000';
-  static const String baseUrl = 'http://192.168.1.107:8000';
+  static const String baseUrl = 'https://semantico.duckdns.org';
+  // static const String baseUrl = 'http://192.168.1.107:8000';
 
   // Per testing su dispositivo fisico Android, usa:
   // static const String baseUrl = 'http://10.0.2.2:8000';

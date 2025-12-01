@@ -123,12 +123,15 @@ def get_user_by_id(db: Session, user_id: int) -> Optional[User]:
 
 def authenticate_user(db: Session, username: str, password: str) -> Optional[User]:
     """Authenticate user by username/email and password"""
+    # Normalize username/email to lowercase
+    username_lower = username.lower().strip()
+
     # Try username first
-    user = get_user_by_username(db, username)
+    user = get_user_by_username(db, username_lower)
 
     # If not found, try email
     if not user:
-        user = get_user_by_email(db, username)
+        user = get_user_by_email(db, username_lower)
 
     if not user:
         return None

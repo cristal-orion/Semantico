@@ -17,6 +17,9 @@ class AuthProvider with ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get error => _error;
 
+  bool _isInitialized = false;
+  bool get isInitialized => _isInitialized;
+
   AuthProvider() {
     _loadUserFromStorage();
   }
@@ -33,6 +36,7 @@ class AuthProvider with ChangeNotifier {
         // Error handled in checkAuth
       }
     }
+    _isInitialized = true;
     notifyListeners();
   }
 

@@ -7,6 +7,8 @@ import 'providers/auth_provider.dart';
 import 'screens/home_screen.dart';
 import 'theme/pop_theme.dart';
 
+import 'widgets/auth_wrapper.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: PopTheme.white,
               useMaterial3: true,
             ),
-            home: const HomeScreen(),
+            home: const AuthWrapper(),
           );
         },
       ),

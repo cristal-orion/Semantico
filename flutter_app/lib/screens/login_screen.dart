@@ -5,7 +5,8 @@ import '../theme/pop_theme.dart';
 import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final bool isRoot;
+  const LoginScreen({super.key, this.isRoot = false});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -36,7 +37,9 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       
       if (mounted) {
-        Navigator.of(context).pop(); // Return to previous screen (usually Home)
+        if (!widget.isRoot) {
+          Navigator.of(context).pop(); // Return to previous screen (usually Home)
+        }
       }
     } catch (e) {
       // Error is handled by provider and displayed in UI
@@ -51,10 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
         title: Text('Login', style: PopTheme.headingStyle),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: PopTheme.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+        automaticallyImplyLeading: !widget.isRoot,
+        leading: widget.isRoot 
+            ? null 
+            : IconButton(
+                icon: Icon(Icons.arrow_back, color: PopTheme.black),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
       ),
       body: Center(
         child: SingleChildScrollView(
