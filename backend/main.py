@@ -5,7 +5,7 @@ Hot and Cold Game - FastAPI Backend
 Gestisce il modello FastText e la logica del gioco
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -17,9 +17,11 @@ import os
 from gensim.models import KeyedVectors
 import numpy as np
 import logging
+import random
 
 # Import database and auth
-from database import init_db
+from database import init_db, User
+from auth import get_current_user
 from routers.auth_router import router as auth_router
 from routers.users_router import router as users_router
 from routers.game_router import router as game_router
@@ -459,35 +461,29 @@ async def make_guess(request: GuessRequest):
 
 @app.get("/hint", response_model=HintResponse)
 async def get_hint(date: Optional[str] = None):
-    """Ottiene un suggerimento casuale tra le top 500 parole più vicine"""
+    """Ottiene un suggerimento casuale tra rank 20 e 150"""
     if not date:
         date = datetime.now(timezone.utc).date().isoformat()
-    
+
     secret_word = game_manager.get_daily_word(date)
-    
-    # Ottieni top 1000 parole più simili (ne prendiamo di più per filtrare)
-    similar = game_manager.model.most_similar(secret_word, topn=1000)
-    
-    # Filtra solo parole valide
+
+    # Ottieni parole simili
+    similar = game_manager.model.most_similar(secret_word, topn=200)
+
+    # Filtra solo parole valide con rank tra 20 e 150
     valid_similar = [
-        (word, sim) for word, sim in similar 
-        if game_manager.is_valid_word(word) and word != secret_word
+        (word, sim, rank) for rank, (word, sim) in enumerate(similar, 1)
+        if game_manager.is_valid_word(word) and word != secret_word and 20 <= rank <= 150
     ]
-    
+
     if not valid_similar:
-        # Fallback se non troviamo nulla (improbabile)
         return HintResponse(
             hint_word="...",
             message="Nessun suggerimento disponibile al momento."
         )
 
-    # Scegli una parola casuale tra le top 100 valide (per dare aiuti buoni)
-    # Limitiamo alle prime 100 per dare suggerimenti utili
-    top_valid = valid_similar[:100]
-    
-    import random
-    hint_word, similarity = random.choice(top_valid)
-    
+    hint_word, similarity, rank = random.choice(valid_similar)
+
     return HintResponse(
         hint_word=hint_word,
         message=f"💡 Suggerimento: prova parole vicine a '{hint_word}'"

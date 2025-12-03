@@ -7,7 +7,7 @@ from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from database import get_db, User
+from database import get_db, User, GameSession, Friendship
 from auth import (
     UserCreate,
     UserLogin,
@@ -146,3 +146,36 @@ async def logout(current_user: User = Depends(get_current_user_required)):
     # With stateless JWT, we just return success
     # The client should delete the token
     return {"message": "Logout effettuato con successo"}
+
+
+@router.delete("/account")
+async def delete_account(
+    current_user: User = Depends(get_current_user_required),
+    db: Session = Depends(get_db)
+):
+    """
+    Elimina definitivamente l'account dell'utente e tutti i dati associati.
+    """
+    import os
+
+    user_id = current_user.id
+
+    # Elimina tutte le sessioni di gioco
+    db.query(GameSession).filter(GameSession.user_id == user_id).delete()
+
+    # Elimina tutte le amicizie (sia come user che come friend)
+    db.query(Friendship).filter(
+        (Friendship.user_id == user_id) | (Friendship.friend_id == user_id)
+    ).delete()
+
+    # Elimina l'avatar se esiste
+    if current_user.avatar_path:
+        avatar_file = f"/opt/semantico{current_user.avatar_path}"
+        if os.path.exists(avatar_file):
+            os.remove(avatar_file)
+
+    # Elimina l'utente
+    db.delete(current_user)
+    db.commit()
+
+    return {"message": "Account eliminato con successo"}

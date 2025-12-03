@@ -80,6 +80,7 @@ class GameSession(Base):
     game_date = Column(String(10), nullable=False)  # YYYY-MM-DD format
     game_mode = Column(String(20), default="daily")  # daily, shot, etc.
     attempts = Column(Integer, default=0)
+    hints_used = Column(Integer, default=0)  # Numero di hint utilizzati
     completed = Column(Boolean, default=False)
     won = Column(Boolean, default=False)
     completion_time = Column(Float, nullable=True)  # Time in seconds

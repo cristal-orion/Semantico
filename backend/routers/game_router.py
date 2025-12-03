@@ -26,6 +26,7 @@ class PlayerProgress(BaseModel):
     completed: bool
     won: bool
     is_friend: bool = False
+    hints_used: int = 0
 
 
 class UpdateProgressRequest(BaseModel):
@@ -44,6 +45,7 @@ class GameStatsResponse(BaseModel):
     best_streak: int
     average_attempts: float
     games_by_mode: dict
+    total_hints: int = 0
 
 
 # In-memory storage for real-time progress (could use Redis in production)
@@ -63,6 +65,16 @@ async def update_progress(
     """
     game_key = f"{request.game_date}_{request.game_mode}"
 
+    # Prima controlla se esiste una sessione nel DB per prendere hints_used
+    existing_session = db.query(GameSession).filter(
+        GameSession.user_id == current_user.id,
+        GameSession.game_date == request.game_date,
+        GameSession.game_mode == request.game_mode
+    ).first()
+
+    # Prendi hints_used dal DB se esiste, altrimenti 0
+    current_hints = existing_session.hints_used if existing_session and hasattr(existing_session, 'hints_used') else 0
+
     # Update in-memory storage for real-time display
     if game_key not in active_players:
         active_players[game_key] = {}
@@ -75,24 +87,19 @@ async def update_progress(
         "attempts": request.attempts,
         "completed": request.completed,
         "won": request.won,
+        "hints_used": current_hints,
         "updated_at": datetime.now(timezone.utc).isoformat()
     }
 
-    # Also update database for persistence
-    session = db.query(GameSession).filter(
-        GameSession.user_id == current_user.id,
-        GameSession.game_date == request.game_date,
-        GameSession.game_mode == request.game_mode
-    ).first()
-
-    if session:
-        session.attempts = request.attempts
-        session.completed = request.completed
-        session.won = request.won
+    # Update/create session nel DB
+    if existing_session:
+        existing_session.attempts = request.attempts
+        existing_session.completed = request.completed
+        existing_session.won = request.won
         if request.completed:
-            session.completed_at = datetime.now(timezone.utc)
+            existing_session.completed_at = datetime.now(timezone.utc)
     else:
-        session = GameSession(
+        existing_session = GameSession(
             user_id=current_user.id,
             game_date=request.game_date,
             game_mode=request.game_mode,
@@ -100,7 +107,7 @@ async def update_progress(
             completed=request.completed,
             won=request.won
         )
-        db.add(session)
+        db.add(existing_session)
 
     db.commit()
 
@@ -155,7 +162,8 @@ async def get_active_players(
                 attempts=data["attempts"],
                 completed=data["completed"],
                 won=data["won"],
-                is_friend=user_id in friend_ids
+                is_friend=user_id in friend_ids,
+                hints_used=data.get("hints_used", 0)
             ))
 
     # Also get from database (players who completed but aren't in memory)
@@ -182,7 +190,8 @@ async def get_active_players(
                 attempts=session.attempts,
                 completed=session.completed,
                 won=session.won,
-                is_friend=user.id in friend_ids
+                is_friend=user.id in friend_ids,
+                hints_used=session.hints_used if hasattr(session, 'hints_used') else 0
             ))
 
     # Sort by best_rank (best players first)
@@ -238,14 +247,45 @@ async def get_user_stats(
         if session.won:
             games_by_mode[mode]["won"] += 1
 
+    # Calcola totale hints usati
+    total_hints = sum(s.hints_used if hasattr(s, 'hints_used') else 0 for s in sessions)
+
     return GameStatsResponse(
         total_games=total_games,
         games_won=games_won,
         current_streak=current_streak,
         best_streak=best_streak,
         average_attempts=round(average_attempts, 1),
-        games_by_mode=games_by_mode
+        games_by_mode=games_by_mode,
+        total_hints=total_hints
     )
+
+
+@router.get("/history")
+async def get_user_game_history(
+    current_user: User = Depends(get_current_user_required),
+    db: Session = Depends(get_db)
+):
+    """
+    Get complete game history for the current user.
+    Returns list of all games played with date, attempts, won status.
+    """
+    sessions = db.query(GameSession).filter(
+        GameSession.user_id == current_user.id
+    ).order_by(GameSession.game_date.desc()).all()
+
+    history = []
+    for session in sessions:
+        history.append({
+            "game_date": session.game_date,
+            "game_mode": session.game_mode,
+            "attempts": session.attempts,
+            "completed": session.completed,
+            "won": session.won,
+            "completed_at": session.completed_at.isoformat() if session.completed_at else None
+        })
+
+    return history
 
 
 @router.get("/friends/status/{game_date}")

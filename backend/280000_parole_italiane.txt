@@ -1915,6 +1915,7 @@ abilitiamo
 abilitiate
 abilitino
 abilito
+abilità
 abilmente
 abiogenesi
 abiosfera
@@ -13335,6 +13336,7 @@ aiolo
 aione
 aioni
 air
+airbag
 aire
 airedale
 airone
@@ -28325,6 +28327,7 @@ arianizzavano
 arianizzi
 arianizzino
 arianizzo
+arianna
 ariano
 ariate
 ariballi
@@ -41239,6 +41242,7 @@ bambusaia
 bambusaie
 bambusoidea
 bambusoidee
+bambù
 banach
 banale
 banali
@@ -48059,6 +48063,7 @@ boatta
 boatte
 boattiere
 boattieri
+bob
 bobba
 bobbando
 bobbano
@@ -49643,6 +49648,7 @@ bovino
 bovoli
 bovolo
 bowling
+box
 boxa
 boxando
 boxano
@@ -53289,6 +53295,7 @@ caffettiere
 caffettieri
 caffi
 caffo
+caffè
 cafona
 cafonaggine
 cafonaggini
@@ -55220,6 +55227,7 @@ cappotti
 cappottino
 cappotto
 cappucce
+cappuccetto
 cappucci
 cappuccia
 cappuccina
@@ -56302,6 +56310,7 @@ castigo
 castimonia
 castimonie
 castita
+castità
 casto
 castone
 castoni
@@ -58898,6 +58907,7 @@ ciliege
 ciliegi
 ciliegia
 ciliegie
+ciliegino
 ciliegio
 cilindrasse
 cilindrassi
@@ -59580,6 +59590,7 @@ cittadinanze
 cittadine
 cittadini
 cittadino
+città
 city
 ciucca
 ciucche
@@ -67926,6 +67937,7 @@ cucurbitali
 cucurbite
 cucuzzoli
 cucuzzolo
+cucù
 cuffia
 cuffie
 cugina
@@ -68266,6 +68278,7 @@ curiosiamo
 curiosiate
 curiosino
 curiosita
+curiosità
 curioso
 curling
 curo
@@ -68363,6 +68376,7 @@ custodisci
 custodisco
 custodiscono
 custodite
+custodito
 cutanea
 cutanee
 cutanei
@@ -74705,6 +74719,7 @@ dismisura
 dismisure
 dismnesia
 dismnesie
+disney
 disneyano
 disnoesia
 disobbedire
@@ -78999,6 +79014,7 @@ emaciata
 emaciate
 emaciati
 emaciato
+email
 emana
 emanai
 emanammo
@@ -80754,6 +80770,7 @@ ereditiere
 ereditieri
 ereditino
 eredito
+eredità
 eremacausi
 eremi
 eremita
@@ -83403,6 +83420,7 @@ ettometri
 ettometro
 ettore
 ettowatt
+età
 eucaina
 eucalipti
 eucalipto
@@ -89581,6 +89599,7 @@ fragolaia
 fragolaio
 fragole
 fragolicoltura
+fragoline
 fragolone
 fragoloni
 fragore
@@ -89921,6 +89940,7 @@ fratellanze
 fratellastri
 fratellastro
 fratelli
+fratellini
 fratello
 fraterna
 fraternamente
@@ -94182,6 +94202,7 @@ giacchette
 giacchetti
 giacchetto
 giacchi
+giacchino
 giacchio
 giaccia
 giacciamo
@@ -95704,6 +95725,7 @@ givamo
 givan
 givano
 givate
+giù
 glabra
 glabre
 glabri
@@ -96251,6 +96273,7 @@ goffredo
 gogna
 gogne
 gogol
+gol
 gola
 golden
 goldoni
@@ -96982,6 +97005,7 @@ gramsciana
 gramsciane
 gramsciani
 gramsciano
+gran
 grana
 granada
 granadiglia
@@ -98670,6 +98694,7 @@ guineani
 guineano
 guinizzelliana
 guinizzelliano
+guinness
 guinzagli
 guinzaglio
 guipure
@@ -99391,6 +99416,7 @@ identifichi
 identifico
 identikit
 identita
+identità
 ideo
 ideocratica
 ideocratiche
@@ -117811,6 +117837,7 @@ internegativi
 internegativo
 internera
 interneranno
+internet
 interni
 internista
 interniste
@@ -123828,6 +123855,7 @@ jeppone
 jepponi
 jersey
 jespersen
+jessica
 jet
 jeunesse
 jiddisch
@@ -127687,6 +127715,7 @@ libertinismo
 libertino
 liberto
 liberty
+libertà
 libet
 libia
 libica
@@ -131846,6 +131875,7 @@ major
 majorette
 majorettes
 makeup
+mal
 mala
 malabar
 malabarica
@@ -136918,6 +136948,7 @@ menzognera
 menzognere
 menzogneri
 menzognero
+menù
 meoni
 meonia
 meonie
@@ -138365,6 +138396,7 @@ mettitutto
 metto
 metton
 mettono
+metà
 meuble
 meubles
 meve
@@ -139304,6 +139336,7 @@ miliziane
 miliziani
 miliziano
 milizie
+milla
 millanta
 millantamenti
 millantamento
@@ -144925,9 +144958,9 @@ namibiana
 namibiane
 namibiani
 namibiano
+nana
 nanchino
 nandu
-nana
 nane
 naneria
 nanerie
@@ -155735,6 +155768,7 @@ oxoniani
 oxoniano
 oxoniense
 oxoniensi
+oz
 ozelot
 ozena
 ozi
@@ -157724,6 +157758,7 @@ papulosa
 papulose
 papulosi
 papuloso
+papà
 para
 parabancari
 parabancaria
@@ -174943,6 +174978,7 @@ profondissime
 profondissimi
 profondissimo
 profondita
+profondità
 profondo
 proforma
 profuga
@@ -179471,6 +179507,7 @@ qualitativamente
 qualitative
 qualitativi
 qualitativo
+qualità
 qualmente
 qualora
 qualsia
@@ -179532,6 +179569,7 @@ quantitativamente
 quantitative
 quantitativi
 quantitativo
+quantità
 quantizza
 quantizzai
 quantizzammo
@@ -185159,6 +185197,7 @@ realizzo
 realmente
 realpolitik
 realta
+realtà
 reame
 reami
 reati
@@ -198577,6 +198616,7 @@ rinfurbito
 rinfurbiva
 rinfurbivano
 rinfusa
+ring
 ringagliardendo
 ringagliardi
 ringagliardire
@@ -208725,6 +208765,7 @@ salvini
 salvinia
 salvino
 salvo
+sam
 samara
 samarcanda
 samare
@@ -208783,6 +208824,7 @@ sampogna
 sampogne
 samuele
 samurai
+san
 sana
 sanabile
 sanabili
@@ -224339,6 +224381,7 @@ sestuplicate
 sestuplicati
 sestuplicato
 sestuplo
+set
 seta
 setaccera
 setacceranno
@@ -233137,6 +233180,7 @@ societaria
 societarie
 societario
 society
+società
 socievole
 socievolezza
 socievolezze
@@ -233875,6 +233919,7 @@ soia
 soigne
 soiree
 soirees
+sol
 sola
 solai
 solaio
@@ -242706,6 +242751,7 @@ splenopatia
 splenopatie
 splenotomia
 spline
+split
 splitting
 spocchia
 spocchiata
@@ -244410,6 +244456,7 @@ sputacchina
 sputacchine
 sputacchino
 sputacchio
+sputafuoco
 sputai
 sputammo
 sputando
@@ -268167,6 +268214,7 @@ trentaduesime
 trentaduesimi
 trentaduesimo
 trentamila
+trentanni
 trentasei
 trentatre
 trentennale
@@ -271352,6 +271400,7 @@ tzigana
 tzigane
 tzigani
 tzigano
+tè
 uabaio
 ubaldo
 ubbia
@@ -271431,6 +271480,7 @@ ubiquitari
 ubiquitaria
 ubiquitarie
 ubiquitario
+ubiquità
 ubriaca
 ubriacai
 ubriacamenti
@@ -271990,6 +272040,7 @@ ultravirus
 ultravuoto
 ultrice
 ultrici
+ultrà
 ulula
 ululai
 ululammo
@@ -272517,6 +272568,7 @@ universitari
 universitaria
 universitarie
 universitario
+università
 universo
 univi
 univo
@@ -274117,6 +274169,7 @@ vaporosita
 vaporoso
 vaquero
 vaqueros
+var
 vara
 varamento
 varammo
@@ -274853,6 +274906,7 @@ velocita
 velocitando
 velocitare
 velocitato
+velocità
 velocizzando
 velocizzare
 velocizzato
@@ -275518,10 +275572,12 @@ veristiche
 veristici
 veristico
 verita
+veritas
 veritiera
 veritiere
 veritieri
 veritiero
+verità
 verla
 verlaine
 verle
@@ -278985,6 +279041,7 @@ wilder
 wilkins
 wilkinson
 willemite
+william
 williams
 winchester
 winchesters
@@ -278993,6 +279050,7 @@ windsurfing
 windsurfista
 windsurfs
 winner
+wireless
 wittgenstein
 wolfe
 wolfram
