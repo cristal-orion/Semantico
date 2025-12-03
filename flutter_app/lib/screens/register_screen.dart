@@ -21,6 +21,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _ageConfirmed = false;
 
   @override
   void dispose() {
@@ -34,6 +35,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
+
+    // Check age confirmation
+    if (!_ageConfirmed) {
+      final authProvider = context.read<AuthProvider>();
+      authProvider.setError('Devi confermare di avere almeno 13 anni');
+      return;
+    }
 
     final authProvider = context.read<AuthProvider>();
     
@@ -206,6 +214,49 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           }
                           return null;
                         },
+                      ),
+                      const SizedBox(height: 24),
+                      
+                      // Age confirmation checkbox
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: PopTheme.cyan.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: _ageConfirmed ? PopTheme.black : Colors.red.shade300,
+                            width: 2,
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            Checkbox(
+                              value: _ageConfirmed,
+                              onChanged: (value) {
+                                setState(() {
+                                  _ageConfirmed = value ?? false;
+                                });
+                              },
+                              activeColor: PopTheme.black,
+                            ),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    _ageConfirmed = !_ageConfirmed;
+                                  });
+                                },
+                                child: Text(
+                                  'Dichiaro di avere almeno 13 anni',
+                                  style: PopTheme.bodyStyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 24),
                       

@@ -94,14 +94,19 @@ class ApiService {
     }
   }
 
-  /// Ottiene un suggerimento casuale
-  Future<HintResponse?> getHint({String? date}) async {
+  /// Ottiene un suggerimento casuale (graduale se autenticato)
+  Future<HintResponse?> getHint({String? date, String? token}) async {
     try {
       final uri = date != null
           ? Uri.parse('$baseUrl/hint?date=$date')
           : Uri.parse('$baseUrl/hint');
 
-      final response = await http.get(uri);
+      final headers = <String, String>{};
+      if (token != null) {
+        headers['Authorization'] = 'Bearer $token';
+      }
+
+      final response = await http.get(uri, headers: headers);
 
       if (response.statusCode == 200) {
         final data = json.decode(utf8.decode(response.bodyBytes));
@@ -132,7 +137,8 @@ class ApiService {
       return null;
     }
   }
-    /// Avvia una nuova partita Shot
+
+  /// Avvia una nuova partita Shot
   Future<ShotGame?> startNewShotGame() async {
     try {
       final response = await http.post(
@@ -259,6 +265,26 @@ class ApiService {
     }
   }
 
+  /// Get user game history (all played games)
+  Future<List<dynamic>?> getGameHistory(String token) async {
+    try {
+      final response = await http.get(
+        Uri.parse('$baseUrl/api/game/history'),
+        headers: {
+          'Authorization': 'Bearer $token',
+        },
+      );
+
+      if (response.statusCode == 200) {
+        return json.decode(utf8.decode(response.bodyBytes));
+      }
+      return null;
+    } catch (e) {
+      print('❌ Errore getGameHistory: $e');
+      return null;
+    }
+  }
+
   /// Get friends list
   Future<Map<String, dynamic>?> getFriends(String token) async {
     try {
@@ -323,7 +349,8 @@ class ApiService {
   }) async {
     try {
       final response = await http.get(
-        Uri.parse('$baseUrl/api/game/friends/status/$gameDate?game_mode=$gameMode'),
+        Uri.parse(
+            '$baseUrl/api/game/friends/status/$gameDate?game_mode=$gameMode'),
         headers: {
           'Authorization': 'Bearer $token',
         },

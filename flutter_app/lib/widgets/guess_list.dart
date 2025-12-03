@@ -117,9 +117,10 @@ class GuessCard extends StatelessWidget {
     // Se similarity è > 1, assumiamo sia percentuale. Se < 1, moltiplichiamo.
     // Dal codice precedente non è chiaro, ma assumiamo sia un valore visualizzabile.
     // Per la barra, usiamo una logica basata sul rank se similarity non è affidabile per UI.
-    // Rank 1 = 100%, Rank 1000 = 50%, Rank 10000 = 10%
+    // Rank 0 = vittoria (100%), Rank 1 = vicinissimo (98%), Rank 10 = 95%
     final rank = guess.rank ?? 100000;
-    if (rank == 1) return 1.0;
+    if (rank == 0) return 1.0; // Solo rank 0 = parola indovinata
+    if (rank == 1) return 0.98; // Rank 1 = parola più vicina, non vittoria
     if (rank <= 10) return 0.95;
     if (rank <= 100) return 0.8;
     if (rank <= 1000) return 0.6;
@@ -170,21 +171,23 @@ class GuessCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 if (guess.correct)
-                  Icon(Icons.star_rounded,
-                      color: PopTheme.yellow, size: 24)
+                  Icon(Icons.star_rounded, color: PopTheme.yellow, size: 24)
                 else if (!guess.valid)
-                  Icon(Icons.help_outline,
-                      color: PopTheme.black, size: 18)
+                  Icon(Icons.help_outline, color: PopTheme.black, size: 18)
                 else
                   Expanded(
                     child: Text(
-                      guess.temperature ?? '',
+                      // Se rank == 1 ma non correct, mostra messaggio speciale
+                      (guess.rank == 1 && !guess.correct)
+                          ? '🔥🔥🔥 Vicinissimo!'
+                          : (guess.temperature ?? ''),
                       style: PopTheme.bodyStyle.copyWith(
                         fontSize: 14,
                         color: color, // Colora il testo invece del box
                         fontWeight: FontWeight.w600,
                       ),
-                      textAlign: TextAlign.right, // Allinea a destra per pulizia
+                      textAlign:
+                          TextAlign.right, // Allinea a destra per pulizia
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),

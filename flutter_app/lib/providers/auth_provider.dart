@@ -120,6 +120,11 @@ class AuthProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void setError(String error) {
+    _error = error;
+    notifyListeners();
+  }
+
   Future<void> uploadAvatar(String filePath) async {
     if (_token == null) return;
     
@@ -141,6 +146,19 @@ class AuthProvider with ChangeNotifier {
       final updatedUser = await _authService.deleteAvatar(_token!);
       _user = updatedUser;
       notifyListeners();
+    } catch (e) {
+      _error = e.toString().replaceAll('Exception: ', '');
+      notifyListeners();
+      rethrow;
+    }
+  }
+
+  Future<void> deleteAccount() async {
+    if (_token == null) return;
+    
+    try {
+      await _authService.deleteAccount(_token!);
+      await logout(); // Logout after deletion
     } catch (e) {
       _error = e.toString().replaceAll('Exception: ', '');
       notifyListeners();

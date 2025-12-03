@@ -36,14 +36,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _toggleNotifications(bool value) async {
     setState(() => _notificationsEnabled = value);
     await NotificationService().setNotificationEnabled(value);
-
+    
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            value
-                ? '🔔 Notifiche abilitate - Riceverai un promemoria a mezzogiorno se non hai ancora giocato!'
-                : '🔕 Notifiche disabilitate',
+            value 
+              ? '🔔 Notifiche abilitate - Riceverai un promemoria a mezzogiorno se non hai ancora giocato!'
+              : '🔕 Notifiche disabilitate',
           ),
           duration: const Duration(seconds: 3),
         ),
@@ -104,7 +104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Consumer<AuthProvider>(
         builder: (context, auth, _) {
           final user = auth.user;
-
+          
           if (user == null) {
             return const Center(child: Text('Nessun utente loggato'));
           }
@@ -167,31 +167,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               decoration: BoxDecoration(
                                 color: PopTheme.yellow,
                                 shape: BoxShape.circle,
-                                border:
-                                    Border.all(color: PopTheme.black, width: 2),
+                                border: Border.all(color: PopTheme.black, width: 2),
                               ),
-                              child: Icon(Icons.camera_alt,
-                                  size: 20, color: PopTheme.black),
+                              child: Icon(Icons.camera_alt, size: 20, color: PopTheme.black),
                             ),
                           ),
                         ),
                       ],
                     ),
                     const SizedBox(height: 16),
-
+                    
                     Text(
                       user.username,
                       style: PopTheme.headingStyle.copyWith(fontSize: 24),
                     ),
-                    if (user.email != null &&
-                        !user.email!.contains('noemail.local'))
+                    if (user.email != null && !user.email!.contains('noemail.local'))
                       Text(
                         user.email!,
-                        style: PopTheme.bodyStyle
-                            .copyWith(color: Colors.grey[600]),
+                        style: PopTheme.bodyStyle.copyWith(color: Colors.grey[600]),
                       ),
                     const SizedBox(height: 32),
-
+                    
                     if (user.avatarPath != null)
                       TextButton.icon(
                         onPressed: () async {
@@ -202,8 +198,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           }
                         },
                         icon: const Icon(Icons.delete, color: Colors.red),
-                        label: const Text('Rimuovi Avatar',
-                            style: TextStyle(color: Colors.red)),
+                        label: const Text('Rimuovi Avatar', style: TextStyle(color: Colors.red)),
                       ),
 
                     const Divider(height: 32),
@@ -238,39 +233,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     const Divider(height: 32),
 
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          auth.logout();
-                          Navigator.of(context).pop();
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: PopTheme.black,
-                          foregroundColor: PopTheme.white,
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
                         icon: const Icon(Icons.logout),
                         label: const Text('LOGOUT'),
                       ),
                     ),
-
-                    const SizedBox(height: 24),
-
-                    // Cancella Account
+                    
+                    const SizedBox(height: 16),
+                    
                     TextButton.icon(
                       onPressed: () => _showDeleteAccountDialog(context, auth),
-                      icon: const Icon(Icons.delete_forever,
-                          color: Colors.red, size: 20),
-                      label: Text(
-                        'Cancella account per sempre',
-                        style: PopTheme.bodyStyle.copyWith(
-                          color: Colors.red,
-                          fontSize: 14,
-                        ),
+                      icon: const Icon(Icons.delete_forever, color: Colors.red),
+                      label: const Text(
+                        'Elimina Account', 
+                        style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)
                       ),
                     ),
                   ],
@@ -283,92 +258,42 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Future<void> _showDeleteAccountDialog(
-      BuildContext context, AuthProvider auth) async {
+  Future<void> _showDeleteAccountDialog(BuildContext context, AuthProvider auth) async {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Row(
-          children: [
-            Icon(Icons.warning_amber_rounded, color: Colors.red, size: 28),
-            const SizedBox(width: 8),
-            const Text('Cancella Account'),
-          ],
-        ),
+        title: const Text('Elimina Account'),
         content: const Text(
-          'Sei sicuro di voler cancellare il tuo account?\n\n'
-          '⚠️ Questa azione è IRREVERSIBILE!\n\n'
-          'Verranno eliminati:\n'
-          '• Il tuo profilo e avatar\n'
-          '• Tutte le tue statistiche\n'
-          '• Lo storico delle partite\n'
-          '• Le amicizie',
+          'Sei sicuro di voler eliminare il tuo account? Questa azione è irreversibile e perderai tutti i tuoi progressi.',
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('ANNULLA'),
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Annulla'),
           ),
-          ElevatedButton(
-            onPressed: () => Navigator.pop(context, true),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-            ),
-            child: const Text('ELIMINA'),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: TextButton.styleFrom(foregroundColor: Colors.red),
+            child: const Text('Elimina'),
           ),
         ],
       ),
     );
 
     if (confirmed == true && context.mounted) {
-      // Seconda conferma
-      final doubleConfirmed = await showDialog<bool>(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Conferma finale'),
-          content: const Text(
-            'Stai per eliminare DEFINITIVAMENTE il tuo account.\n\n'
-            'Sei davvero sicuro?',
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, false),
-              child: const Text('NO, TORNA INDIETRO'),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context, true),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                foregroundColor: Colors.white,
-              ),
-              child: const Text('SÌ, ELIMINA'),
-            ),
-          ],
-        ),
-      );
-
-      if (doubleConfirmed == true && context.mounted) {
-        try {
-          await auth.deleteAccount();
-          if (context.mounted) {
-            Navigator.of(context).pop();
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Account eliminato con successo'),
-                backgroundColor: Colors.green,
-              ),
-            );
-          }
-        } catch (e) {
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text('Errore: $e'),
-                backgroundColor: Colors.red,
-              ),
-            );
-          }
+      try {
+        await auth.deleteAccount();
+        if (context.mounted) {
+          Navigator.of(context).pop(); // Close profile
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Account eliminato con successo')),
+          );
+        }
+      } catch (e) {
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Errore: $e')),
+          );
         }
       }
     }
@@ -424,8 +349,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Widget _buildStatCard(
-      String label, String value, IconData icon, Color color) {
+  Widget _buildStatCard(String label, String value, IconData icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -461,9 +385,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       child: Row(
         children: [
           Icon(
-            _notificationsEnabled
-                ? Icons.notifications_active
-                : Icons.notifications_off,
+            _notificationsEnabled ? Icons.notifications_active : Icons.notifications_off,
             color: _notificationsEnabled ? PopTheme.magenta : Colors.grey,
             size: 28,
           ),

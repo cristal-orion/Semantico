@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '../theme/pop_theme.dart';
 import '../providers/auth_provider.dart';
+import '../services/api_service.dart';
 import 'game_screen.dart';
 
 class ArchiveScreen extends StatefulWidget {
@@ -22,24 +23,52 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   final DateTime _startDate = DateTime(2025, 11, 1);
 
   int? _userId;
+  String? _token;
 
   @override
   void initState() {
     super.initState();
-    // Get userId before async operation
+    // Get userId and token before async operation
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final auth = context.read<AuthProvider>();
       _userId = auth.user?.id;
+      _token = auth.token;
       _loadArchive();
     });
   }
 
   Future<void> _loadArchive() async {
-    final prefs = await SharedPreferences.getInstance();
     final now = DateTime.now();
     final List<Map<String, dynamic>> items = [];
 
-    // Use stored userId for correct storage key
+    // Map to store server history data (date -> session info)
+    Map<String, Map<String, dynamic>> serverHistory = {};
+
+    // Try to load from server if authenticated
+    if (_token != null) {
+      try {
+        final history = await ApiService().getGameHistory(_token!);
+        if (history != null) {
+          for (final session in history) {
+            final date = session['game_date'] as String;
+            // Only include daily mode in archive
+            if (session['game_mode'] == 'daily') {
+              serverHistory[date] = {
+                'played': true,
+                'won': session['won'] ?? false,
+                'attempts': session['attempts'] ?? 0,
+                'completed': session['completed'] ?? false,
+              };
+            }
+          }
+        }
+      } catch (e) {
+        print('Errore caricamento storico dal server: $e');
+      }
+    }
+
+    // Also check local storage for games not yet synced
+    final prefs = await SharedPreferences.getInstance();
     final userKey = _userId != null ? 'user_${_userId}_' : 'guest_';
 
     // Iterate from today back to start date
@@ -47,19 +76,28 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     while (current.isAfter(_startDate) ||
         DateUtils.isSameDay(current, _startDate)) {
       final dateStr = DateFormat('yyyy-MM-dd').format(current);
-      final key = '${userKey}guesses_$dateStr';
-      final saved = prefs.getString(key);
 
       bool played = false;
       bool won = false;
       int attempts = 0;
 
-      if (saved != null) {
-        played = true;
-        final List<dynamic> decoded = json.decode(saved);
-        attempts = decoded.length;
-        // Check if any guess was correct
-        won = decoded.any((g) => g['correct'] == true);
+      // First check server data
+      if (serverHistory.containsKey(dateStr)) {
+        played = serverHistory[dateStr]!['played'] ?? false;
+        won = serverHistory[dateStr]!['won'] ?? false;
+        attempts = serverHistory[dateStr]!['attempts'] ?? 0;
+      } else {
+        // Fallback to local storage if not on server
+        final key = '${userKey}guesses_$dateStr';
+        final saved = prefs.getString(key);
+
+        if (saved != null) {
+          played = true;
+          final List<dynamic> decoded = json.decode(saved);
+          attempts = decoded.length;
+          // Check if any guess was correct
+          won = decoded.any((g) => g['correct'] == true);
+        }
       }
 
       // Calculate game number

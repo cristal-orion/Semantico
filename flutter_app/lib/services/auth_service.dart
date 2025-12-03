@@ -15,18 +15,19 @@ class AuthService {
   static const String baseUrl = ApiService.baseUrl;
 
   /// Register a new user
-  Future<AuthResponse> register(String username, String? email, String password) async {
+  Future<AuthResponse> register(
+      String username, String? email, String password) async {
     // Build request body - only include email if it's not empty
     final Map<String, dynamic> body = {
       'username': username,
       'password': password,
     };
-    
+
     // Only add email if it's non-null and non-empty
     if (email != null && email.isNotEmpty) {
       body['email'] = email;
     }
-    
+
     final response = await http.post(
       Uri.parse('$baseUrl/api/auth/register'),
       headers: {'Content-Type': 'application/json'},
@@ -100,13 +101,13 @@ class AuthService {
       'POST',
       Uri.parse('$baseUrl/api/users/avatar'),
     );
-    
+
     request.headers['Authorization'] = 'Bearer $token';
     request.files.add(await http.MultipartFile.fromPath('file', filePath));
-    
+
     final streamedResponse = await request.send();
     final response = await http.Response.fromStream(streamedResponse);
-    
+
     if (response.statusCode == 200) {
       return User.fromJson(json.decode(response.body));
     } else {
@@ -127,6 +128,20 @@ class AuthService {
       return User.fromJson(json.decode(response.body));
     } else {
       throw Exception('Errore eliminazione avatar');
+    }
+  }
+
+  /// Delete user account
+  Future<void> deleteAccount(String token) async {
+    final response = await http.delete(
+      Uri.parse('$baseUrl/api/auth/account'),
+      headers: {
+        'Authorization': 'Bearer $token',
+      },
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception('Errore eliminazione account');
     }
   }
 }

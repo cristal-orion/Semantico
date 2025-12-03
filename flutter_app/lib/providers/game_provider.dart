@@ -98,6 +98,10 @@ class GameProvider with ChangeNotifier {
   Future<void> _loadSavedGuesses() async {
     if (_currentDate == null) return;
 
+    // Reset stato prima di caricare
+    _guesses = [];
+    _hasWon = false;
+
     try {
       final prefs = await SharedPreferences.getInstance();
       // Include userId in key for per-user storage (fallback to 'guest' if not logged in)
@@ -109,11 +113,15 @@ class GameProvider with ChangeNotifier {
         final List<dynamic> decoded = json.decode(saved);
         _guesses = decoded.map((e) => GuessResult.fromJson(e)).toList();
 
-        // Verifica se ha già vinto
-        _hasWon = _guesses.any((g) => g.correct);
+        // Verifica se ha già vinto (solo se ci sono tentativi)
+        if (_guesses.isNotEmpty) {
+          _hasWon = _guesses.any((g) => g.correct);
+        }
       }
     } catch (e) {
       print('Errore caricamento tentativi: $e');
+      _guesses = [];
+      _hasWon = false;
     }
   }
 
@@ -200,7 +208,7 @@ class GameProvider with ChangeNotifier {
     await initialize();
   }
 
-  /// Ottiene un suggerimento
+  /// Ottiene un suggerimento (graduale se autenticato)
   Future<String?> getHint() async {
     if (_hasWon) return null;
 
@@ -208,7 +216,8 @@ class GameProvider with ChangeNotifier {
     notifyListeners();
 
     try {
-      final hint = await _apiService.getHint(date: _currentDate);
+      final hint =
+          await _apiService.getHint(date: _currentDate, token: authToken);
 
       _isLoading = false;
       notifyListeners();

@@ -41,7 +41,8 @@ class PlayerProgress {
   /// Calculate position on progress bar (0.0 = cold, 1.0 = hot/won)
   double get progressPosition {
     if (won) return 1.0;
-    if (bestRank <= 1) return 1.0;
+    if (bestRank == 0) return 1.0; // Solo rank 0 = vittoria
+    if (bestRank == 1) return 0.98; // Rank 1 = vicinissimo ma non vittoria
     if (bestRank <= 10) return 0.95;
     if (bestRank <= 50) return 0.85;
     if (bestRank <= 100) return 0.75;
@@ -116,7 +117,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
       if (response != null && mounted) {
         setState(() {
           _players = response
-              .map((json) => PlayerProgress.fromJson(json as Map<String, dynamic>))
+              .map((json) =>
+                  PlayerProgress.fromJson(json as Map<String, dynamic>))
               .toList();
         });
       }
@@ -135,9 +137,11 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
     final allPlayers = [..._players];
     if (widget.currentUserId != null && widget.currentUserBestRank != null) {
       // Check if current user is already in the list
-      final existingIndex = allPlayers.indexWhere((p) => p.userId == widget.currentUserId);
+      final existingIndex =
+          allPlayers.indexWhere((p) => p.userId == widget.currentUserId);
       if (existingIndex >= 0) {
         // Update existing user with current best rank
+        // Nota: rank 0 = parola indovinata, rank 1 = parola più vicina (non vittoria)
         final existing = allPlayers[existingIndex];
         allPlayers[existingIndex] = PlayerProgress(
           userId: existing.userId,
@@ -146,11 +150,12 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
           bestRank: widget.currentUserBestRank!,
           attempts: existing.attempts,
           completed: existing.completed,
-          won: widget.currentUserBestRank == 1 || existing.won,
+          won: widget.currentUserBestRank == 0 || existing.won,
           isFriend: existing.isFriend,
         );
       } else {
         // Add current user
+        // Nota: rank 0 = parola indovinata, rank 1 = parola più vicina (non vittoria)
         allPlayers.add(PlayerProgress(
           userId: widget.currentUserId!,
           username: widget.currentUserName ?? 'Tu',
@@ -158,7 +163,7 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
           bestRank: widget.currentUserBestRank!,
           attempts: 0,
           completed: false,
-          won: widget.currentUserBestRank == 1,
+          won: widget.currentUserBestRank == 0,
           isFriend: false,
         ));
       }
@@ -178,12 +183,12 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
               borderRadius: BorderRadius.circular(4),
               gradient: LinearGradient(
                 colors: [
-                  Colors.blue.shade400,      // Cold (left)
+                  Colors.blue.shade400, // Cold (left)
                   Colors.cyan.shade400,
                   Colors.green.shade400,
                   Colors.yellow.shade500,
                   Colors.orange.shade500,
-                  Colors.red.shade500,       // Hot (right)
+                  Colors.red.shade500, // Hot (right)
                 ],
               ),
             ),
@@ -225,7 +230,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
 
   List<Widget> _buildPlayerAvatars(List<PlayerProgress> players) {
     final List<Widget> avatars = [];
-    final screenWidth = MediaQuery.of(context).size.width - 80; // Minus padding and flag
+    final screenWidth =
+        MediaQuery.of(context).size.width - 80; // Minus padding and flag
 
     // Group players by approximate position to prevent overlap
     final Map<int, List<PlayerProgress>> grouped = {};
@@ -243,7 +249,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
       final bucket = entry.key;
       final playersInBucket = entry.value;
 
-      for (int i = 0; i < playersInBucket.length && i < 4; i++) { // Max 4 per bucket
+      for (int i = 0; i < playersInBucket.length && i < 4; i++) {
+        // Max 4 per bucket
         final player = playersInBucket[i];
         final basePos = bucket * 24.0;
         final offset = i * 3.0; // Slight horizontal offset for stacking
@@ -287,7 +294,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
                       ? Image.network(
                           '${ApiService.baseUrl}${player.avatarPath}',
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _buildDefaultAvatar(player, isCurrentUser),
+                          errorBuilder: (_, __, ___) =>
+                              _buildDefaultAvatar(player, isCurrentUser),
                         )
                       : _buildDefaultAvatar(player, isCurrentUser),
                 ),
@@ -301,7 +309,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
     return avatars;
   }
 
-  Widget _buildDefaultAvatar(PlayerProgress player, [bool isCurrentUser = false]) {
+  Widget _buildDefaultAvatar(PlayerProgress player,
+      [bool isCurrentUser = false]) {
     return Container(
       color: isCurrentUser
           ? PopTheme.yellow
@@ -348,7 +357,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
                       ? Image.network(
                           '${ApiService.baseUrl}${player.avatarPath}',
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _buildDefaultAvatar(player),
+                          errorBuilder: (_, __, ___) =>
+                              _buildDefaultAvatar(player),
                         )
                       : _buildDefaultAvatar(player),
                 ),
@@ -364,7 +374,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
               if (player.isFriend)
                 Container(
                   margin: const EdgeInsets.only(top: 4),
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                   decoration: BoxDecoration(
                     color: PopTheme.magenta,
                     borderRadius: BorderRadius.circular(10),
@@ -402,7 +413,8 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
                 onPressed: () => Navigator.pop(context),
                 style: TextButton.styleFrom(
                   backgroundColor: PopTheme.black,
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                 ),
                 child: Text(
                   'CHIUDI',

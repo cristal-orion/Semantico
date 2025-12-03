@@ -10,7 +10,6 @@ import '../services/api_service.dart';
 import '../theme/pop_theme.dart';
 import 'package:flutter/services.dart'; // For Clipboard
 
-
 /// Schermata principale del gioco
 class GameScreen extends StatefulWidget {
   final String? date;
@@ -26,13 +25,8 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   void dispose() {
-    // Pulisce lo stato quando si esce dalla schermata
-    // Usiamo addPostFrameCallback per evitare errori se il widget è in fase di smontaggio
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) {
-        context.read<GameProvider>().clearCurrentState();
-      }
-    });
+    // Non usiamo addPostFrameCallback nel dispose perché può causare race condition
+    // Lo stato viene pulito in initialize() quando si apre una nuova partita
     super.dispose();
   }
 
@@ -80,8 +74,8 @@ class _GameScreenState extends State<GameScreen> {
                 if (gp.dailyWordInfo == null) return const SizedBox.shrink();
                 return Text(
                   'GIOCO #${gp.dailyWordInfo!.gameNumber} • ${gp.dailyWordInfo!.date}',
-                  style: PopTheme.bodyStyle.copyWith(
-                      fontSize: 12, fontWeight: FontWeight.bold),
+                  style: PopTheme.bodyStyle
+                      .copyWith(fontSize: 12, fontWeight: FontWeight.bold),
                 );
               },
             ),
@@ -97,11 +91,14 @@ class _GameScreenState extends State<GameScreen> {
             onPressed: () => context.read<GameProvider>().refresh(),
           ),
         ],
-        backgroundColor: PopTheme.white, // AppBar always matches theme background (Dark or White)
+        backgroundColor: PopTheme
+            .white, // AppBar always matches theme background (Dark or White)
         elevation: 0,
         iconTheme: IconThemeData(color: PopTheme.black),
       ),
-      backgroundColor: PopTheme.isDarkMode ? PopTheme.white : PopTheme.cyan, // Cyan in Light, Dark in Dark
+      backgroundColor: PopTheme.isDarkMode
+          ? PopTheme.white
+          : PopTheme.cyan, // Cyan in Light, Dark in Dark
       body: Container(
         // decoration: const BoxDecoration(
         //   gradient: LinearGradient(...) // RIMOSSO GRADIENTE
@@ -181,7 +178,9 @@ class _GameScreenState extends State<GameScreen> {
                       // Calculate best rank from guesses
                       int bestRank = 999999;
                       for (final guess in gameProvider.guesses) {
-                        if (guess.valid && guess.rank != null && guess.rank! < bestRank) {
+                        if (guess.valid &&
+                            guess.rank != null &&
+                            guess.rank! < bestRank) {
                           bestRank = guess.rank!;
                         }
                       }
@@ -191,7 +190,8 @@ class _GameScreenState extends State<GameScreen> {
                         gameMode: 'daily',
                         authToken: auth.token,
                         currentUserId: auth.user?.id,
-                        currentUserBestRank: bestRank < 999999 ? bestRank : null,
+                        currentUserBestRank:
+                            bestRank < 999999 ? bestRank : null,
                         currentUserAvatar: auth.user?.avatarPath,
                         currentUserName: auth.user?.username,
                         showFriendsOnly: false,
@@ -411,7 +411,8 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                   ),
                   child: Text('CAPITO!',
-                      style: PopTheme.bodyStyle.copyWith(color: PopTheme.white)),
+                      style:
+                          PopTheme.bodyStyle.copyWith(color: PopTheme.white)),
                 ),
               ),
             ],
