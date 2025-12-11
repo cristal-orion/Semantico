@@ -1,7 +1,7 @@
 name: hot_and_cold
 description: Gioco semantico di indovinare parole - stile Semantle
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.2+5
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

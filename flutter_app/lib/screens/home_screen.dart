@@ -35,185 +35,185 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: VectorBackground(
         child: SafeArea(
-          child: Stack(
-            children: [
-              // Profile / Login Button
-              Positioned(
-                top: 16,
-                left: 16,
-                child: Consumer<AuthProvider>(
-                  builder: (context, auth, _) {
-                    return FloatingActionButton(
-                      heroTag: 'profile_btn',
-                      mini: true,
-                      backgroundColor: PopTheme.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        side: BorderSide(color: PopTheme.black, width: 3),
-                      ),
-                      onPressed: () {
-                        if (auth.isAuthenticated) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ProfileScreen()),
-                          );
-                        } else {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginScreen()),
-                          );
-                        }
-                      },
-                      child: auth.isAuthenticated && auth.user?.avatarPath != null
-                          ? ClipRRect(
-                              borderRadius: BorderRadius.circular(9),
-                              child: Image.network(
-                                '${ApiService.baseUrl}/${auth.user!.avatarPath}',
-                                fit: BoxFit.cover,
-                                errorBuilder: (_, __, ___) => Icon(
-                                  Icons.person,
-                                  color: PopTheme.black,
-                                ),
-                              ),
-                            )
-                          : Icon(
-                              auth.isAuthenticated ? Icons.person : Icons.login,
-                              color: PopTheme.black,
-                            ),
-                    );
-                  },
-                ),
-              ),
-
-              // Theme Toggle
-              Positioned(
-                top: 16,
-                right: 16,
-                child: FloatingActionButton(
-                  mini: true,
-                  backgroundColor: PopTheme.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    side: BorderSide(color: PopTheme.black, width: 3),
-                  ),
-                  onPressed: () {
-                    context.read<GameProvider>().toggleTheme();
-                  },
-                  child: Icon(
-                    context.watch<GameProvider>().isDarkMode
-                        ? Icons.light_mode_rounded
-                        : Icons.dark_mode_rounded,
-                    color: PopTheme.black,
-                  ),
-                ),
-              ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(24.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Logo / Title
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 12),
-                    decoration: PopTheme.boxDecoration(color: PopTheme.white)
-                        .copyWith(boxShadow: PopTheme.shadow),
-                    child: Image.asset(
-                      'assets/images/SematicoLogotipo.png',
-                      height: 60, // Adjust height as needed
-                      fit: BoxFit.contain,
+          child: Stack(children: [
+            // Profile / Login Button
+            Positioned(
+              top: 16,
+              left: 16,
+              child: Consumer<AuthProvider>(
+                builder: (context, auth, _) {
+                  return FloatingActionButton(
+                    heroTag: 'profile_btn',
+                    mini: true,
+                    backgroundColor: PopTheme.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      side: BorderSide(color: PopTheme.black, width: 3),
                     ),
-                  )
-                      .animate(onPlay: (controller) => controller.repeat())
-                      .shimmer(duration: 2000.ms, delay: 1000.ms)
-                      .then()
-                      .shake(hz: 4, curve: Curves.easeInOutCubic),
-
-                  const SizedBox(height: 60),
-
-                  // Play Button (Daily Word)
-                  Consumer2<GameProvider, AuthProvider>(
-                    builder: (context, gp, auth, _) {
-                      final gameNumber = gp.dailyWordInfo?.gameNumber ?? '...';
-                      return _buildMenuButton(
-                        context,
-                        label: 'PAROLA DEL GIORNO #$gameNumber',
-                        icon: Icons.play_arrow_rounded,
-                        color: PopTheme.yellow,
-                        onPressed: () {
-                          if (auth.isAuthenticated) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const GameScreen()),
-                            );
-                          } else {
-                            _showAuthRequiredDialog(context);
-                          }
-                        },
-                      );
+                    onPressed: () {
+                      if (auth.isAuthenticated) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProfileScreen()),
+                        );
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()),
+                        );
+                      }
                     },
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  // Shot Mode Button
-                  Consumer<AuthProvider>(
-                    builder: (context, auth, _) {
-                      return _buildMenuButton(
-                        context,
-                        label: 'SHOT MODE',
-                        icon: Icons.flash_on_rounded,
-                        color: PopTheme.orange,
-                        onPressed: () {
-                          if (auth.isAuthenticated) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ShotGameScreen()),
-                            );
-                          } else {
-                            _showAuthRequiredDialog(context);
-                          }
-                        },
-                      );
-                    },
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  // Archive Button
-                  Consumer<AuthProvider>(
-                    builder: (context, auth, _) {
-                      return _buildMenuButton(
-                        context,
-                        label: 'ARCHIVIO',
-                        icon: Icons.calendar_month_rounded,
-                        color: PopTheme.cyan,
-                        onPressed: () {
-                          if (auth.isAuthenticated) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ArchiveScreen()),
-                            ).then((_) {
-                              // Ricarica la partita del giorno quando si torna dall'archivio
-                              context.read<GameProvider>().initialize();
-                            });
-                          } else {
-                            _showAuthRequiredDialog(context);
-                          }
-                        },
-                      );
-                    },
-                  ),
-
-
-                ],
+                    child: auth.isAuthenticated && auth.user?.avatarPath != null
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(9),
+                            child: Image.network(
+                              '${ApiService.baseUrl}/${auth.user!.avatarPath}',
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, __, ___) => Icon(
+                                Icons.person,
+                                color: PopTheme.black,
+                              ),
+                            ),
+                          )
+                        : Icon(
+                            auth.isAuthenticated ? Icons.person : Icons.login,
+                            color: PopTheme.black,
+                          ),
+                  );
+                },
               ),
+            ),
+
+            // Theme Toggle
+            Positioned(
+              top: 16,
+              right: 16,
+              child: FloatingActionButton(
+                mini: true,
+                backgroundColor: PopTheme.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: BorderSide(color: PopTheme.black, width: 3),
+                ),
+                onPressed: () {
+                  context.read<GameProvider>().toggleTheme();
+                },
+                child: Icon(
+                  context.watch<GameProvider>().isDarkMode
+                      ? Icons.light_mode_rounded
+                      : Icons.dark_mode_rounded,
+                  color: PopTheme.black,
+                ),
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Logo / Title
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24, vertical: 12),
+                      decoration: PopTheme.boxDecoration(color: PopTheme.white)
+                          .copyWith(boxShadow: PopTheme.shadow),
+                      child: Image.asset(
+                        'assets/images/SematicoLogotipo.png',
+                        height: 60, // Adjust height as needed
+                        fit: BoxFit.contain,
+                      ),
+                    )
+                        .animate(onPlay: (controller) => controller.repeat())
+                        .shimmer(duration: 2000.ms, delay: 1000.ms)
+                        .then()
+                        .shake(hz: 4, curve: Curves.easeInOutCubic),
+
+                    const SizedBox(height: 60),
+
+                    // Play Button (Daily Word)
+                    Consumer2<GameProvider, AuthProvider>(
+                      builder: (context, gp, auth, _) {
+                        final gameNumber =
+                            gp.dailyWordInfo?.gameNumber ?? '...';
+                        return _buildMenuButton(
+                          context,
+                          label: 'PAROLA DEL GIORNO #$gameNumber',
+                          icon: Icons.play_arrow_rounded,
+                          color: PopTheme.yellow,
+                          onPressed: () {
+                            if (auth.isAuthenticated) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const GameScreen()),
+                              );
+                            } else {
+                              _showAuthRequiredDialog(context);
+                            }
+                          },
+                        );
+                      },
+                    ),
+
+                    const SizedBox(height: 24),
+
+                    // Shot Mode Button
+                    Consumer<AuthProvider>(
+                      builder: (context, auth, _) {
+                        return _buildMenuButton(
+                          context,
+                          label: 'SHOT MODE',
+                          icon: Icons.flash_on_rounded,
+                          color: PopTheme.orange,
+                          onPressed: () {
+                            if (auth.isAuthenticated) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ShotGameScreen()),
+                              );
+                            } else {
+                              _showAuthRequiredDialog(context);
+                            }
+                          },
+                        );
+                      },
+                    ),
+
+                    const SizedBox(height: 24),
+
+                    // Archive Button
+                    Consumer<AuthProvider>(
+                      builder: (context, auth, _) {
+                        return _buildMenuButton(
+                          context,
+                          label: 'ARCHIVIO',
+                          icon: Icons.calendar_month_rounded,
+                          color: PopTheme.cyan,
+                          onPressed: () {
+                            if (auth.isAuthenticated) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ArchiveScreen()),
+                              ).then((_) {
+                                // Ricarica la partita del giorno quando si torna dall'archivio
+                                context.read<GameProvider>().initialize();
+                              });
+                            } else {
+                              _showAuthRequiredDialog(context);
+                            }
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ]),
@@ -359,10 +359,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 side: BorderSide(color: effectiveBorderColor, width: 3),
               ),
             ).copyWith(
-              // Custom shadow effect via elevation hack or container?
-              // Using standard elevation for now, but PopTheme uses hard shadows usually.
-              // Let's stick to simple button for now, maybe wrap in Container for hard shadow later if requested.
-            ),
+                // Custom shadow effect via elevation hack or container?
+                // Using standard elevation for now, but PopTheme uses hard shadows usually.
+                // Let's stick to simple button for now, maybe wrap in Container for hard shadow later if requested.
+                ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

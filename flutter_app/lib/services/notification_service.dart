@@ -193,14 +193,14 @@ class NotificationService {
       android: androidDetails,
     );
 
-    // Programma notifica singola (non ricorrente)
+    // Programma notifica singola (non ricorrente) - usa inexact per evitare permessi speciali
     await _notifications.zonedSchedule(
       _dailyWordNotificationId,
       message['title']!,
       message['body']!,
       scheduledDate,
       notificationDetails,
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
     );
